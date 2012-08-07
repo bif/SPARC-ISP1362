@@ -1,0 +1,1048 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.6	//
+BUTTONS_BADDR	workspace/hwsw_de2-115/testapp/include/buttons.h	4;"	d
+BUTTONS_DATA	workspace/hwsw_de2-115/testapp/include/buttons.h	6;"	d
+BUTTONS_H	workspace/hwsw_de2-115/testapp/include/buttons.h	2;"	d
+BUTTONS_STATUS	workspace/hwsw_de2-115/testapp/include/buttons.h	5;"	d
+CC	workspace/hwsw_de2-115/testapp/Makefile	/^CC=spear32-gcc$/;"	m
+CFG_AHBRAMSZ	workspace/libraries/grlib/lib/gaisler/misc/ahbram.in.h	11;"	d
+CFG_AHBRAMSZ	workspace/libraries/grlib/lib/gaisler/misc/ahbram.in.h	13;"	d
+CFG_AHBRAMSZ	workspace/libraries/grlib/lib/gaisler/misc/ahbram.in.h	15;"	d
+CFG_AHBRAMSZ	workspace/libraries/grlib/lib/gaisler/misc/ahbram.in.h	17;"	d
+CFG_AHBRAMSZ	workspace/libraries/grlib/lib/gaisler/misc/ahbram.in.h	19;"	d
+CFG_AHBRAMSZ	workspace/libraries/grlib/lib/gaisler/misc/ahbram.in.h	21;"	d
+CFG_AHBRAMSZ	workspace/libraries/grlib/lib/gaisler/misc/ahbram.in.h	23;"	d
+CFG_AHBRAMSZ	workspace/libraries/grlib/lib/gaisler/misc/ahbram.in.h	25;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	11;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	13;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	15;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	17;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	19;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	21;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	23;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	25;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	27;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	3;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	5;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	7;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	9;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	11;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	13;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	15;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	3;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	5;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	7;"	d
+CFG_CLK_TECH	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	9;"	d
+CFG_DCACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	239;"	d
+CFG_DCACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	241;"	d
+CFG_DCACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	243;"	d
+CFG_DCACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	245;"	d
+CFG_DCACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	221;"	d
+CFG_DCACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	223;"	d
+CFG_DCACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	225;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	211;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	213;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	215;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	217;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	219;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	221;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	223;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	225;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	227;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	229;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	193;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	195;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	197;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	199;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	201;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	203;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	205;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	207;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	209;"	d
+CFG_DCACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	211;"	d
+CFG_DEBUG_PC32	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	452;"	d
+CFG_DEBUG_PC32	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	454;"	d
+CFG_DEBUG_PC32	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	432;"	d
+CFG_DEBUG_PC32	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	434;"	d
+CFG_DLINE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	233;"	d
+CFG_DLINE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	235;"	d
+CFG_DLINE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	215;"	d
+CFG_DLINE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	217;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	277;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	279;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	281;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	283;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	285;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	287;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	289;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	291;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	293;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	257;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	259;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	261;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	263;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	265;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	267;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	269;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	271;"	d
+CFG_DLRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	273;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	398;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	400;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	402;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	404;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	406;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	408;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	378;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	380;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	382;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	384;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	386;"	d
+CFG_DSU_ATB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	388;"	d
+CFG_DSU_ETHB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	22;"	d
+CFG_DSU_ETHB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	24;"	d
+CFG_DSU_ETHB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	26;"	d
+CFG_DSU_ETHB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	28;"	d
+CFG_DSU_ETHB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	30;"	d
+CFG_DSU_ETHB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	32;"	d
+CFG_DSU_ETHB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	34;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	384;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	386;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	388;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	390;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	392;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	394;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	364;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	366;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	368;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	370;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	372;"	d
+CFG_DSU_ITB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	374;"	d
+CFG_GRETH_FIFO	workspace/libraries/grlib/lib/gaisler/greth/greth.in.h	10;"	d
+CFG_GRETH_FIFO	workspace/libraries/grlib/lib/gaisler/greth/greth.in.h	12;"	d
+CFG_GRETH_FIFO	workspace/libraries/grlib/lib/gaisler/greth/greth.in.h	14;"	d
+CFG_GRETH_FIFO	workspace/libraries/grlib/lib/gaisler/greth/greth.in.h	16;"	d
+CFG_GRETH_FIFO	workspace/libraries/grlib/lib/gaisler/greth/greth.in.h	18;"	d
+CFG_GRETH_FIFO	workspace/libraries/grlib/lib/gaisler/greth/greth.in.h	20;"	d
+CFG_ICACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	152;"	d
+CFG_ICACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	154;"	d
+CFG_ICACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	156;"	d
+CFG_ICACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	158;"	d
+CFG_ICACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	136;"	d
+CFG_ICACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	138;"	d
+CFG_ICACHE_ALGORND	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	140;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	124;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	126;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	128;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	130;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	132;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	134;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	136;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	138;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	140;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	142;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	108;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	110;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	112;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	114;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	116;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	118;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	120;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	122;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	124;"	d
+CFG_ICACHE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	126;"	d
+CFG_ILINE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	146;"	d
+CFG_ILINE_SZ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	148;"	d
+CFG_ILINE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	130;"	d
+CFG_ILINE_SZ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	132;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	174;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	176;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	178;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	180;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	182;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	184;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	186;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	188;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	190;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	156;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	158;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	160;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	162;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	164;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	166;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	168;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	170;"	d
+CFG_ILRAM_SIZE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	172;"	d
+CFG_IU_DSETS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	199;"	d
+CFG_IU_DSETS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	201;"	d
+CFG_IU_DSETS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	203;"	d
+CFG_IU_DSETS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	205;"	d
+CFG_IU_DSETS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	207;"	d
+CFG_IU_DSETS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	181;"	d
+CFG_IU_DSETS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	183;"	d
+CFG_IU_DSETS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	185;"	d
+CFG_IU_DSETS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	187;"	d
+CFG_IU_DSETS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	189;"	d
+CFG_IU_ISETS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	112;"	d
+CFG_IU_ISETS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	114;"	d
+CFG_IU_ISETS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	116;"	d
+CFG_IU_ISETS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	118;"	d
+CFG_IU_ISETS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	120;"	d
+CFG_IU_ISETS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	100;"	d
+CFG_IU_ISETS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	102;"	d
+CFG_IU_ISETS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	104;"	d
+CFG_IU_ISETS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	96;"	d
+CFG_IU_ISETS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	98;"	d
+CFG_IU_MUL_STRUCT	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	38;"	d
+CFG_IU_MUL_STRUCT	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	40;"	d
+CFG_IU_MUL_STRUCT	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	42;"	d
+CFG_IU_MUL_STRUCT	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	44;"	d
+CFG_IU_V8	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	27;"	d
+CFG_IU_V8	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	29;"	d
+CFG_IU_V8	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	31;"	d
+CFG_IU_V8	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	34;"	d
+CFG_IU_V8	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	26;"	d
+CFG_IU_V8	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	28;"	d
+CFG_MMU_FASTWB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	365;"	d
+CFG_MMU_FASTWB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	367;"	d
+CFG_MMU_FASTWB	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	376;"	d
+CFG_MMU_FASTWB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	345;"	d
+CFG_MMU_FASTWB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	347;"	d
+CFG_MMU_FASTWB	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	356;"	d
+CFG_PAD_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	116;"	d
+CFG_PAD_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	118;"	d
+CFG_PCIFIFO	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	24;"	d
+CFG_PCIFIFO	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	27;"	d
+CFG_PCIFIFO	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	29;"	d
+CFG_PCIFIFO	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	31;"	d
+CFG_PCIFIFO	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	33;"	d
+CFG_PCIFIFO	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	35;"	d
+CFG_PCIFIFO	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	37;"	d
+CFG_PCITYPE	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	2;"	d
+CFG_PCITYPE	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	4;"	d
+CFG_PCITYPE	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	6;"	d
+CFG_PCITYPE	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	8;"	d
+CFG_PCI_ENFIFO	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	25;"	d
+CFG_PCI_ENFIFO	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	41;"	d
+CFG_PCI_TRACEBUF	workspace/libraries/grlib/lib/gaisler/pci/pcitrace.in.h	10;"	d
+CFG_PCI_TRACEBUF	workspace/libraries/grlib/lib/gaisler/pci/pcitrace.in.h	12;"	d
+CFG_PCI_TRACEBUF	workspace/libraries/grlib/lib/gaisler/pci/pcitrace.in.h	14;"	d
+CFG_PCI_TRACEBUF	workspace/libraries/grlib/lib/gaisler/pci/pcitrace.in.h	6;"	d
+CFG_PCI_TRACEBUF	workspace/libraries/grlib/lib/gaisler/pci/pcitrace.in.h	8;"	d
+CFG_RAM_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	100;"	d
+CFG_RAM_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	102;"	d
+CFG_RAM_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	104;"	d
+CFG_RAM_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	106;"	d
+CFG_RAM_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	108;"	d
+CFG_RAM_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	110;"	d
+CFG_RAM_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	112;"	d
+CFG_RAM_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	96;"	d
+CFG_RAM_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	98;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	46;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	48;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	50;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	52;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	54;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	56;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	58;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	60;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	62;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	64;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	66;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	68;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	70;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	72;"	d
+CFG_SR_CTRL_BANKSZ	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	74;"	d
+CFG_SR_CTRL_SRBANKS	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	32;"	d
+CFG_SR_CTRL_SRBANKS	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	34;"	d
+CFG_SR_CTRL_SRBANKS	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	36;"	d
+CFG_SR_CTRL_SRBANKS	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	38;"	d
+CFG_SR_CTRL_SRBANKS	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	40;"	d
+CFG_SR_CTRL_SRBANKS	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	42;"	d
+CFG_UA1_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart1.in.h	10;"	d
+CFG_UA1_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart1.in.h	12;"	d
+CFG_UA1_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart1.in.h	14;"	d
+CFG_UA1_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart1.in.h	16;"	d
+CFG_UA1_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart1.in.h	18;"	d
+CFG_UA1_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart1.in.h	6;"	d
+CFG_UA1_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart1.in.h	8;"	d
+CFG_UA2_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart2.in.h	10;"	d
+CFG_UA2_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart2.in.h	12;"	d
+CFG_UA2_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart2.in.h	14;"	d
+CFG_UA2_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart2.in.h	16;"	d
+CFG_UA2_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart2.in.h	18;"	d
+CFG_UA2_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart2.in.h	6;"	d
+CFG_UA2_FIFO	workspace/libraries/grlib/lib/gaisler/uart/uart2.in.h	8;"	d
+CFLAGS	workspace/hwsw_de2-115/testapp/Makefile	/^CFLAGS=-c -Wall -O2$/;"	m
+CMD_CLEAR	VHDL/ext_modules/ext_counter/driver/counter.c	16;"	d	file:
+CMD_COUNT	VHDL/ext_modules/ext_counter/driver/counter.c	15;"	d	file:
+CONFIG_AHBRAM_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/ahbram.in.h	3;"	d
+CONFIG_AHBRAM_START	workspace/libraries/grlib/lib/gaisler/misc/ahbram.in.h	7;"	d
+CONFIG_AHBROM_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/ahbrom.in.h	2;"	d
+CONFIG_AHBROM_PIPE	workspace/libraries/grlib/lib/gaisler/misc/ahbrom.in.h	10;"	d
+CONFIG_AHBROM_START	workspace/libraries/grlib/lib/gaisler/misc/ahbrom.in.h	6;"	d
+CONFIG_AHBSTAT_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/ahbstat.in.h	2;"	d
+CONFIG_AHBSTAT_NFTSLV	workspace/libraries/grlib/lib/gaisler/misc/ahbstat.in.h	6;"	d
+CONFIG_AHB_DTRACE	workspace/libraries/grlib/lib/grlib/amba/amba.in.h	30;"	d
+CONFIG_AHB_IOADDR	workspace/libraries/grlib/lib/grlib/amba/amba.in.h	10;"	d
+CONFIG_AHB_MON	workspace/libraries/grlib/lib/grlib/amba/amba.in.h	18;"	d
+CONFIG_AHB_MONERR	workspace/libraries/grlib/lib/grlib/amba/amba.in.h	22;"	d
+CONFIG_AHB_MONWAR	workspace/libraries/grlib/lib/grlib/amba/amba.in.h	26;"	d
+CONFIG_AHB_RROBIN	workspace/libraries/grlib/lib/grlib/amba/amba.in.h	6;"	d
+CONFIG_AHB_SPLIT	workspace/libraries/grlib/lib/grlib/amba/amba.in.h	2;"	d
+CONFIG_APB_HADDR	workspace/libraries/grlib/lib/grlib/amba/amba.in.h	14;"	d
+CONFIG_ATAIO	workspace/libraries/grlib/lib/gaisler/ata/ata.in.h	6;"	d
+CONFIG_ATAIRQ	workspace/libraries/grlib/lib/gaisler/ata/ata.in.h	10;"	d
+CONFIG_ATA_ENABLE	workspace/libraries/grlib/lib/gaisler/ata/ata.in.h	2;"	d
+CONFIG_ATA_FIFO	workspace/libraries/grlib/lib/gaisler/ata/ata.in.h	18;"	d
+CONFIG_ATA_MWDMA	workspace/libraries/grlib/lib/gaisler/ata/ata.in.h	14;"	d
+CONFIG_BOUNDSCAN_EN	workspace/libraries/grlib/lib/gaisler/jtag/bscan.in.h	2;"	d
+CONFIG_CACHE_ERRINJ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	444;"	d
+CONFIG_CACHE_ERRINJ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	424;"	d
+CONFIG_CACHE_FIXED	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	265;"	d
+CONFIG_CACHE_FIXED	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	245;"	d
+CONFIG_CACHE_FT_EN	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	441;"	d
+CONFIG_CACHE_FT_EN	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	421;"	d
+CONFIG_CANIO	workspace/libraries/grlib/lib/gaisler/can/can_mc.in.h	10;"	d
+CONFIG_CANIO	workspace/libraries/grlib/lib/gaisler/can/can_oc.in.h	6;"	d
+CONFIG_CANIRQ	workspace/libraries/grlib/lib/gaisler/can/can_mc.in.h	14;"	d
+CONFIG_CANIRQ	workspace/libraries/grlib/lib/gaisler/can/can_oc.in.h	10;"	d
+CONFIG_CANLOOP	workspace/libraries/grlib/lib/gaisler/can/can_oc.in.h	14;"	d
+CONFIG_CANSEPIRQ	workspace/libraries/grlib/lib/gaisler/can/can_mc.in.h	18;"	d
+CONFIG_CAN_ENABLE	workspace/libraries/grlib/lib/gaisler/can/can_mc.in.h	2;"	d
+CONFIG_CAN_ENABLE	workspace/libraries/grlib/lib/gaisler/can/can_oc.in.h	2;"	d
+CONFIG_CAN_FT	workspace/libraries/grlib/lib/gaisler/can/can_mc.in.h	26;"	d
+CONFIG_CAN_FT	workspace/libraries/grlib/lib/gaisler/can/can_oc.in.h	23;"	d
+CONFIG_CAN_NUM	workspace/libraries/grlib/lib/gaisler/can/can_mc.in.h	6;"	d
+CONFIG_CAN_SYNCRST	workspace/libraries/grlib/lib/gaisler/can/can_mc.in.h	22;"	d
+CONFIG_CAN_SYNCRST	workspace/libraries/grlib/lib/gaisler/can/can_oc.in.h	18;"	d
+CONFIG_CLK_DIV	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	35;"	d
+CONFIG_CLK_DIV	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	23;"	d
+CONFIG_CLK_MUL	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	31;"	d
+CONFIG_CLK_MUL	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	19;"	d
+CONFIG_CLK_NOFB	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	59;"	d
+CONFIG_CLK_NOFB	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	35;"	d
+CONFIG_DCACHE_ENABLE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	195;"	d
+CONFIG_DCACHE_ENABLE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	177;"	d
+CONFIG_DCACHE_LOCK	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	249;"	d
+CONFIG_DCACHE_LOCK	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	229;"	d
+CONFIG_DCACHE_LRAM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	269;"	d
+CONFIG_DCACHE_LRAM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	249;"	d
+CONFIG_DCACHE_LRSTART	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	273;"	d
+CONFIG_DCACHE_LRSTART	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	253;"	d
+CONFIG_DCACHE_SNOOP	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	253;"	d
+CONFIG_DCACHE_SNOOP	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	233;"	d
+CONFIG_DCACHE_SNOOP_FAST	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	257;"	d
+CONFIG_DCACHE_SNOOP_FAST	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	237;"	d
+CONFIG_DCACHE_SNOOP_SEPTAG	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	261;"	d
+CONFIG_DCACHE_SNOOP_SEPTAG	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	241;"	d
+CONFIG_DDR2SP	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	2;"	d
+CONFIG_DDR2SP_CBDELAY0	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	66;"	d
+CONFIG_DDR2SP_CBDELAY1	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	70;"	d
+CONFIG_DDR2SP_CBDELAY2	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	74;"	d
+CONFIG_DDR2SP_CBDELAY3	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	78;"	d
+CONFIG_DDR2SP_COL	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	22;"	d
+CONFIG_DDR2SP_DATAWIDTH	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	18;"	d
+CONFIG_DDR2SP_DELAY0	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	34;"	d
+CONFIG_DDR2SP_DELAY1	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	38;"	d
+CONFIG_DDR2SP_DELAY2	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	42;"	d
+CONFIG_DDR2SP_DELAY3	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	46;"	d
+CONFIG_DDR2SP_DELAY4	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	50;"	d
+CONFIG_DDR2SP_DELAY5	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	54;"	d
+CONFIG_DDR2SP_DELAY6	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	58;"	d
+CONFIG_DDR2SP_DELAY7	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	62;"	d
+CONFIG_DDR2SP_FREQ	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	10;"	d
+CONFIG_DDR2SP_FTEN	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	86;"	d
+CONFIG_DDR2SP_INIT	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	6;"	d
+CONFIG_DDR2SP_MBYTE	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	26;"	d
+CONFIG_DDR2SP_NOSYNC	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	82;"	d
+CONFIG_DDR2SP_RSKEW	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	30;"	d
+CONFIG_DDR2SP_TRFC	workspace/libraries/grlib/lib/gaisler/ddr/ddr2sp.in.h	14;"	d
+CONFIG_DDRMP	workspace/libraries/grlib/lib/gaisler/ddr/ddrctrl.in.h	2;"	d
+CONFIG_DDRMP_EN2P	workspace/libraries/grlib/lib/gaisler/ddr/ddrctrl.in.h	26;"	d
+CONFIG_DDRMP_FREQ	workspace/libraries/grlib/lib/gaisler/ddr/ddrctrl.in.h	22;"	d
+CONFIG_DDRMP_MBITS	workspace/libraries/grlib/lib/gaisler/ddr/ddrctrl.in.h	18;"	d
+CONFIG_DDRMP_NBITS	workspace/libraries/grlib/lib/gaisler/ddr/ddrctrl.in.h	14;"	d
+CONFIG_DDRMP_NCS	workspace/libraries/grlib/lib/gaisler/ddr/ddrctrl.in.h	6;"	d
+CONFIG_DDRMP_NDEV	workspace/libraries/grlib/lib/gaisler/ddr/ddrctrl.in.h	10;"	d
+CONFIG_DDRSP	workspace/libraries/grlib/lib/gaisler/ddr/ddrsp.in.h	2;"	d
+CONFIG_DDRSP_COL	workspace/libraries/grlib/lib/gaisler/ddr/ddrsp.in.h	14;"	d
+CONFIG_DDRSP_FREQ	workspace/libraries/grlib/lib/gaisler/ddr/ddrsp.in.h	10;"	d
+CONFIG_DDRSP_INIT	workspace/libraries/grlib/lib/gaisler/ddr/ddrsp.in.h	6;"	d
+CONFIG_DDRSP_MBYTE	workspace/libraries/grlib/lib/gaisler/ddr/ddrsp.in.h	18;"	d
+CONFIG_DDRSP_RSKEW	workspace/libraries/grlib/lib/gaisler/ddr/ddrsp.in.h	22;"	d
+CONFIG_DEBUG_UART	workspace/libraries/grlib/lib/grlib/util/debug.in.h	3;"	d
+CONFIG_DSU_ENABLE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	380;"	d
+CONFIG_DSU_ENABLE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	360;"	d
+CONFIG_DSU_ETH	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	2;"	d
+CONFIG_DSU_ETHLSB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	18;"	d
+CONFIG_DSU_ETHMSB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	14;"	d
+CONFIG_DSU_ETH_DIS	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	42;"	d
+CONFIG_DSU_ETH_PROG	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	38;"	d
+CONFIG_DSU_IPLSB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	10;"	d
+CONFIG_DSU_IPMSB	workspace/libraries/grlib/lib/gaisler/net/edcl.in.h	6;"	d
+CONFIG_DSU_JTAG	workspace/libraries/grlib/lib/gaisler/jtag/jtag.in.h	2;"	d
+CONFIG_DSU_JTAG2	workspace/libraries/grlib/lib/gaisler/jtag/jtag2.in.h	2;"	d
+CONFIG_DSU_UART	workspace/libraries/grlib/lib/gaisler/uart/dcom.in.h	2;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	343;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	345;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	346;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	349;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	350;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	353;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	354;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	357;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	358;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	361;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	362;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	373;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	323;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	325;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	326;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	329;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	330;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	333;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	334;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	337;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	338;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	341;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	342;"	d
+CONFIG_DTLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	353;"	d
+CONFIG_FPU	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	100;"	d
+CONFIG_FPU	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	94;"	d
+CONFIG_FPU	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	96;"	d
+CONFIG_FPU	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	98;"	d
+CONFIG_FPU	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	78;"	d
+CONFIG_FPU	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	80;"	d
+CONFIG_FPU	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	82;"	d
+CONFIG_FPU	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	84;"	d
+CONFIG_FPUFT	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	431;"	d
+CONFIG_FPUFT	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	434;"	d
+CONFIG_FPUFT	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	436;"	d
+CONFIG_FPUFT	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	411;"	d
+CONFIG_FPUFT	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	414;"	d
+CONFIG_FPUFT	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	416;"	d
+CONFIG_FPU_GRFPC	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	68;"	d
+CONFIG_FPU_GRFPC	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	70;"	d
+CONFIG_FPU_GRFPC	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	72;"	d
+CONFIG_FPU_GRFPC	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	52;"	d
+CONFIG_FPU_GRFPC	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	54;"	d
+CONFIG_FPU_GRFPC	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	56;"	d
+CONFIG_FPU_GRFPU_MUL	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	76;"	d
+CONFIG_FPU_GRFPU_MUL	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	78;"	d
+CONFIG_FPU_GRFPU_MUL	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	80;"	d
+CONFIG_FPU_GRFPU_MUL	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	82;"	d
+CONFIG_FPU_GRFPU_MUL	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	84;"	d
+CONFIG_FPU_GRFPU_MUL	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	60;"	d
+CONFIG_FPU_GRFPU_MUL	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	62;"	d
+CONFIG_FPU_GRFPU_MUL	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	64;"	d
+CONFIG_FPU_GRFPU_MUL	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	66;"	d
+CONFIG_FPU_GRFPU_MUL	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	68;"	d
+CONFIG_FPU_GRFPU_SHARED	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	88;"	d
+CONFIG_FPU_GRFPU_SHARED	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	90;"	d
+CONFIG_FPU_GRFPU_SHARED	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	72;"	d
+CONFIG_FPU_GRFPU_SHARED	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	74;"	d
+CONFIG_FPU_NETLIST	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	104;"	d
+CONFIG_FPU_NETLIST	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	88;"	d
+CONFIG_GPT_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	25;"	d
+CONFIG_GPT_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	2;"	d
+CONFIG_GPT_IRQ	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	18;"	d
+CONFIG_GPT_IRQ	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	41;"	d
+CONFIG_GPT_NTIM	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	29;"	d
+CONFIG_GPT_NTIM	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	6;"	d
+CONFIG_GPT_SEPIRQ	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	22;"	d
+CONFIG_GPT_SEPIRQ	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	45;"	d
+CONFIG_GPT_SW	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	10;"	d
+CONFIG_GPT_SW	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	33;"	d
+CONFIG_GPT_TW	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	14;"	d
+CONFIG_GPT_TW	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	37;"	d
+CONFIG_GPT_WDOG	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	53;"	d
+CONFIG_GPT_WDOGEN	workspace/libraries/grlib/lib/gaisler/misc/gptimer.in.h	49;"	d
+CONFIG_GR1553B_BCEN	workspace/libraries/grlib/lib/gaisler/gr1553b/gr1553b.in.h	6;"	d
+CONFIG_GR1553B_BCEN2	workspace/libraries/grlib/lib/gaisler/gr1553b/gr1553b_2.in.h	6;"	d
+CONFIG_GR1553B_BMEN	workspace/libraries/grlib/lib/gaisler/gr1553b/gr1553b.in.h	14;"	d
+CONFIG_GR1553B_BMEN2	workspace/libraries/grlib/lib/gaisler/gr1553b/gr1553b_2.in.h	14;"	d
+CONFIG_GR1553B_ENABLE	workspace/libraries/grlib/lib/gaisler/gr1553b/gr1553b.in.h	2;"	d
+CONFIG_GR1553B_ENABLE2	workspace/libraries/grlib/lib/gaisler/gr1553b/gr1553b_2.in.h	2;"	d
+CONFIG_GR1553B_RTEN	workspace/libraries/grlib/lib/gaisler/gr1553b/gr1553b.in.h	10;"	d
+CONFIG_GR1553B_RTEN2	workspace/libraries/grlib/lib/gaisler/gr1553b/gr1553b_2.in.h	10;"	d
+CONFIG_GRACECTRL	workspace/libraries/grlib/lib/gaisler/misc/gracectrl.in.h	2;"	d
+CONFIG_GRCANIRQ	workspace/libraries/grlib/lib/gaisler/can/grcan.in.h	6;"	d
+CONFIG_GRCANSINGLE	workspace/libraries/grlib/lib/gaisler/can/grcan.in.h	10;"	d
+CONFIG_GRCAN_ENABLE	workspace/libraries/grlib/lib/gaisler/can/grcan.in.h	2;"	d
+CONFIG_GRETH_ENABLE	workspace/libraries/grlib/lib/gaisler/greth/greth.in.h	2;"	d
+CONFIG_GRETH_GIGA	workspace/libraries/grlib/lib/gaisler/greth/greth.in.h	6;"	d
+CONFIG_GRGPIO2_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/grgpio2.in.h	2;"	d
+CONFIG_GRGPIO2_IMASK	workspace/libraries/grlib/lib/gaisler/misc/grgpio2.in.h	5;"	d
+CONFIG_GRGPIO2_WIDTH	workspace/libraries/grlib/lib/gaisler/misc/grgpio2.in.h	8;"	d
+CONFIG_GRGPIO_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/grgpio.in.h	2;"	d
+CONFIG_GRGPIO_IMASK	workspace/libraries/grlib/lib/gaisler/misc/grgpio.in.h	5;"	d
+CONFIG_GRGPIO_WIDTH	workspace/libraries/grlib/lib/gaisler/misc/grgpio.in.h	8;"	d
+CONFIG_GRSYSMON	workspace/libraries/grlib/lib/gaisler/misc/grsysmon.in.h	2;"	d
+CONFIG_GRUSBDC_AIFACE	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	6;"	d
+CONFIG_GRUSBDC_DW	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	11;"	d
+CONFIG_GRUSBDC_DW	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	14;"	d
+CONFIG_GRUSBDC_DW	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	17;"	d
+CONFIG_GRUSBDC_ENABLE	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	2;"	d
+CONFIG_GRUSBDC_I0	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	29;"	d
+CONFIG_GRUSBDC_I1	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	32;"	d
+CONFIG_GRUSBDC_I10	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	59;"	d
+CONFIG_GRUSBDC_I11	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	62;"	d
+CONFIG_GRUSBDC_I12	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	65;"	d
+CONFIG_GRUSBDC_I13	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	68;"	d
+CONFIG_GRUSBDC_I14	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	71;"	d
+CONFIG_GRUSBDC_I15	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	74;"	d
+CONFIG_GRUSBDC_I2	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	35;"	d
+CONFIG_GRUSBDC_I3	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	38;"	d
+CONFIG_GRUSBDC_I4	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	41;"	d
+CONFIG_GRUSBDC_I5	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	44;"	d
+CONFIG_GRUSBDC_I6	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	47;"	d
+CONFIG_GRUSBDC_I7	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	50;"	d
+CONFIG_GRUSBDC_I8	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	53;"	d
+CONFIG_GRUSBDC_I9	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	56;"	d
+CONFIG_GRUSBDC_NEPI	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	21;"	d
+CONFIG_GRUSBDC_NEPO	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	25;"	d
+CONFIG_GRUSBDC_O0	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	77;"	d
+CONFIG_GRUSBDC_O1	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	80;"	d
+CONFIG_GRUSBDC_O10	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	107;"	d
+CONFIG_GRUSBDC_O11	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	110;"	d
+CONFIG_GRUSBDC_O12	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	113;"	d
+CONFIG_GRUSBDC_O13	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	116;"	d
+CONFIG_GRUSBDC_O14	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	119;"	d
+CONFIG_GRUSBDC_O15	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	122;"	d
+CONFIG_GRUSBDC_O2	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	83;"	d
+CONFIG_GRUSBDC_O3	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	86;"	d
+CONFIG_GRUSBDC_O4	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	89;"	d
+CONFIG_GRUSBDC_O5	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	92;"	d
+CONFIG_GRUSBDC_O6	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	95;"	d
+CONFIG_GRUSBDC_O7	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	98;"	d
+CONFIG_GRUSBDC_O8	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	101;"	d
+CONFIG_GRUSBDC_O9	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	104;"	d
+CONFIG_GRUSBDC_UIFACE	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	10;"	d
+CONFIG_GRUSBDC_UIFACE	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	13;"	d
+CONFIG_GRUSBDC_UIFACE	workspace/libraries/grlib/lib/gaisler/usb/grusbdc.in.h	16;"	d
+CONFIG_GRUSBHC_BEDESC	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	42;"	d
+CONFIG_GRUSBHC_BEREGS	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	38;"	d
+CONFIG_GRUSBHC_BLO	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	34;"	d
+CONFIG_GRUSBHC_BWRD	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	46;"	d
+CONFIG_GRUSBHC_EHC	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	10;"	d
+CONFIG_GRUSBHC_ENABLE	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	2;"	d
+CONFIG_GRUSBHC_ENDIAN	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	30;"	d
+CONFIG_GRUSBHC_NCC	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	18;"	d
+CONFIG_GRUSBHC_NPCC	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	22;"	d
+CONFIG_GRUSBHC_NPORTS	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	6;"	d
+CONFIG_GRUSBHC_PORTROUTE1	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	145;"	d
+CONFIG_GRUSBHC_PORTROUTE2	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	150;"	d
+CONFIG_GRUSBHC_PR1	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	100;"	d
+CONFIG_GRUSBHC_PR10	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	127;"	d
+CONFIG_GRUSBHC_PR11	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	130;"	d
+CONFIG_GRUSBHC_PR12	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	133;"	d
+CONFIG_GRUSBHC_PR13	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	136;"	d
+CONFIG_GRUSBHC_PR14	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	139;"	d
+CONFIG_GRUSBHC_PR15	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	142;"	d
+CONFIG_GRUSBHC_PR2	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	103;"	d
+CONFIG_GRUSBHC_PR3	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	106;"	d
+CONFIG_GRUSBHC_PR4	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	109;"	d
+CONFIG_GRUSBHC_PR5	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	112;"	d
+CONFIG_GRUSBHC_PR6	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	115;"	d
+CONFIG_GRUSBHC_PR7	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	118;"	d
+CONFIG_GRUSBHC_PR8	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	121;"	d
+CONFIG_GRUSBHC_PR9	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	124;"	d
+CONFIG_GRUSBHC_PRR	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	26;"	d
+CONFIG_GRUSBHC_UHC	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	14;"	d
+CONFIG_GRUSBHC_UTMTYPE	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	50;"	d
+CONFIG_GRUSBHC_UTMTYPE	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	65;"	d
+CONFIG_GRUSBHC_UTMTYPE	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	80;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	53;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	55;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	59;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	61;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	68;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	70;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	74;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	76;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	82;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	85;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	87;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	89;"	d
+CONFIG_GRUSBHC_VBUSCONF	workspace/libraries/grlib/lib/gaisler/usb/grusbhc.in.h	96;"	d
+CONFIG_GRUSB_DCL	workspace/libraries/grlib/lib/gaisler/usb/grusb_dcl.in.h	2;"	d
+CONFIG_GRUSB_DCL_DW	workspace/libraries/grlib/lib/gaisler/usb/grusb_dcl.in.h	10;"	d
+CONFIG_GRUSB_DCL_DW	workspace/libraries/grlib/lib/gaisler/usb/grusb_dcl.in.h	13;"	d
+CONFIG_GRUSB_DCL_DW	workspace/libraries/grlib/lib/gaisler/usb/grusb_dcl.in.h	7;"	d
+CONFIG_GRUSB_DCL_UIFACE	workspace/libraries/grlib/lib/gaisler/usb/grusb_dcl.in.h	12;"	d
+CONFIG_GRUSB_DCL_UIFACE	workspace/libraries/grlib/lib/gaisler/usb/grusb_dcl.in.h	6;"	d
+CONFIG_GRUSB_DCL_UIFACE	workspace/libraries/grlib/lib/gaisler/usb/grusb_dcl.in.h	9;"	d
+CONFIG_I2CSLV_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/i2cslv.in.h	2;"	d
+CONFIG_I2CSLV_HARDADDR	workspace/libraries/grlib/lib/gaisler/misc/i2cslv.in.h	6;"	d
+CONFIG_I2CSLV_I2CADDR	workspace/libraries/grlib/lib/gaisler/misc/i2cslv.in.h	14;"	d
+CONFIG_I2CSLV_TENBIT	workspace/libraries/grlib/lib/gaisler/misc/i2cslv.in.h	10;"	d
+CONFIG_I2C_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/i2c.in.h	2;"	d
+CONFIG_ICACHE_ENABLE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	108;"	d
+CONFIG_ICACHE_ENABLE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	92;"	d
+CONFIG_ICACHE_LOCK	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	162;"	d
+CONFIG_ICACHE_LOCK	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	144;"	d
+CONFIG_ICACHE_LRAM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	166;"	d
+CONFIG_ICACHE_LRAM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	148;"	d
+CONFIG_ICACHE_LRSTART	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	170;"	d
+CONFIG_ICACHE_LRSTART	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	152;"	d
+CONFIG_IRQ3_ENABLE	workspace/libraries/grlib/lib/gaisler/leon3/irqmp.in.h	2;"	d
+CONFIG_IRQ3_NSEC	workspace/libraries/grlib/lib/gaisler/leon3/irqmp.in.h	5;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	328;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	331;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	334;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	337;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	340;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	372;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	308;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	311;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	314;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	317;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	320;"	d
+CONFIG_ITLBNUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	352;"	d
+CONFIG_IUFT_EN	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	416;"	d
+CONFIG_IUFT_EN	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	418;"	d
+CONFIG_IUFT_EN	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	420;"	d
+CONFIG_IUFT_EN	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	422;"	d
+CONFIG_IUFT_EN	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	424;"	d
+CONFIG_IUFT_EN	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	396;"	d
+CONFIG_IUFT_EN	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	398;"	d
+CONFIG_IUFT_EN	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	400;"	d
+CONFIG_IUFT_EN	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	402;"	d
+CONFIG_IUFT_EN	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	404;"	d
+CONFIG_IU_BP	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	56;"	d
+CONFIG_IU_BP	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	40;"	d
+CONFIG_IU_DISAS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	457;"	d
+CONFIG_IU_DISAS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	437;"	d
+CONFIG_IU_DISAS_NET	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	460;"	d
+CONFIG_IU_DISAS_NET	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	440;"	d
+CONFIG_IU_LDELAY	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	18;"	d
+CONFIG_IU_LDELAY	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	18;"	d
+CONFIG_IU_MUL_MAC	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	52;"	d
+CONFIG_IU_MUL_MAC	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	36;"	d
+CONFIG_IU_NWINDOWS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	10;"	d
+CONFIG_IU_NWINDOWS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	10;"	d
+CONFIG_IU_RSTADDR	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	14;"	d
+CONFIG_IU_RSTADDR	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	14;"	d
+CONFIG_IU_SVT	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	64;"	d
+CONFIG_IU_SVT	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	48;"	d
+CONFIG_IU_WATCHPOINTS	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	22;"	d
+CONFIG_IU_WATCHPOINTS	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	22;"	d
+CONFIG_KBD_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/ps2vga.in.h	8;"	d
+CONFIG_LEON3	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	2;"	d
+CONFIG_LEON3	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	2;"	d
+CONFIG_LEON3FT_EN	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	412;"	d
+CONFIG_LEON3FT_EN	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	392;"	d
+CONFIG_LEON3_NETLIST	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	448;"	d
+CONFIG_LEON3_NETLIST	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	428;"	d
+CONFIG_MMUEN	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	311;"	d
+CONFIG_MMUEN	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	371;"	d
+CONFIG_MMUEN	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	291;"	d
+CONFIG_MMUEN	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	351;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	297;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	299;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	301;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	303;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	305;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	307;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	277;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	279;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	281;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	283;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	285;"	d
+CONFIG_MMU_PAGE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	287;"	d
+CONFIG_NOTAG	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	60;"	d
+CONFIG_NOTAG	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	44;"	d
+CONFIG_OCLKB_DIV	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	43;"	d
+CONFIG_OCLKC_DIV	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	47;"	d
+CONFIG_OCLK_DIV	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	39;"	d
+CONFIG_PCI_CLKDLL	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	51;"	d
+CONFIG_PCI_CLKDLL	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	27;"	d
+CONFIG_PCI_DEVICEID	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	16;"	d
+CONFIG_PCI_REVID	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	20;"	d
+CONFIG_PCI_SYSCLK	workspace/libraries/grlib/lib/techmap/clocks/clkgen.in.h	55;"	d
+CONFIG_PCI_SYSCLK	workspace/libraries/grlib/lib/techmap/gencomp/clkgen.in.h	31;"	d
+CONFIG_PCI_TRACE	workspace/libraries/grlib/lib/gaisler/pci/pcitrace.in.h	2;"	d
+CONFIG_PCI_VENDORID	workspace/libraries/grlib/lib/gaisler/pci/pci.in.h	12;"	d
+CONFIG_PROC_NUM	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	6;"	d
+CONFIG_PROC_NUM	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	6;"	d
+CONFIG_PS2_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/ps2.in.h	2;"	d
+CONFIG_PWD	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	48;"	d
+CONFIG_PWD	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	32;"	d
+CONFIG_RF_ERRINJ	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	427;"	d
+CONFIG_RF_ERRINJ	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	407;"	d
+CONFIG_ROM_START	workspace/libraries/grlib/lib/gaisler/misc/ahbrom.in.h	14;"	d
+CONFIG_ROM_START	workspace/libraries/grlib/lib/gaisler/misc/ahbrom.in.h	16;"	d
+CONFIG_SDCTRL	workspace/libraries/grlib/lib/gaisler/memctrl/sdctrl.in.h	2;"	d
+CONFIG_SDCTRL_BUS64	workspace/libraries/grlib/lib/gaisler/memctrl/sdctrl.in.h	14;"	d
+CONFIG_SDCTRL_INVCLK	workspace/libraries/grlib/lib/gaisler/memctrl/sdctrl.in.h	10;"	d
+CONFIG_SDCTRL_PAGE	workspace/libraries/grlib/lib/gaisler/memctrl/sdctrl.in.h	18;"	d
+CONFIG_SDCTRL_PROGPAGE	workspace/libraries/grlib/lib/gaisler/memctrl/sdctrl.in.h	22;"	d
+CONFIG_SDCTRL_SEPBUS	workspace/libraries/grlib/lib/gaisler/memctrl/sdctrl.in.h	6;"	d
+CONFIG_SPICTRL_AM	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	20;"	d
+CONFIG_SPICTRL_ASEL	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	23;"	d
+CONFIG_SPICTRL_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	2;"	d
+CONFIG_SPICTRL_FIFO	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	11;"	d
+CONFIG_SPICTRL_FT	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	35;"	d
+CONFIG_SPICTRL_FT	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	37;"	d
+CONFIG_SPICTRL_FT	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	39;"	d
+CONFIG_SPICTRL_MAXWLEN	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	29;"	d
+CONFIG_SPICTRL_NUM	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	5;"	d
+CONFIG_SPICTRL_ODMODE	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	17;"	d
+CONFIG_SPICTRL_SLVREG	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	14;"	d
+CONFIG_SPICTRL_SLVS	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	8;"	d
+CONFIG_SPICTRL_SYNCRAM	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	32;"	d
+CONFIG_SPICTRL_TWEN	workspace/libraries/grlib/lib/gaisler/misc/spictrl.in.h	26;"	d
+CONFIG_SPIMCTRL	workspace/libraries/grlib/lib/gaisler/memctrl/spimctrl.in.h	3;"	d
+CONFIG_SPIMCTRL_ASCALER	workspace/libraries/grlib/lib/gaisler/memctrl/spimctrl.in.h	27;"	d
+CONFIG_SPIMCTRL_DUALOUTPUT	workspace/libraries/grlib/lib/gaisler/memctrl/spimctrl.in.h	19;"	d
+CONFIG_SPIMCTRL_DUMMYBYTE	workspace/libraries/grlib/lib/gaisler/memctrl/spimctrl.in.h	15;"	d
+CONFIG_SPIMCTRL_PWRUPCNT	workspace/libraries/grlib/lib/gaisler/memctrl/spimctrl.in.h	31;"	d
+CONFIG_SPIMCTRL_READCMD	workspace/libraries/grlib/lib/gaisler/memctrl/spimctrl.in.h	11;"	d
+CONFIG_SPIMCTRL_SCALER	workspace/libraries/grlib/lib/gaisler/memctrl/spimctrl.in.h	23;"	d
+CONFIG_SPIMCTRL_SDCARD	workspace/libraries/grlib/lib/gaisler/memctrl/spimctrl.in.h	7;"	d
+CONFIG_SPWRTR_AHBSLVEN	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	141;"	d
+CONFIG_SPWRTR_ALMOST	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	117;"	d
+CONFIG_SPWRTR_AMBAEN	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	71;"	d
+CONFIG_SPWRTR_AMBAPORTS	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	83;"	d
+CONFIG_SPWRTR_ARB	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	91;"	d
+CONFIG_SPWRTR_ARB	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	93;"	d
+CONFIG_SPWRTR_AUTOSCRUB	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	153;"	d
+CONFIG_SPWRTR_DMACHAN	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	137;"	d
+CONFIG_SPWRTR_ENABLE	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	2;"	d
+CONFIG_SPWRTR_FIFO2	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	105;"	d
+CONFIG_SPWRTR_FIFO2	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	107;"	d
+CONFIG_SPWRTR_FIFO2	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	109;"	d
+CONFIG_SPWRTR_FIFO2	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	111;"	d
+CONFIG_SPWRTR_FIFO2	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	113;"	d
+CONFIG_SPWRTR_FIFOEN	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	75;"	d
+CONFIG_SPWRTR_FIFOPORTS	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	87;"	d
+CONFIG_SPWRTR_FT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	57;"	d
+CONFIG_SPWRTR_FT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	59;"	d
+CONFIG_SPWRTR_FT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	61;"	d
+CONFIG_SPWRTR_FT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	63;"	d
+CONFIG_SPWRTR_INPUT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	10;"	d
+CONFIG_SPWRTR_INPUT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	12;"	d
+CONFIG_SPWRTR_INPUT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	14;"	d
+CONFIG_SPWRTR_INPUT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	6;"	d
+CONFIG_SPWRTR_INPUT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	8;"	d
+CONFIG_SPWRTR_OUTPUT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	18;"	d
+CONFIG_SPWRTR_OUTPUT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	20;"	d
+CONFIG_SPWRTR_OUTPUT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	22;"	d
+CONFIG_SPWRTR_OUTPUT	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	24;"	d
+CONFIG_SPWRTR_PNP	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	149;"	d
+CONFIG_SPWRTR_RMAP	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	97;"	d
+CONFIG_SPWRTR_RMAPBUF	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	125;"	d
+CONFIG_SPWRTR_RMAPBUF	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	127;"	d
+CONFIG_SPWRTR_RMAPBUF	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	129;"	d
+CONFIG_SPWRTR_RMAPBUF	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	131;"	d
+CONFIG_SPWRTR_RMAPBUF	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	133;"	d
+CONFIG_SPWRTR_RMAPCRC	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	101;"	d
+CONFIG_SPWRTR_RTSAME	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	28;"	d
+CONFIG_SPWRTR_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	32;"	d
+CONFIG_SPWRTR_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	34;"	d
+CONFIG_SPWRTR_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	36;"	d
+CONFIG_SPWRTR_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	38;"	d
+CONFIG_SPWRTR_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	40;"	d
+CONFIG_SPWRTR_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	42;"	d
+CONFIG_SPWRTR_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	44;"	d
+CONFIG_SPWRTR_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	46;"	d
+CONFIG_SPWRTR_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	48;"	d
+CONFIG_SPWRTR_RXUNAL	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	121;"	d
+CONFIG_SPWRTR_SPWEN	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	67;"	d
+CONFIG_SPWRTR_SPWPORTS	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	79;"	d
+CONFIG_SPWRTR_TECHFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	52;"	d
+CONFIG_SPWRTR_TIMERBITS	workspace/libraries/grlib/lib/gaisler/spacewire/router.in.h	145;"	d
+CONFIG_SPW_AHBFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	10;"	d
+CONFIG_SPW_AHBFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	12;"	d
+CONFIG_SPW_AHBFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	14;"	d
+CONFIG_SPW_AHBFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	16;"	d
+CONFIG_SPW_AHBFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	18;"	d
+CONFIG_SPW_AHBFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	20;"	d
+CONFIG_SPW_DMACHAN	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	72;"	d
+CONFIG_SPW_ENABLE	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	2;"	d
+CONFIG_SPW_FT	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	62;"	d
+CONFIG_SPW_GRSPW	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	66;"	d
+CONFIG_SPW_GRSPW	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	68;"	d
+CONFIG_SPW_INPUT	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	80;"	d
+CONFIG_SPW_INPUT	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	82;"	d
+CONFIG_SPW_INPUT	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	84;"	d
+CONFIG_SPW_INPUT	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	86;"	d
+CONFIG_SPW_INPUT	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	88;"	d
+CONFIG_SPW_NETLIST	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	58;"	d
+CONFIG_SPW_NUM	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	6;"	d
+CONFIG_SPW_OUTPUT	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	92;"	d
+CONFIG_SPW_OUTPUT	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	94;"	d
+CONFIG_SPW_OUTPUT	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	96;"	d
+CONFIG_SPW_OUTPUT	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	98;"	d
+CONFIG_SPW_PORTS	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	76;"	d
+CONFIG_SPW_RMAP	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	34;"	d
+CONFIG_SPW_RMAPBUF	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	38;"	d
+CONFIG_SPW_RMAPBUF	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	40;"	d
+CONFIG_SPW_RMAPBUF	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	42;"	d
+CONFIG_SPW_RMAPBUF	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	44;"	d
+CONFIG_SPW_RMAPBUF	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	46;"	d
+CONFIG_SPW_RMAPCRC	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	50;"	d
+CONFIG_SPW_RTSAME	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	102;"	d
+CONFIG_SPW_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	24;"	d
+CONFIG_SPW_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	26;"	d
+CONFIG_SPW_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	28;"	d
+CONFIG_SPW_RXFIFO	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	30;"	d
+CONFIG_SPW_RXUNAL	workspace/libraries/grlib/lib/gaisler/spacewire/spacewire.in.h	54;"	d
+CONFIG_SRCTRL	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	3;"	d
+CONFIG_SRCTRL_8BIT	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	23;"	d
+CONFIG_SRCTRL_IOWS	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	15;"	d
+CONFIG_SRCTRL_PROMWS	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	7;"	d
+CONFIG_SRCTRL_RAMWS	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	11;"	d
+CONFIG_SRCTRL_RMW	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	19;"	d
+CONFIG_SRCTRL_ROMASEL	workspace/libraries/grlib/lib/gaisler/memctrl/srctrl.in.h	28;"	d
+CONFIG_SSCTRL	workspace/libraries/grlib/lib/gaisler/memctrl/ssrctrl.in.h	2;"	d
+CONFIG_SSCTRL_PROM16	workspace/libraries/grlib/lib/gaisler/memctrl/ssrctrl.in.h	6;"	d
+CONFIG_SVGA_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/ps2vga.in.h	5;"	d
+CONFIG_SVGA_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/svgactrl.in.h	2;"	d
+CONFIG_SYN_NO_ASYNC	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	122;"	d
+CONFIG_SYN_SCAN	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	126;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	10;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	12;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	14;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	16;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	18;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	20;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	22;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	24;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	26;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	28;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	2;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	30;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	32;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	34;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	36;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	38;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	40;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	42;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	44;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	46;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	48;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	4;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	50;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	52;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	54;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	56;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	58;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	60;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	62;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	64;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	66;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	68;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	6;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	70;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	72;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	74;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	76;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	78;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	80;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	82;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	84;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	86;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	88;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	8;"	d
+CONFIG_SYN_TECH	workspace/libraries/grlib/lib/techmap/gencomp/tech.in.h	90;"	d
+CONFIG_TLB_REP	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	321;"	d
+CONFIG_TLB_REP	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	324;"	d
+CONFIG_TLB_REP	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	375;"	d
+CONFIG_TLB_REP	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	301;"	d
+CONFIG_TLB_REP	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	304;"	d
+CONFIG_TLB_REP	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	355;"	d
+CONFIG_TLB_TYPE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	314;"	d
+CONFIG_TLB_TYPE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	317;"	d
+CONFIG_TLB_TYPE	workspace/libraries/grlib/lib/gaisler/leon3/leon3.in.h	374;"	d
+CONFIG_TLB_TYPE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	294;"	d
+CONFIG_TLB_TYPE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	297;"	d
+CONFIG_TLB_TYPE	workspace/libraries/grlib/lib/gaisler/leon3ft/leon3net.in.h	354;"	d
+CONFIG_UART1_ENABLE	workspace/libraries/grlib/lib/gaisler/uart/uart1.in.h	2;"	d
+CONFIG_UART2_ENABLE	workspace/libraries/grlib/lib/gaisler/uart/uart2.in.h	2;"	d
+CONFIG_VGA_ENABLE	workspace/libraries/grlib/lib/gaisler/misc/ps2vga.in.h	2;"	d
+COUNTER_BASE	VHDL/ext_modules/ext_counter/driver/counter.c	10;"	d	file:
+COUNTER_CONFIG_C	VHDL/ext_modules/ext_counter/driver/counter.c	12;"	d	file:
+COUNTER_STATUS	VHDL/ext_modules/ext_counter/driver/counter.c	11;"	d	file:
+COUNTER_VALUE	VHDL/ext_modules/ext_counter/driver/counter.c	13;"	d	file:
+DIFF_BANK	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    parameter DIFF_BANK  = 2'd1; \/\/ different bank, same group$/;"	c
+DIFF_GROUP	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    parameter DIFF_GROUP = 2'd2; \/\/ different bank, different group$/;"	c
+DISP7SEG_BADDR	workspace/hwsw_de2-115/testapp/src/main.c	11;"	d	file:
+I2C_ADR	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	parameter I2C_ADR = 7'b101_0000;$/;"	c
+INCLUDE	workspace/hwsw_de2-115/testapp/Makefile	/^INCLUDE=-Iinclude$/;"	m
+KEY1	workspace/hwsw_de2-115/testapp/include/buttons.h	/^typedef enum {KEY1,KEY2,KEY3} keys_t;$/;"	e	enum:__anon1
+KEY2	workspace/hwsw_de2-115/testapp/include/buttons.h	/^typedef enum {KEY1,KEY2,KEY3} keys_t;$/;"	e	enum:__anon1
+KEY3	workspace/hwsw_de2-115/testapp/include/buttons.h	/^typedef enum {KEY1,KEY2,KEY3} keys_t;$/;"	e	enum:__anon1
+KEY_MATRIX_BADDR	VHDL/ext_modules/ext_key_matrix/driver/key_matrix.h	7;"	d
+KEY_MATRIX_CONFIG	VHDL/ext_modules/ext_key_matrix/driver/key_matrix.h	11;"	d
+KEY_MATRIX_CONFIG_BADDR	VHDL/ext_modules/ext_key_matrix/driver/key_matrix.h	10;"	d
+KEY_MATRIX_CONFIG_BOFF	VHDL/ext_modules/ext_key_matrix/driver/key_matrix.h	9;"	d
+KEY_MATRIX_CONFIG_INTA	VHDL/ext_modules/ext_key_matrix/driver/key_matrix.h	12;"	d
+KEY_MATRIX_PRESSED_KEY	VHDL/ext_modules/ext_key_matrix/driver/key_matrix.h	15;"	d
+KEY_MATRIX_PRESSED_KEY_BOFF	VHDL/ext_modules/ext_key_matrix/driver/key_matrix.h	14;"	d
+LDFLAGS	workspace/hwsw_de2-115/testapp/Makefile	/^LDFLAGS=-Wl,--nmagic,--no-check-sections,--strip-all,-Tspear32-de2-115.ld$/;"	m
+LIBS	workspace/hwsw_de2-115/testapp/Makefile	/^LIBS=-lspeardrivers$/;"	m
+NUM_HEX_CHARS_PER_BYTE	workspace/hwsw_de2-115/bootloader/main.c	36;"	d	file:
+OBJCOPY	workspace/hwsw_de2-115/testapp/Makefile	/^OBJCOPY=spear32-objcopy$/;"	m
+OBJDUMP	workspace/hwsw_de2-115/testapp/Makefile	/^OBJDUMP=spear32-objdump$/;"	m
+OBJECTS	workspace/hwsw_de2-115/testapp/Makefile	/^OBJECTS=$(SOURCES:.c=.o)$/;"	m
+PROGRAM	workspace/hwsw_de2-115/testapp/Makefile	/^PROGRAM=main$/;"	m
+SAME_BANK	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    parameter SAME_BANK  = 2'd0; \/\/ same bank, same group$/;"	c
+SCARTS_ADDR_CTYPE	workspace/hwsw_de2-115/bootloader/main.c	26;"	d	file:
+SCARTS_ADDR_CTYPE	workspace/hwsw_de2-115/bootloader/main.c	29;"	d	file:
+SCARTS_BOOTMEM_LMA	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	5;"	d
+SCARTS_BOOTMEM_SIZE	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	6;"	d
+SCARTS_BOOTMEM_VMA	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	4;"	d
+SCARTS_CODEMEM_LMA	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	8;"	d
+SCARTS_CODEMEM_SIZE	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	9;"	d
+SCARTS_CODEMEM_VMA	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	7;"	d
+SCARTS_DATAMEM_LMA	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	11;"	d
+SCARTS_DATAMEM_SIZE	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	12;"	d
+SCARTS_DATAMEM_VMA	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	10;"	d
+SCARTS_INSN_SIZE	workspace/hwsw_de2-115/bootloader/main.c	34;"	d	file:
+SCARTS_WORD_SIZE	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	13;"	d
+SOURCES	workspace/hwsw_de2-115/testapp/Makefile	/^SOURCES=src\/main.c \\$/;"	m
+SREC_FIELD_ADDRESS_OFFSET	workspace/hwsw_de2-115/bootloader/main.c	41;"	d	file:
+SREC_FIELD_CHECKSUM_LEN	workspace/hwsw_de2-115/bootloader/main.c	42;"	d	file:
+SREC_FIELD_LENGTH_LEN	workspace/hwsw_de2-115/bootloader/main.c	39;"	d	file:
+SREC_FIELD_LENGTH_OFFSET	workspace/hwsw_de2-115/bootloader/main.c	40;"	d	file:
+SREC_FIELD_TYPE_OFFSET	workspace/hwsw_de2-115/bootloader/main.c	38;"	d	file:
+SREC_MAX_LINE_LEN	workspace/hwsw_de2-115/bootloader/main.c	37;"	d	file:
+SREC_TYPE_DATA2	workspace/hwsw_de2-115/bootloader/main.c	44;"	d	file:
+SREC_TYPE_DATA2_TERM	workspace/hwsw_de2-115/bootloader/main.c	45;"	d	file:
+SREC_TYPE_DATA4	workspace/hwsw_de2-115/bootloader/main.c	46;"	d	file:
+SREC_TYPE_DATA4_TERM	workspace/hwsw_de2-115/bootloader/main.c	47;"	d	file:
+SREC_TYPE_HEADER	workspace/hwsw_de2-115/bootloader/main.c	43;"	d	file:
+VGATEXT_BADDR	workspace/hwsw_de2-115/testapp/src/main.c	12;"	d	file:
+__EXT_KEY_MATRIX_H__	VHDL/ext_modules/ext_key_matrix/driver/key_matrix.h	5;"	d
+__SIM_SCARTS_32_H__	workspace/hwsw_de2-115/bootloader/gdb/sim-scarts_32.h	2;"	d
+acc_done	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	wire      acc_done;  \/\/ 8bits transfered$/;"	n
+addr	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [ADDR_BITS-1:0] addr;$/;"	p
+addr	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [`MAX_BITS-1:0] addr;$/;"	p
+addr	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg    [`MAX_BITS-1:0] addr;$/;"	r
+address	workspace/hwsw_de2-115/bootloader/main.c	/^  SCARTS_ADDR_CTYPE address;$/;"	m	struct:__anon2	file:
+address_length	workspace/hwsw_de2-115/bootloader/main.c	/^  uint8_t           address_length;$/;"	m	struct:__anon2	file:
+ba	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg [BA_BITS-1:0] ba;$/;"	r
+bank	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input  [BA_BITS-1:0]  bank;$/;"	p
+bank	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [BA_BITS-1:0] bank;$/;"	p
+bank	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        integer bank;$/;"	r
+bank	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg [BA_BITS-1:0] bank;$/;"	r
+banks	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input  [`BANKS-1:0] banks; \/\/one select bit per bank$/;"	p
+bit_cnt	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg [2:0] bit_cnt;   \/\/ 3bit downcounter$/;"	r
+bit_mask	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg [63:0] bit_mask;$/;"	r
+char_to_int	workspace/hwsw_de2-115/bootloader/main.c	/^char_to_int (char c)$/;"	f	file:
+chk_err	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task chk_err;$/;"	t
+cke	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input cke;$/;"	p
+cmd	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [2:0] cmd;$/;"	p
+cmd	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [3:0] cmd;$/;"	p
+cmd_addr_timing_check	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task cmd_addr_timing_check;$/;"	t
+cmd_task	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task cmd_task;$/;"	t
+code	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        integer code;$/;"	r
+col	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input  [COL_BITS-1:0] col;$/;"	p
+col	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg [COL_BITS-1:0] col;$/;"	r
+counter_getValue	VHDL/ext_modules/ext_counter/driver/counter.c	/^uint32_t counter_getValue()$/;"	f
+counter_reset	VHDL/ext_modules/ext_counter/driver/counter.c	/^void counter_reset()$/;"	f
+counter_resume	VHDL/ext_modules/ext_counter/driver/counter.c	/^void counter_resume()$/;"	f
+counter_start	VHDL/ext_modules/ext_counter/driver/counter.c	/^void counter_start()$/;"	f
+counter_stop	VHDL/ext_modules/ext_counter/driver/counter.c	/^void counter_stop()$/;"	f
+d_sta	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg sta, d_sta;$/;"	r
+d_sto	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg sto, d_sto;$/;"	r
+data	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	parameter data        = 3'b100;$/;"	c
+data	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input  [BL_MAX*DQ_BITS-1:0] data;$/;"	p
+data	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [RFF_BITS:1] data $/;"	p
+data	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        output [BL_MAX*DQ_BITS-1:0] data;$/;"	p
+data_ack	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	parameter data_ack    = 3'b101;$/;"	c
+data_task	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task data_task;$/;"	t
+ddr3	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^module ddr3 ($/;"	m
+debug	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	wire debug = 1'b0;$/;"	n
+display_handle	workspace/hwsw_de2-115/testapp/src/main.c	/^static dis7seg_handle_t display_handle;$/;"	v	file:
+dm_timing_check	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task dm_timing_check;$/;"	t
+dq_timing_check	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task dq_timing_check;$/;"	t
+dqs_even_receiver	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task dqs_even_receiver;$/;"	t
+dqs_neg_timing_check	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task dqs_neg_timing_check;$/;"	t
+dqs_odd_receiver	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task dqs_odd_receiver;$/;"	t
+dqs_pos_timing_check	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task dqs_pos_timing_check;$/;"	t
+erase_banks	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task erase_banks;$/;"	t
+err	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg err;$/;"	r
+fast_scl_high	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            fast_scl_high =  600,$/;"	c
+fast_scl_low	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            fast_scl_low  = 1300,$/;"	c
+fast_tbuf	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            fast_tbuf     = 1300;$/;"	c
+fast_thd_sta	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            fast_thd_sta  =  600,$/;"	c
+fast_tsu_sta	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            fast_tsu_sta  = 1300,$/;"	c
+fast_tsu_sto	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            fast_tsu_sto  =  600,$/;"	c
+fromcmd	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [3:0] fromcmd;$/;"	p
+getKeys	workspace/hwsw_de2-115/testapp/src/buttons.c	/^uint32_t getKeys(void)$/;"	f
+get_index	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    function get_index;$/;"	f
+get_mem_adr	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	parameter get_mem_adr = 3'b010;$/;"	c
+gma_ack	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	parameter gma_ack     = 3'b011;$/;"	c
+group	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg group;$/;"	r
+i	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [3:0] i;$/;"	p
+i	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        integer i;$/;"	r
+i	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg [`BANKS:0] i;$/;"	r
+i	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg [`MAX_BITS-1:0] i;$/;"	r
+i	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    input i;$/;"	p
+i	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    reg [3:0] i;$/;"	r
+i	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    reg [4:0] i;$/;"	r
+i	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    reg [5:0] i;$/;"	r
+i2c_reset	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	wire      i2c_reset; \/\/ i2c-statemachine reset$/;"	n
+i2c_slave_model	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^module i2c_slave_model (scl, sda);$/;"	m
+idle	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	parameter idle        = 3'b000;$/;"	c
+initialize	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task initialize;$/;"	t
+integer	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input integer fd, $/;"	p
+integer	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input integer index, $/;"	p
+j	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        integer j;$/;"	r
+j	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    reg [3:0] j;$/;"	r
+keys_t	workspace/hwsw_de2-115/testapp/include/buttons.h	/^typedef enum {KEY1,KEY2,KEY3} keys_t;$/;"	t	typeref:enum:__anon1
+ld	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg       ld;        \/\/ load downcounter$/;"	r
+length	workspace/hwsw_de2-115/bootloader/main.c	/^  uint8_t           length;$/;"	m	struct:__anon2	file:
+main	workspace/hwsw_de2-115/bootloader/main.c	/^int main (int argc, char *argv[])$/;"	f
+main	workspace/hwsw_de2-115/testapp/src/main.c	/^int main (int argc, char *argv[])$/;"	f
+mem	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg [7:0] mem [3:0]; \/\/ initiate memory$/;"	r
+mem_adr	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg [7:0] mem_adr;   \/\/ memory address$/;"	r
+mem_do	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg [7:0] mem_do;    \/\/ memory data output$/;"	r
+memory_read	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task memory_read;$/;"	t
+memory_write	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task memory_write;$/;"	t
+mode_reg0	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [ADDR_BITS-1:0] mode_reg0;$/;"	p
+mode_reg1	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [ADDR_BITS-1:0] mode_reg1;$/;"	p
+mode_reg2	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [ADDR_BITS-1:0] mode_reg2;$/;"	p
+mode_reg3	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [ADDR_BITS-1:0] mode_reg3;$/;"	p
+my_adr	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	wire      my_adr;    \/\/ my address called ??$/;"	n
+normal_scl_high	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            normal_scl_high = 4000,$/;"	c
+normal_scl_low	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	  specparam normal_scl_low  = 4700,$/;"	c
+normal_tbuf	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            normal_tbuf     = 4700,$/;"	c
+normal_thd_sta	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            normal_thd_sta  = 4000,$/;"	c
+normal_tsu_sta	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            normal_tsu_sta  = 4700,$/;"	c
+normal_tsu_sto	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	            normal_tsu_sto  = 4000,$/;"	c
+offset	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        integer offset;$/;"	r
+payload_num_bytes	workspace/hwsw_de2-115/bootloader/main.c	/^  uint8_t           payload_num_bytes;$/;"	m	struct:__anon2	file:
+payload_offset	workspace/hwsw_de2-115/bootloader/main.c	/^  uint8_t           payload_offset;$/;"	m	struct:__anon2	file:
+program_codemem	workspace/hwsw_de2-115/bootloader/main.c	/^program_codemem (srecord_t *srec, char *buffer)$/;"	f	file:
+program_datamem	workspace/hwsw_de2-115/bootloader/main.c	/^program_datamem (srecord_t *srec, char *buffer)$/;"	f	file:
+relationship	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input [1:0] relationship;$/;"	p
+reset_task	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task reset_task;$/;"	t
+row	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        input  [ROW_BITS-1:0] row;$/;"	p
+row	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg [ROW_BITS-1:0] row;$/;"	r
+rw	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg       rw;        \/\/ read\/write direction$/;"	r
+scl	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	input scl;$/;"	p
+sda	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	inout sda;$/;"	p
+sda_dly	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	wire      sda_dly;   \/\/ delayed version of sda$/;"	n
+sda_o	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg       sda_o;     \/\/ sda-drive level$/;"	r
+set_latency	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task set_latency;$/;"	t
+size	workspace/hwsw_de2-115/bootloader/main.c	/^  uint8_t           size;$/;"	m	struct:__anon2	file:
+slave_ack	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	parameter slave_ack   = 3'b001;$/;"	c
+sr	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg [7:0] sr;        \/\/ 8bit shift register$/;"	r
+srecord_t	workspace/hwsw_de2-115/bootloader/main.c	/^} srecord_t;$/;"	t	typeref:struct:__anon2	file:
+sta	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg sta, d_sta;$/;"	r
+state	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg [2:0] state; \/\/ synopsys enum_state$/;"	r
+sto	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	reg sto, d_sto;$/;"	r
+tfaw_cntr	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^        reg [`BANKS:0] tfaw_cntr;$/;"	r
+tst_sta	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	wire tst_sta = sta;$/;"	n
+tst_sto	workspace/libraries/grlib/lib/gaisler/sim/i2c_slave_model.v	/^	wire tst_sto = sto;$/;"	n
+type	workspace/hwsw_de2-115/bootloader/main.c	/^  uint8_t           type;$/;"	m	struct:__anon2	file:
+write_to_file	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^    task write_to_file( $/;"	t
+x16	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^`define x16$/;"	c
+x1Gb	workspace/libraries/grlib/lib/micron/ddr/ddr3.v	/^`define x1Gb$/;"	c
