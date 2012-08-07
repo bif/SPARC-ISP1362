@@ -1,0 +1,40 @@
+# git lst ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+*.[oa]
+*~
+*.rpt
+*.summary
+*.done
+*.pin
+*.sof
+*.bak
+PLLJ_PLLSPE_INFO.txt
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/db/
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/incremental_db/
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/simulation/
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/top.psf
+sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/*/
+*.aux
+*.log
+*.out
+*.toc
+*.swp
+*.orig
+sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/.nfs*
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/top.cdf
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/top.dpf
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/top.frf
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/top.map.smsg
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/top.srf
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/top.tis_db_list.ddb
+transcript
+*.srec
+*.tga
+sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/vsim.wlf
+sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/modelsim.ini
+sparc_usb_ISP1362/workspace/hwsw_de2-115/quartus/greybox_tmp/*
+sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/dumpdata.txt
+
+
