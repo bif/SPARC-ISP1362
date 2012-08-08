@@ -45,7 +45,7 @@ case $2 in
                 stty -F $COM --all
         ;;
         *)
-                echo "Usage: $0 (init|listen|write|status) [filename]"
+                echo "Usage: $0 (lab|home) (init|listen|write|status) [filename]"
         ;;
 esac
 
