@@ -71,7 +71,16 @@ entity top is
     -- Pushbuttons
     key1        : in std_logic; 
     key2        : in std_logic;
-    key3        : in std_logic
+    key3        : in std_logic;
+		-- ISP1362 - usb controler
+		USB_DATA	: inout std_logic_vector (15 downto 0);
+		USB_ADDR	: out std_logic_vector (1 downto 0); 
+		USB_RD_N	: out std_logic;
+		USB_WR_N	: out std_logic;
+		USB_CS_N	: out std_logic;
+		USB_RST_N	: out std_logic;
+		USB_INT0	: in std_logic;
+		USB_INT1	: in std_logic
 
   );
 end top;
@@ -91,7 +100,11 @@ architecture behaviour of top is
 
   signal clk         : std_logic;
 
-  -- pushbuttom
+	-- ISP1362 
+	signal usb_sel	: std_logic;
+  signal usb_exto	: module_output_type;
+
+  -- pushbuttons
   signal pushbutton_sel	: std_ulogic;
   signal pushbutton_exto	: module_out_type;
 
@@ -105,7 +118,7 @@ architecture behaviour of top is
   
   -- signals for AHB slaves and APB slaves
   signal ahbmi            : ahb_master_in_type;
-  signal scarts_ahbmo      : ahb_master_out_type;
+  signal scarts_ahbmo     : ahb_master_out_type;
   signal grlib_ahbmi      : ahb_mst_in_type;
   signal grlib_ahbmo      : ahb_mst_out_vector;
   signal ahbsi            : ahb_slv_in_type;
@@ -372,8 +385,44 @@ begin
   -----------------------------------------------------------------------------
   -- Scarts extension modules
   -----------------------------------------------------------------------------
-    
-  dis7seg_unit: ext_dis7seg
+  ISP1362_usb_unit: ext_ISP1362
+	port map(
+    clk        => clk,
+    extsel     => usb_sel,
+    exti       => exti,
+    exto       => usb_exto,
+		-- slave hc
+		avs_hc_writedata_iDATA		: in std_logic_vector (15 downto 0);
+		avs_hc_address_iADDR			: in std_logic;
+		avs_hc_read_n_iRD_N 			: in std_logic;
+		avs_hc_write_n_iWR_N			: in std_logic;
+		avs_hc_chipselect_n_iCS_N	: in std_logic;
+		avs_hc_reset_n_iRST_N			: in std_logic;
+		avs_hc_clk_iCLK						: in std_logic;
+		avs_hc_readdata_oDATA			: out std_logic_vector (15 downto 0);
+		avs_hc_irq_n_oINT0_N			: out std_logic;
+		-- slave dc
+		avs_dc_writedata_iDATA		: in std_logic_vector (15 downto 0);
+		avs_dc_address_iADDR			: in std_logic;
+		avs_dc_read_n_iRD_N				: in std_logic;
+		avs_dc_write_n_iWR_N			: in std_logic;
+		avs_dc_chipselect_n_iCS_N	: in std_logic;
+		avs_dc_reset_n_iRST_N			: in std_logic;
+		avs_dc_clk_iCLK						: in std_logic;
+		avs_dc_readdata_oDATA			: out std_logic_vector (15 downto 0);
+		avs_dc_irq_n_oINT0_N			: out std_logic;
+		-- ISP1362 Side
+		USB_DATA		=> USB_DATA; 	
+		USB_ADDR		=> USB_ADDR;
+		USB_RD_N		=> USB_RD_N;							
+		USB_WR_N		=> USB_WR_N;
+		USB_CS_N		=> USB_CS_N;
+		USB_RST_N		=> USB_RST_N;
+		USB_INT0		=> USB_INT0;
+		USB_INT1		=> USB_INT1
+	); 
+
+	dis7seg_unit: ext_dis7seg
     generic map (
       DIGIT_COUNT => 8,
       MULTIPLEXED => 0)
@@ -385,7 +434,7 @@ begin
       digits     => digits,
       DisEna     => open,
       PIN_select => open
-      );
+    );
 
   pushbutton_unit: ext_pushbutton
     port map(

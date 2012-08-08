@@ -17,10 +17,10 @@
 
 
 -----------------------------------------------------------------------
--- Title      : Extension Module for the USB chip ISP1362 on fpga board 
---				DE2-115 
--- Project    : SCARTS - Scalable Processor for Embedded Applications 
---              in Realtime Environment
+-- Title:			Extension Module for the USB chip ISP1362 on fpga board 
+--						DE2-115 
+-- Project:		SCARTS - Scalable Processor for Embedded Applications 
+--            in Realtime Environment
 -----------------------------------------------------------------------
  
 -----------------------------------------------------------------------
@@ -40,73 +40,104 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 use work.scarts_pkg.all;
-use work.pkg_pushbutton.all;
 use work.pkg_ISP1362.all;
 
+---------------------------------------------------------------------
+-- architecture
+---------------------------------------------------------------------
 architecture behaviour of ext_ISP1362 is
 
-subtype byte is std_logic_vector(7 downto 0);
-type register_set is array (0 to 7) of byte;
+---------------------------------------------------------------------
+-- define type for extension module register set  
+---------------------------------------------------------------------
+subtype ext_register is std_logic_vector(7 downto 0);
+type register_set is array (0 to 9) of ext_register;
 
-
--- register 0 = STATUSREG, register 2 = CONFIGREG
--- register 1 = STATUSREG customer, register 3 = CONFIGREG customer
-constant STATUSREG_CUST : integer := 1;
-constant CONFIGREG_CUST : integer := 3;
-
+---------------------------------------------------------------------
+-- define constants 
+---------------------------------------------------------------------
 constant HIGH_IMPENDANT	: std_logic_vector := "ZZZZZZZZZZZZZZZZ";
 
-type reg_type is record
-  ifacereg   : register_set;
-end record;
+-- DC control & status registers
+constant STATUSREG_CUST		: integer	:= 2;
+constant CONFIGREG_CUST		:	integer	:= 3;
+
+-- DC data registers
+constant DC_DATA_IN_LOW		: integer	:= 4;
+constant DC_DATA_IN_HIGH	:	integer	:= 5;
+constant DC_DATA_OUT_LOW	: integer	:= 6;
+constant DC_DATA_OUT_HIGH	:	integer	:= 7;
+
+-- indicies - flags of DC_CONTROL_REG 
+constant avs_dc_address_iADDR				: integer := 0;
+constant avs_dc_read_n_iRD_N				: integer := 1;
+constant avs_dc_write_n_iWR_N				: integer := 2;
+constant avs_dc_chipselect_n_iCS_N	: integer := 3;
+constant avs_dc_reset_n_iRST_N			: integer := 4;
+constant avs_dc_clk_iCLK						: integer := 5;
+constant avs_dc_irq_n_oINT0_N				: integer := 6;
 
 
-signal r_next : reg_type;
-signal r : reg_type := 
-  (
-    ifacereg => (others => (others => '0'))
-  ); 
+---------------------------------------------------------------------
+-- define signals 
+---------------------------------------------------------------------
+signal r_next : register_set;
+signal r : register_set := (others => (others => '0'));
+   
 signal rstint : std_ulogic;
 
--- signals for ISP1362
---TODO
-
 begin -- behaviour
+	------------------------------------------------------------------
+  -- sync process
+	------------------------------------------------------------------
+  reg : process(clk, rstint)
+  begin
+    if rising_edge(clk) then 
+      if rstint = RST_ACT then
+        r <= (others => (others => '0'));
+      else
+        r(STATUSREG) <= r_next(STATUSREG);
+				r(CONFIGREG) <= r_ext(CONFIGREG);
+      end if;
+    end if;
+  end process;
 
+	------------------------------------------------------------------
   -- extension module process
-  comb : process(r, exti, extsel, button1, button2, button2, buttons)
-    variable v : reg_type;
+	------------------------------------------------------------------
+  comb : process(r, exti, extsel, USB_DATA, USB_INT0, USB_INT1)
+    variable v : register_set;
   begin
     v := r;
         
     -- write memory mapped addresses
-    if ((extsel = '1') and (exti.write_en = '1')) then
+		if ((extsel = '1') and (exti.write_en = '1')) then
       case exti.addr(4 downto 2) is
         when "000" =>
           if ((exti.byte_en(0) = '1') or (exti.byte_en(1) = '1')) then
-            -- first two bytes are status and config register
-            v.ifacereg(STATUSREG)(STA_INT) := '1';
-            v.ifacereg(CONFIGREG)(CONF_INTA) :='0';
+            -- TODO which bits have to be written? 
+            v(STATUSREG)(STA_INT) := '1';
+            v(CONFIGREG)(CONF_INTA) :='0';
           else
             if ((exti.byte_en(2) = '1')) then
-              v.ifacereg(2) := exti.data(23 downto 16);
+              v(STATUSREG_CUST) := exti.data(23 downto 16);
             end if;
             if ((exti.byte_en(3) = '1')) then
-              v.ifacereg(3) := exti.data(31 downto 24);
+              v(CONFIGREG_CUST) := exti.data(31 downto 24);
             end if;
           end if;
         when "001" =>
           if ((exti.byte_en(0) = '1')) then
-            v.ifacereg(4) := exti.data(7 downto 0);
+            v(DC_DATA_IN_LOW) := exti.data(7 downto 0);
           end if;
           if ((exti.byte_en(1) = '1')) then
-            v.ifacereg(5) := exti.data(15 downto 8);
+            v(DC_DATA_IN_HIGH) := exti.data(15 downto 8);
           end if;
           if ((exti.byte_en(2) = '1')) then
-            v.ifacereg(6) := exti.data(23 downto 16);
+            v(DC_DATA_OUT_LOW) := exti.data(23 downto 16);
           end if;
           if ((exti.byte_en(3) = '1')) then
-            v.ifacereg(7) := exti.data(31 downto 24);
+            v(DC_DATA_OUT_HIGH) := exti.data(31 downto 24);
           end if;
         when others =>
           null;
@@ -170,20 +201,6 @@ begin -- behaviour
     r_next <= v;
   end process;
 
-  -- sync process
-  reg : process(clk, rstint)
-  begin
-    if rising_edge(clk) then 
-      if rstint = RST_ACT then
-        r.ifacereg <= (others => (others => '0'));
-        buttons <= (others => '1'); -- '1' because buttons low activ
-      else
-        r <= r_next;
-        buttons(1) <= button1;
-        buttons(2) <= button2;
-        buttons(3) <= button3;
-      end if;
-    end if;
-  end process;
+
 
 end behaviour;

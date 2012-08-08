@@ -57,8 +57,8 @@ entity ext_pushbutton is
     -- Module Specific Ports
     ------------------------------------------------------------------
     button1			: in std_logic;
-	button2			: in std_logic;
-	button3			: in std_logic
+		button2			: in std_logic;
+		button3			: in std_logic
 		
 --		sw0 	  		: in std_logic;
 --		sw1 	  		: in std_logic;
@@ -69,7 +69,7 @@ entity ext_pushbutton is
 --		sw6 	  		: in std_logic;
 --		sw7	    		: in std_logic;
 --		sw8     		: in std_logic;
---		sw9		   	  	: in std_logic;
+--		sw9		   	  : in std_logic;
 --		sw10	  		: in std_logic;
 --		sw11	  		: in std_logic;
 --		sw12	  		: in std_logic;

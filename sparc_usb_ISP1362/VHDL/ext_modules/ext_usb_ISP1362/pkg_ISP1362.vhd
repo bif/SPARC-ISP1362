@@ -48,54 +48,29 @@ use work.scarts_pkg.all;
 package pkg_ISP1362 is
   
   component ext_ISP1362
-    port (
-    ------------------------------------------------------------------
-    -- Generic Ports
-    ------------------------------------------------------------------
-    clk        : in  std_logic;
-    extsel     : in  std_ulogic;
-    exti       : in  module_in_type;
-    exto       : out module_out_type;
-    ------------------------------------------------------------------
-    -- Module Specific Ports
-    ------------------------------------------------------------------
-
-	-- to SPARC
-		-- slave hc
-	avs_hc_writedata_iDATA		in std_logic_vector (15 downto 0);
-	avs_hc_address_iADDR		in std_logic;
-	avs_hc_read_n_iRD_N 		in std_logic;
-	avs_hc_write_n_iWR_N		in std_logic;
-	avs_hc_chipselect_n_iCS_N	in std_logic;
-	avs_hc_reset_n_iRST_N		in std_logic;
-	avs_hc_clk_iCLK				in std_logic;
-	avs_hc_readdata_oDATA		out std_logic_vector (15 downto 0);
-	avs_hc_irq_n_oINT0_N		out std_logic;
-		-- slave dc
-	avs_dc_writedata_iDATA		in std_logic_vector (15 downto 0);
-	avs_dc_address_iADDR		in std_logic;
-	avs_dc_read_n_iRD_N			in std_logic;
-	avs_dc_write_n_iWR_N		in std_logic;
-	avs_dc_chipselect_n_iCS_N	in std_logic;
-	avs_dc_reset_n_iRST_N		in std_logic;
-	avs_dc_clk_iCLK				in std_logic;
-	avs_dc_readdata_oDATA		out std_logic_vector (15 downto 0);
-	avs_dc_irq_n_oINT0_N		out std_logic;
-
-	-- ISP1362 Side
-	USB_DATA	inout std_logic_vector (15 downto 0);
-	USB_ADDR	out std_logic_vector (1 downto 0); 
-	USB_RD_N	out std_logic;
-	USB_WR_N	out std_logic;
-	USB_CS_N	out std_logic;
-	USB_RST_N	out std_logic;
-	USB_INT0	in std_logic;
-	USB_INT1	in std_logic
-  );
+		port (
+			------------------------------------------------------------------
+			-- Generic Ports
+			------------------------------------------------------------------
+			clk        : in  std_logic;
+			extsel     : in  std_ulogic;
+			exti       : in  module_in_type;
+			exto       : out module_out_type;
+			------------------------------------------------------------------
+			-- Module Specific Ports
+			------------------------------------------------------------------
+			USB_DATA	: inout std_logic_vector (15 downto 0);
+			USB_ADDR	: out std_logic_vector (1 downto 0); 
+			USB_RD_N	: out std_logic;
+			USB_WR_N	: out std_logic;
+			USB_CS_N	: out std_logic;
+			USB_RST_N	: out std_logic;
+			USB_INT0	: in std_logic;
+			USB_INT1	: in std_logic
+		);
 end component;
 
 end pkg_ISP1362;
-
 
 ---------------------------------------------------------------------
 -- END PACKAGE
