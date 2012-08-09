@@ -65,8 +65,7 @@ package pkg_ISP1362 is
 			USB_WR_N	: out std_logic;
 			USB_CS_N	: out std_logic;
 			USB_RST_N	: out std_logic;
-			USB_INT0	: in std_logic;
-			USB_INT1	: in std_logic
+			USB_INT2	: in std_logic
 		);
 end component;
 

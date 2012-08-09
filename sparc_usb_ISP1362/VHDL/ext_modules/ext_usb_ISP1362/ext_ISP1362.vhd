@@ -51,7 +51,7 @@ architecture behaviour of ext_ISP1362 is
 -- define type for extension module register set  
 ---------------------------------------------------------------------
 subtype ext_register is std_logic_vector(7 downto 0);
-type register_set is array (0 to 9) of ext_register;
+type register_set is array (0 to 7) of ext_register;
 
 ---------------------------------------------------------------------
 -- define constants 
@@ -63,10 +63,10 @@ constant STATUSREG_CUST		: integer	:= 2;
 constant CONFIGREG_CUST		:	integer	:= 3;
 
 -- DC data registers
-constant DC_DATA_IN_LOW		: integer	:= 4;
-constant DC_DATA_IN_HIGH	:	integer	:= 5;
-constant DC_DATA_OUT_LOW	: integer	:= 6;
-constant DC_DATA_OUT_HIGH	:	integer	:= 7;
+constant DC_READ_DATA_LOW		: integer	:= 4;
+constant DC_READ_DATA_HIGH	:	integer	:= 5;
+constant DC_WRITE_DATA_LOW	: integer	:= 6;
+constant DC_WRITE_DATA_HIGH	:	integer	:= 7;
 
 -- indicies - flags of DC_CONTROL_REG 
 constant avs_dc_address_iADDR				: integer := 0;
@@ -75,7 +75,7 @@ constant avs_dc_write_n_iWR_N				: integer := 2;
 constant avs_dc_chipselect_n_iCS_N	: integer := 3;
 constant avs_dc_reset_n_iRST_N			: integer := 4;
 constant avs_dc_clk_iCLK						: integer := 5;
-constant avs_dc_irq_n_oINT0_N				: integer := 6;
+constant avs_dc_irq_n_oINT1_N				: integer := 6;
 
 
 ---------------------------------------------------------------------
@@ -109,97 +109,156 @@ begin -- behaviour
     variable v : register_set;
   begin
     v := r;
-        
-    -- write memory mapped addresses
+    ----------------------------------------------------------------    
+    -- write memory mapped registers (SPARC to EXT_MOD) 
+		----------------------------------------------------------------
 		if ((extsel = '1') and (exti.write_en = '1')) then
       case exti.addr(4 downto 2) is
         when "000" =>
-					-- write control & configuration bits
+					-- get control & configuration flags
           if ((exti.byte_en(0) = '1') or (exti.byte_en(1) = '1')) then
             -- TODO which bits have to be written? 
             v(STATUSREG)(STA_INT) := '1';
             v(CONFIGREG)(CONF_INTA) :='0';
           else
+						-- used for status flags
             if ((exti.byte_en(2) = '1')) then
               v(STATUSREG_CUST) := exti.data(23 downto 16);
             end if;
+						-- not used (only interrupt?)
             if ((exti.byte_en(3) = '1')) then
               v(CONFIGREG_CUST) := exti.data(31 downto 24);
             end if;
           end if;
         when "001" =>
-          -- write data
+          -- get data from SPARC - to transmit to host
 					if ((exti.byte_en(0) = '1')) then
-            v(DC_DATA_IN_LOW) := exti.data(7 downto 0);
+            v(DC_WRITE_DATA_LOW) := exti.data(7 downto 0);
           end if;
           if ((exti.byte_en(1) = '1')) then
-            v(DC_DATA_IN_HIGH) := exti.data(15 downto 8);
-          end if;
-          if ((exti.byte_en(2) = '1')) then
-            v(DC_DATA_OUT_LOW) := exti.data(23 downto 16);
-          end if;
-          if ((exti.byte_en(3) = '1')) then
-            v(DC_DATA_OUT_HIGH) := exti.data(31 downto 24);
-          end if;
-        when others =>
-          null;
-      end case;
-    end if;
-    
-    -- read memory mapped addresses
-    exto.data <= (others => '0');
-    if ((extsel = '1') and (exti.write_en = '0')) then
-      case exti.addr(4 downto 2) is
-        when "000" =>
-          exto.data <= r.ifacereg(3) & r.ifacereg(2) & r.ifacereg(1) & r.ifacereg(0);
-        when "001" =>
-          if (r.ifacereg(CONFIGREG)(CONF_ID) = '1') then
-            exto.data <= MODULE_VER & MODULE_ID;
-          else
-            exto.data <= r.ifacereg(7) & r.ifacereg(6) & r.ifacereg(5) & r.ifacereg(REG_BUTTONS);
+            v(DC_WRITE_DATA_HIGH) := exti.data(15 downto 8);
           end if;
         when others =>
           null;
       end case;
     end if;
    
-    -- compute status flags
-    v.ifacereg(STATUSREG)(STA_LOOR) := r.ifacereg(CONFIGREG)(CONF_LOOW);
-    v.ifacereg(STATUSREG)(STA_FSS) := '0';
-    v.ifacereg(STATUSREG)(STA_RESH) := '0';
-    v.ifacereg(STATUSREG)(STA_RESL) := '0';
-    v.ifacereg(STATUSREG)(STA_BUSY) := '0';
-    v.ifacereg(STATUSREG)(STA_ERR) := '0';
-    v.ifacereg(STATUSREG)(STA_RDY) := '1';
+		----------------------------------------------------------------
+		-- module specific part
+		----------------------------------------------------------------
+		-- data to transmit to host
+		if v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) == '0' then
+			if v(STATUSREG_CUST)(avs_dc_write_n_iWR_N)	= '1' then
+				USB_DATA <= HIGH_IMPENDANT;
+			else
+				USB_DATA <= v(DC_WRITE_DATA_HIGH) & v(DC_WRITE_DATA_LOW);
+			end if;
+		end if;
 
+		--assign	avs_dc_readdata_oDATA		=	avs_dc_read_n_iRD_N	?	16'hzzzz	:	USB_DATA;
+		-- data received from host
+		if v(STATUSREG_CUST)(avs_dc_read_n_iRD_N) = '1' then
+			v(DC_READ_DATA_HIGH)	<= HIGH_IMPENDANTG;
+			v(DC_READ_DATA_LOW)	<= HIGH_IMPENDANTG;
+		else
+			v(DC_READ_DATA_HIGH)	<= USB_DATA(15 downto 8);
+			v(DC_READ_DATA_LOW)	<= USB_DATA(7 downto 0);
+		end if;
+
+		--assign	USB_ADDR		=	avs_dc_chipselect_n_iCS_N? {1'b0,avs_hc_address_iADDR} : {1'b1,avs_dc_address_iADDR};
+		-- set usb address
+		if v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
+			USB_ADDR <= ('1', v(STATUSREG_CUST)(avs_dc_address_iADDR));
+		end if; 
+
+		--assign	USB_CS_N		=	avs_hc_chipselect_n_iCS_N & avs_dc_chipselect_n_iCS_N;
+		-- set chipselect for device
+		USB_CS_N <= v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N); 
+
+		--assign	USB_WR_N		=	avs_dc_chipselect_n_iCS_N? avs_hc_write_n_iWR_N : avs_dc_write_n_iWR_N;
+		if v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then	
+			USB_WR_N <= v(STATUSREG_CUST)(avs_dc_write_n_iWR_N);
+		end if;
+
+		--assign	USB_RD_N		=	avs_dc_chipselect_n_iCS_N? avs_hc_read_n_iRD_N  : avs_dc_read_n_iRD_N;
+		if v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
+			USB_RD_N <= v(STATUSREG_CUST)(avs_dc_read_n_iRD_N);
+		end if; 
+
+		--assign	USB_RST_N		=	avs_dc_chipselect_n_iCS_N? avs_hc_reset_n_iRST_N: avs_dc_reset_n_iRST_N;
+		if v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
+			USB_RST_N <= v(STATUSREG_CUST)(avs_dc_reset_n_iRST_N);
+		end if;
+
+		--assign	avs_dc_irq_n_oINT1_N		=	USB_INT1;
+		-- forward interrupt to SPARC
+-- QUESTION: wie lange bleibt INT1 auf 1? 
+		if	USB_INT1 = '1' then
+    	v(STATUSREG)(STA_INT) <= '1';
+		end if;
+
+		-----------------------------------------------------------------
+		-- read memory mapped addresses (EXT_MOD to SPARC)
+		-----------------------------------------------------------------
+    exto.data <= (others => '0');
+    if ((extsel = '1') and (extiwrite_en = '0')) then
+      case exti.addr(4 downto 2) is
+        when "000" =>
+          -- write control & configuration flags
+					exto.data <= r(CONFIGREG_CUST) & r(STATUSREG_CUST) & r(CONFIGREG) & r(STATUSREG);
+        when "001" =>
+          if (r(CONFIGREG)(CONF_ID) = '1') then
+            -- to read manufacture & version nbr of the module
+						exto.data <= MODULE_VER & MODULE_ID;
+          else
+						-- transfer data to SPARC - received from host
+            exto.data <= "00000000" & "00000000" & r(DC_READ_DATA_HIGH
+) & r(DC_READ_DATA_LOW);
+          end if;
+        when others =>
+          null;
+      end case;
+    end if;
+
+		-----------------------------------------------------------------
+    -- compute status flags
+		-----------------------------------------------------------------
+    v(STATUSREG)(STA_LOOR) := r(CONFIGREG)(CONF_LOOW);
+    v(STATUSREG)(STA_FSS) := '0';
+    v(STATUSREG)(STA_RESH) := '0';
+    v(STATUSREG)(STA_RESL) := '0';
+    v(STATUSREG)(STA_BUSY) := '0';
+    v(STATUSREG)(STA_ERR) := '0';
+    v(STATUSREG)(STA_RDY) := '1';
+
+		-----------------------------------------------------------------
     -- set output enabled (default)
-    v.ifacereg(CONFIGREG)(CONF_OUTD) := '1';
-     
+		-----------------------------------------------------------------
+    v(CONFIGREG)(CONF_OUTD) := '1';
+
+		-----------------------------------------------------------------
     -- combine soft- and hard-reset
+		-----------------------------------------------------------------
     rstint <= not RST_ACT;
-    if exti.reset = RST_ACT or r.ifacereg(CONFIGREG)(CONF_SRES) = '1' then
+    if exti.reset = RST_ACT or r(CONFIGREG)(CONF_SRES) = '1' then
       rstint <= RST_ACT;
     end if;
 
-    -- reset interrupt
-    if r.ifacereg(STATUSREG)(STA_INT) = '1' and r.ifacereg(CONFIGREG)(CONF_INTA) ='0' then
-      v.ifacereg(STATUSREG)(STA_INT) := '0';
+		-----------------------------------------------------------------
+    -- interrupts
+		-----------------------------------------------------------------
+    -- reset interrupt next time cycle it this cycle occours an 
+		-- interrupt
+		if r(STATUSREG)(STA_INT) = '1' and r(CONFIGREG)(CONF_INTA) ='0' then
+      v(STATUSREG)(STA_INT) := '0';
     end if; 
 
-    --  set interrupt
-    --if r.ifacereg(CONFIGREG)(CONF_INTA) ='1' then
-    --  v.ifacereg(STATUSREG)(STA_INT) := '0';
-    --  v.ifacereg(CONFIGREG)(CONF_INTA) := '0';
-    --end if;
-
     -- write interupt flag
-    exto.intreq <= r.ifacereg(STATUSREG)(STA_INT);
+    exto.intreq <= r(STATUSREG)(STA_INT);
 
-    -- module specific part
-    for i in 1 to 3 loop
-      v.ifacereg(REG_BUTTONS)(i) := buttons(i);
-    end loop;  
-
+    ----------------------------------------------------------------
+		-- prepare register for handover to next clock cycle
+		----------------------------------------------------------------
     r_next <= v;
   end process;
 
