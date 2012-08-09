@@ -81,7 +81,7 @@ assign	avs_dc_irq_n_oINT0_N		=	USB_INT1;
 
 endmodule
 
---******************************************* verilog to vhdl ***********************************************************
+---******************************************* verilog to vhdl ***********************************************************
 
 
 -- assign	USB_DATA		=	avs_dc_chipselect_n_iCS_N ? (avs_hc_write_n_iWR_N	?	16'hzzzz	:	avs_hc_writedata_iDATA) :  (avs_dc_write_n_iWR_N	?	16'hzzzz	:	avs_dc_writedata_iDATA) ;

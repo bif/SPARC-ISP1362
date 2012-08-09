@@ -114,6 +114,7 @@ begin -- behaviour
 		if ((extsel = '1') and (exti.write_en = '1')) then
       case exti.addr(4 downto 2) is
         when "000" =>
+					-- write control & configuration bits
           if ((exti.byte_en(0) = '1') or (exti.byte_en(1) = '1')) then
             -- TODO which bits have to be written? 
             v(STATUSREG)(STA_INT) := '1';
@@ -127,7 +128,8 @@ begin -- behaviour
             end if;
           end if;
         when "001" =>
-          if ((exti.byte_en(0) = '1')) then
+          -- write data
+					if ((exti.byte_en(0) = '1')) then
             v(DC_DATA_IN_LOW) := exti.data(7 downto 0);
           end if;
           if ((exti.byte_en(1) = '1')) then
