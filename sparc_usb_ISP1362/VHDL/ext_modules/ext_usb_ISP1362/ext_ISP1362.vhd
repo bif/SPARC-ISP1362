@@ -56,7 +56,7 @@ type register_set is array (0 to 7) of ext_register;
 ---------------------------------------------------------------------
 -- define constants 
 ---------------------------------------------------------------------
-constant HIGH_IMPENDANT	: std_logic_vector := "ZZZZZZZZZZZZZZZZ";
+constant HIGH_IMPENDANT	: std_logic_vector := "ZZZZZZZZ";
 
 -- DC control & status registers
 constant STATUSREG_CUST		: integer	:= 2;
@@ -97,7 +97,7 @@ begin -- behaviour
         r <= (others => (others => '0'));
       else
         r(STATUSREG) <= r_next(STATUSREG);
-				r(CONFIGREG) <= r_ext(CONFIGREG);
+				r(CONFIGREG) <= r_next(CONFIGREG);
       end if;
     end if;
   end process;
@@ -150,7 +150,7 @@ begin -- behaviour
 		-- assign	USB_DATA		=	avs_dc_chipselect_n_iCS_N ? (avs_hc_write_n_iWR_N	?	16'hzzzz	:	avs_hc_writedata_iDATA) :  (avs_dc_write_n_iWR_N	?	16'hzzzz	:	avs_dc_writedata_iDATA) ;
 		if r(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
 			if v(STATUSREG_CUST)(avs_dc_write_n_iWR_N)	= '1' then
-				USB_DATA <= HIGH_IMPENDANT;
+				USB_DATA <= HIGH_IMPENDANT & HIGH_IMPENDANT;
 			else
 				USB_DATA <= r(DC_WRITE_DATA_HIGH) & v(DC_WRITE_DATA_LOW);
 			end if;
@@ -159,11 +159,11 @@ begin -- behaviour
 		--assign	avs_dc_readdata_oDATA		=	avs_dc_read_n_iRD_N	?	16'hzzzz	:	USB_DATA;
 		-- data received from host
 		if r(STATUSREG_CUST)(avs_dc_read_n_iRD_N) = '1' then
-			v(DC_READ_DATA_HIGH)	<= HIGH_IMPENDANTG;
-			v(DC_READ_DATA_LOW)	<= HIGH_IMPENDANTG;
+			v(DC_READ_DATA_HIGH)	:= HIGH_IMPENDANT;
+			v(DC_READ_DATA_LOW)	:= HIGH_IMPENDANT;
 		else
-			v(DC_READ_DATA_HIGH)	<= USB_DATA(15 downto 8);
-			v(DC_READ_DATA_LOW)	<= USB_DATA(7 downto 0);
+			v(DC_READ_DATA_HIGH)	:= USB_DATA(15 downto 8);
+			v(DC_READ_DATA_LOW)	:= USB_DATA(7 downto 0);
 		end if;
 
 		--assign	USB_ADDR		=	avs_dc_chipselect_n_iCS_N? {1'b0,avs_hc_address_iADDR} : {1'b1,avs_dc_address_iADDR};
@@ -195,7 +195,7 @@ begin -- behaviour
 		-- forward interrupt to SPARC
 -- QUESTION: wie lange bleibt INT1 auf 1? 
 		if	USB_INT1 = '1' then
-    	v(STATUSREG)(STA_INT) <= '1';
+    	v(STATUSREG)(STA_INT) := '1';
 		end if;
 
 		-----------------------------------------------------------------

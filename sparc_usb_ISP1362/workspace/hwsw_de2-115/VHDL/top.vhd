@@ -102,7 +102,7 @@ architecture behaviour of top is
 
 	-- ISP1362 
 	signal usb_sel	: std_logic;
-  signal usb_exto	: module_output_type;
+  signal usb_exto	: module_out_type;
 
   -- pushbuttons
   signal pushbutton_sel	: std_ulogic;
@@ -390,12 +390,12 @@ begin
     exti       => exti,
     exto       => usb_exto,
 		-- ISP1362 Side
-		USB_DATA		=> USB_DATA; 	
-		USB_ADDR		=> USB_ADDR;
-		USB_RD_N		=> USB_RD_N;							
-		USB_WR_N		=> USB_WR_N;
-		USB_CS_N		=> USB_CS_N;
-		USB_RST_N		=> USB_RST_N;
+		USB_DATA		=> USB_DATA, 	
+		USB_ADDR		=> USB_ADDR,
+		USB_RD_N		=> USB_RD_N,						
+		USB_WR_N		=> USB_WR_N,
+		USB_CS_N		=> USB_CS_N,
+		USB_RST_N		=> USB_RST_N,
 		USB_INT1		=> USB_INT1
 	); 
 
@@ -480,7 +480,7 @@ begin
     
     extdata := (others => '0');
     for i in extdata'left downto extdata'right loop
-      extdata(i) := dis7segexto.data(i) or counter_exto.data(i) or aux_uart_exto.data(i) or pushbutton_exto.data(i) or usb_exto(i); 
+      extdata(i) := dis7segexto.data(i) or counter_exto.data(i) or aux_uart_exto.data(i) or pushbutton_exto.data(i) or usb_exto.data(i); 
     end loop;
 
     scarts_i.data <= (others => '0');
