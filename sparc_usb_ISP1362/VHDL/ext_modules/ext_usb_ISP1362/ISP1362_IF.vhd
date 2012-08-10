@@ -41,15 +41,15 @@ input			avs_hc_clk_iCLK;
 output	[15:0]	avs_hc_readdata_oDATA;
 output			avs_hc_irq_n_oINT0_N;
 // slave dc
-input	[15:0]	avs_dc_writedata_iDATA;
-input			avs_dc_address_iADDR;
-input			avs_dc_read_n_iRD_N;
-input			avs_dc_write_n_iWR_N;
-input			avs_dc_chipselect_n_iCS_N;
-input			avs_dc_reset_n_iRST_N;
-input			avs_dc_clk_iCLK;
-output	[15:0]	avs_dc_readdata_oDATA;
-output			avs_dc_irq_n_oINT0_N;
+input	[15:0]	avs_dc_writedata_iDATA;		1
+input			avs_dc_address_iADDR;					2
+input			avs_dc_read_n_iRD_N;					5
+input			avs_dc_write_n_iWR_N;					4
+input			avs_dc_chipselect_n_iCS_N;		3	
+input			avs_dc_reset_n_iRST_N;				8	
+input			avs_dc_clk_iCLK;							--	
+output	[15:0]	avs_dc_readdata_oDATA;	1		
+output			avs_dc_irq_n_oINT0_N;				6	
 
 
 

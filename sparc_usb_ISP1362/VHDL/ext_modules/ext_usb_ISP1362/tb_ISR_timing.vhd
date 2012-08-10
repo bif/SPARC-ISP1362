@@ -33,9 +33,10 @@ architecture beh  of ext_usb_ISP1362 is
 
 	constant cc	: TIME := 20 ns;
 	constant bittime	: integer := 434; -- 8.681 us / 20 ns	
-
+	constant EXT_DFLT_ADDR	:std_logic_vector (14 downto 0) := "000000000000000";
+	
 	signal clk_sig			: std_logic;
-  signal extsel_wig		: std_ulogic;
+  signal extsel_sig		: std_ulogic;
   signal exti_sig			: module_in_type;
   signal exto_sig			: module_out_type;
 	signal usb_data_sig	: std_logic_vector (15 downto 0);
@@ -72,11 +73,44 @@ architecture beh  of ext_usb_ISP1362 is
 			wait for cc/2;
 		end process clk_gen;
 		
-  test : process
-  begin
-		-- TODO: simulate beh of ISR  
+		test : process
+	
+			procedure icwait(cycles: Natural) is
+			begin
+				for i in 1 to cycles loop
+					wait until clk = '0' and clk'event;
+				end loop;
+			end icwait; 
+		
+			procedure en_mdoule(config: boolean) is
+				if config = true then
+					exti_sig.addr <= EXT_DFLT_ADDR;	
+					--exti_sig.byte_en <= "0011";
+					extsel_sig <= '1';
+					icwait(2);
+				else
+					extsel_sig <= '0';
+					exti.byte_en <= "0000";
+					icwait(2);
+				end if;
+			end en_module;
+
+			procedure set_addr(bits : std_logic_vector (2 downto 0)) is
+				exti_sig_addr (4 downto 2) <= bits;
+			end set_addr;
+
+		begin
+
+		-- reset module
+		exti_sig.reset <= RST_ACT;
+		icwait(5);
+		exti_sig.reset <= not RST_ACT;
+
+		
+
+		
 
 
+		end process test;
 
-  end process test;
 end architecture beh;

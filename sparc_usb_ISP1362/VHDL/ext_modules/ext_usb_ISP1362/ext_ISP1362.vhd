@@ -105,7 +105,7 @@ begin -- behaviour
 	------------------------------------------------------------------
   -- extension module process
 	------------------------------------------------------------------
-  comb : process(r, exti, extsel, USB_DATA, USB_INT0, USB_INT1)
+  comb : process(r, exti, extsel, USB_DATA, USB_INT1)
     variable v : register_set;
   begin
     v := r;
@@ -147,17 +147,18 @@ begin -- behaviour
 		-- module specific part
 		----------------------------------------------------------------
 		-- data to transmit to host
-		if v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) == '0' then
+		-- assign	USB_DATA		=	avs_dc_chipselect_n_iCS_N ? (avs_hc_write_n_iWR_N	?	16'hzzzz	:	avs_hc_writedata_iDATA) :  (avs_dc_write_n_iWR_N	?	16'hzzzz	:	avs_dc_writedata_iDATA) ;
+		if r(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
 			if v(STATUSREG_CUST)(avs_dc_write_n_iWR_N)	= '1' then
 				USB_DATA <= HIGH_IMPENDANT;
 			else
-				USB_DATA <= v(DC_WRITE_DATA_HIGH) & v(DC_WRITE_DATA_LOW);
+				USB_DATA <= r(DC_WRITE_DATA_HIGH) & v(DC_WRITE_DATA_LOW);
 			end if;
 		end if;
 
 		--assign	avs_dc_readdata_oDATA		=	avs_dc_read_n_iRD_N	?	16'hzzzz	:	USB_DATA;
 		-- data received from host
-		if v(STATUSREG_CUST)(avs_dc_read_n_iRD_N) = '1' then
+		if r(STATUSREG_CUST)(avs_dc_read_n_iRD_N) = '1' then
 			v(DC_READ_DATA_HIGH)	<= HIGH_IMPENDANTG;
 			v(DC_READ_DATA_LOW)	<= HIGH_IMPENDANTG;
 		else
@@ -167,7 +168,7 @@ begin -- behaviour
 
 		--assign	USB_ADDR		=	avs_dc_chipselect_n_iCS_N? {1'b0,avs_hc_address_iADDR} : {1'b1,avs_dc_address_iADDR};
 		-- set usb address
-		if v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
+		if r(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
 			USB_ADDR <= ('1', v(STATUSREG_CUST)(avs_dc_address_iADDR));
 		end if; 
 
@@ -176,17 +177,17 @@ begin -- behaviour
 		USB_CS_N <= v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N); 
 
 		--assign	USB_WR_N		=	avs_dc_chipselect_n_iCS_N? avs_hc_write_n_iWR_N : avs_dc_write_n_iWR_N;
-		if v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then	
+		if r(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then	
 			USB_WR_N <= v(STATUSREG_CUST)(avs_dc_write_n_iWR_N);
 		end if;
 
 		--assign	USB_RD_N		=	avs_dc_chipselect_n_iCS_N? avs_hc_read_n_iRD_N  : avs_dc_read_n_iRD_N;
-		if v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
+		if r(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
 			USB_RD_N <= v(STATUSREG_CUST)(avs_dc_read_n_iRD_N);
 		end if; 
 
 		--assign	USB_RST_N		=	avs_dc_chipselect_n_iCS_N? avs_hc_reset_n_iRST_N: avs_dc_reset_n_iRST_N;
-		if v(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
+		if r(STATUSREG_CUST)(avs_dc_chipselect_n_iCS_N) = '0' then
 			USB_RST_N <= v(STATUSREG_CUST)(avs_dc_reset_n_iRST_N);
 		end if;
 
@@ -201,7 +202,7 @@ begin -- behaviour
 		-- read memory mapped addresses (EXT_MOD to SPARC)
 		-----------------------------------------------------------------
     exto.data <= (others => '0');
-    if ((extsel = '1') and (extiwrite_en = '0')) then
+    if ((extsel = '1') and (exti.write_en = '0')) then
       case exti.addr(4 downto 2) is
         when "000" =>
           -- write control & configuration flags

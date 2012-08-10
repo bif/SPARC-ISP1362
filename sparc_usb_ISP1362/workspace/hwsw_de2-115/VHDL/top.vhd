@@ -26,6 +26,7 @@ use work.pkg_dis7seg.all;
 use work.pkg_counter.all;
 use work.ext_miniUART_pkg.all;
 use work.pkg_pushbutton.all;
+use work.pkg_ISP1362.all;
 
 library grlib;
 use grlib.amba.all;
@@ -79,7 +80,6 @@ entity top is
 		USB_WR_N	: out std_logic;
 		USB_CS_N	: out std_logic;
 		USB_RST_N	: out std_logic;
-		USB_INT0	: in std_logic;
 		USB_INT1	: in std_logic
 
   );
@@ -380,8 +380,6 @@ begin
     ltm_grest <= '1';
   
 
-  
-
   -----------------------------------------------------------------------------
   -- Scarts extension modules
   -----------------------------------------------------------------------------
@@ -391,26 +389,6 @@ begin
     extsel     => usb_sel,
     exti       => exti,
     exto       => usb_exto,
-		-- slave hc
-		avs_hc_writedata_iDATA		: in std_logic_vector (15 downto 0);
-		avs_hc_address_iADDR			: in std_logic;
-		avs_hc_read_n_iRD_N 			: in std_logic;
-		avs_hc_write_n_iWR_N			: in std_logic;
-		avs_hc_chipselect_n_iCS_N	: in std_logic;
-		avs_hc_reset_n_iRST_N			: in std_logic;
-		avs_hc_clk_iCLK						: in std_logic;
-		avs_hc_readdata_oDATA			: out std_logic_vector (15 downto 0);
-		avs_hc_irq_n_oINT0_N			: out std_logic;
-		-- slave dc
-		avs_dc_writedata_iDATA		: in std_logic_vector (15 downto 0);
-		avs_dc_address_iADDR			: in std_logic;
-		avs_dc_read_n_iRD_N				: in std_logic;
-		avs_dc_write_n_iWR_N			: in std_logic;
-		avs_dc_chipselect_n_iCS_N	: in std_logic;
-		avs_dc_reset_n_iRST_N			: in std_logic;
-		avs_dc_clk_iCLK						: in std_logic;
-		avs_dc_readdata_oDATA			: out std_logic_vector (15 downto 0);
-		avs_dc_irq_n_oINT0_N			: out std_logic;
 		-- ISP1362 Side
 		USB_DATA		=> USB_DATA; 	
 		USB_ADDR		=> USB_ADDR;
@@ -418,7 +396,6 @@ begin
 		USB_WR_N		=> USB_WR_N;
 		USB_CS_N		=> USB_CS_N;
 		USB_RST_N		=> USB_RST_N;
-		USB_INT0		=> USB_INT0;
 		USB_INT1		=> USB_INT1
 	); 
 
@@ -464,7 +441,7 @@ begin
       RxD    => aux_uart_rx,
       TxD    => aux_uart_tx);
   
-  comb : process(scarts_o, debugo_if, D_RxD, dis7segexto, counter_exto, aux_uart_exto, pushbutton_exto)  --extend!
+  comb : process(scarts_o, debugo_if, D_RxD, dis7segexto, counter_exto, aux_uart_exto, pushbutton_exto, usb_exto)  --extend!
     variable extdata : std_logic_vector(31 downto 0);
   begin   
     exti.reset    <= scarts_o.reset;
@@ -477,8 +454,9 @@ begin
     counter_segsel <= '0';
     aux_uart_sel <= '0';
     pushbutton_sel <= '0';
+    usb_sel <= '0';
     
-    if scarts_o.extsel = '1' then
+		if scarts_o.extsel = '1' then
       case scarts_o.addr(14 downto 5) is
         when "1111110111" => -- (-288)
           --DIS7SEG Module
@@ -492,14 +470,17 @@ begin
         when "1111110100" => -- (-384)
           -- Pushbutton Module
           pushbutton_sel <= '1';
-        when others =>
+        when "1111110011" => -- (-416)
+					-- usb_ISP1362 Module
+					usb_sel <= '1';
+				when others =>
           null;
       end case;
     end if;
     
     extdata := (others => '0');
     for i in extdata'left downto extdata'right loop
-      extdata(i) := dis7segexto.data(i) or counter_exto.data(i) or aux_uart_exto.data(i) or pushbutton_exto.data(i); 
+      extdata(i) := dis7segexto.data(i) or counter_exto.data(i) or aux_uart_exto.data(i) or pushbutton_exto.data(i) or usb_exto(i); 
     end loop;
 
     scarts_i.data <= (others => '0');
