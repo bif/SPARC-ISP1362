@@ -74,8 +74,7 @@ constant avs_dc_read_n_iRD_N				: integer := 1;
 constant avs_dc_write_n_iWR_N				: integer := 2;
 constant avs_dc_chipselect_n_iCS_N	: integer := 3;
 constant avs_dc_reset_n_iRST_N			: integer := 4;
-constant avs_dc_clk_iCLK						: integer := 5;
-constant avs_dc_irq_n_oINT1_N				: integer := 6;
+constant avs_dc_irq_n_oINT1_N				: integer := 5;
 
 
 ---------------------------------------------------------------------
