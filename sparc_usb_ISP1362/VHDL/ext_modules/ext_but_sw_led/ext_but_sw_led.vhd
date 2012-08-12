@@ -42,9 +42,9 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 use work.scarts_pkg.all;
-use work.pkg_button_switch_led.all;
+use work.pkg_but_sw_led.all;
 
-architecture behaviour of ext_button_switch_led is
+architecture behaviour of ext_but_sw_led is
 
 -- 48 pins = 6 byte fore
 subtype byte is std_logic_vector(7 downto 0);
@@ -78,22 +78,22 @@ type buttons_type is array (1 to 3) of std_logic;
 signal buttons : buttons_type;
 
 -- signals for switches
-type switches_type is array (0 to 17) od std_logic;
+type switches_type is array (0 to 17) of std_logic;
 signal switches : switches_type;
 
 -- signals for red leds
-type red_leds_type is array (0 to 17) od std_logic;
+type red_leds_type is array (0 to 17) of std_logic;
 signal red_leds : red_leds_type;
 
 -- signals for green leds
-type green_leds_type is array (0 to 8) od std_logic;
+type green_leds_type is array (0 to 8) of std_logic;
 signal green_leds : green_leds_type;
 
 
 begin -- behaviour
 
   -- extension module process
-  comb : process(r, exti, extsel, button1, button2, button2, buttons, sw0, sw1, sw2, sw3, sw4, sw5, sw6, sw7, sw8, sw9, sw10, sw11, sw12, sw13, sw14, sw15, sw16, sw17, red_leds, green_leds)
+  comb : process(r, exti, extsel, button1, button2, button2, buttons, sw, switches, red_leds, green_leds)
     variable v : reg_type;
   begin
     v := r;
@@ -138,10 +138,10 @@ begin -- behaviour
           if (r.ifacereg(CONFIGREG)(CONF_ID) = '1') then
             exto.data <= MODULE_VER & MODULE_ID;
           else
-            exto.data <= r.ifacereg(REG_IO_3) & r.ifacereg(REG_IO_2);
+            exto.data <= r.ifacereg(REG_IO_3) & r.ifacereg(REG_IO_2) & r.ifacereg(REG_IO_1) & r.ifacereg(REG_IO_0);
           end if;
 				when "010" =>
-					exto.data <= r.ifacereg(REG_IO_5) & r.ifacereg(REG_IO_4);
+					exto.data <= "00000000" & "00000000" & r.ifacereg(REG_IO_5) & r.ifacereg(REG_IO_4);
         when others =>
           null;
       end case;
@@ -224,60 +224,22 @@ begin -- behaviour
 				switches <= (others => '0');
 				red_leds <= (others => '0');
       	green_leds <= (others => '0');
+				ledr <= (others => '0');
+				ledg <= (others => '0');
 			else
         r <= r_next;
         buttons(1) <= button1;
         buttons(2) <= button2;
         buttons(3) <= button3;
-
-				switches(0) <= sw0;
-				switches(1) <= sw1;
-				switches(2) <= sw2;
-				switches(3) <= sw3;
-				switches(4) <= sw4;
-				switches(5) <= sw5;
-				switches(6) <= sw6;
-				switches(7) <= sw7;
-				switches(8) <= sw8;
-				switches(9) <= sw9;
-				switches(10) <= sw10;
-				switches(11) <= sw11;
-				switches(12) <= sw12;
-				switches(13) <= sw13;
-				switches(14) <= sw14;
-				switches(15) <= sw15;
-				switches(16) <= sw16;
-				switches(17) <= sw17;	
-
-				red_leds(0) <= ledr_0;
-  			red_leds(1) <= ledr_1;
-   			red_leds(2) <= ledr_2;
-  			red_leds(3) <= ledr_3;
-   			red_leds(4) <= ledr_4;
-   			red_leds(5) <= ledr_5;
-  			red_leds(6) <= ledr_6;
-  			red_leds(7) <= ledr_7;
-  			red_leds(8) <= ledr_8;
-  			red_leds(9) <= ledr_9;
-				red_leds(10) <= ledr_10;
-  			red_leds(11) <= ledr_11;
-  			red_leds(12) <= ledr_12;
-  			red_leds(13) <= ledr_13;
-  			red_leds(14) <= ledr_14;
-  			red_leds(15) <= ledr_15;
-  			red_leds(16) <= ledr_16;
-  			red_leds(17) <= ledr_17;
-  			
-				green_leds(0) <= ledg_0;
-				green_leds(1) <= ledg_1;
-				green_leds(2) <= ledg_2;
-				green_leds(3) <= ledg_3;
-				green_leds(4) <= ledg_4;
-				green_leds(5) <= ledg_5;
-				green_leds(6) <= ledg_6;
-				green_leds(7) <= ledg_7;
-				green_leds(8) <= ledg_8;
-
+				for i in 0 to 17 loop	
+					switches(i) <= sw(i);
+				end loop;
+				for i in 0 to 17 loop	
+					ledr(i) <= red_leds(i);
+				end loop;
+				for i in 0 to 8 loop	
+					ledg(i) <= green_leds(i);
+				end loop;
 			end if;
     end if;
   end process;

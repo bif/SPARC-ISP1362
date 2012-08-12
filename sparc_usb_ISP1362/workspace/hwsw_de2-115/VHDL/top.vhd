@@ -70,58 +70,15 @@ entity top is
     aux_uart_rx : in  std_logic;
     aux_uart_tx : out std_logic;
     -- but_sw_led
-    key1        : in std_logic; 
-    key2        : in std_logic;
-    key3        : in std_logic;
+    KEY1        : in std_logic; 
+    KEY2        : in std_logic;
+    KEY3        : in std_logic;
 		-- Switches
-		sw0 	  		: in std_logic;
-		sw1 	  		: in std_logic;
-		sw2 	  		: in std_logic;
-		sw3 	  		: in std_logic;
-		sw4 	  		: in std_logic;
-		sw5 	  		: in std_logic;
-		sw6 	  		: in std_logic;
-		sw7	    		: in std_logic;
-		sw8     		: in std_logic;
-		sw9		   	  : in std_logic;
-		sw10	  		: in std_logic;
-		sw11	  		: in std_logic;
-		sw12	  		: in std_logic;
-		sw13	  		: in std_logic;
-		sw14	  		: in std_logic;
-		sw15	  		: in std_logic;
-		sw16	  		: in std_logic;
-		sw17	  		: in std_logic;
+		SW 	  			: in std_logic_vector(17 downto 0);
 		-- Leds
-		ledr_0			: out std_logic;
- 		ledr_1			: out std_logic;
- 		ledr_2			: out std_logic;
-		ledr_3			: out std_logic;
-		ledr_4			: out std_logic;
-		ledr_5			: out std_logic;
-		ledr_6			: out std_logic;
-		ledr_7			: out std_logic;
-		ledr_8			: out std_logic;
-		ledr_9			: out std_logic;
-		ledr_10			: out std_logic;
-		ledr_11			: out std_logic;
-		ledr_12			: out std_logic;
-		ledr_13			: out std_logic;
-		ledr_14			: out std_logic;
-		ledr_15			: out std_logic;
-		ledr_16			: out std_logic;
-		ledr_17			: out std_logic;
-		ledg_0			: out std_logic;
-		ledg_1			: out std_logic;
-		ledg_2			: out std_logic;
-		ledg_3			: out std_logic;
-		ledg_4			: out std_logic;
-		ledg_5			: out std_logic;
-		ledg_6			: out std_logic;
-		ledg_7			: out std_logic;
-		ledg_8			: out std_logic;
-
-		-- ISP1362 - usb controler
+		LEDR				: out std_logic_vector(17 downto 0);
+		LEDG				: out std_logic_vector(8 downto 0);	
+ 			-- ISP1362 - usb controler
 		USB_DATA	: inout std_logic_vector (15 downto 0);
 		USB_ADDR	: out std_logic_vector (1 downto 0); 
 		USB_RD_N	: out std_logic;
@@ -467,55 +424,12 @@ begin
       extsel     => but_sw_led_sel,
       exti       => exti,
       exto       => but_sw_led_exto,
-      button1    => key1,
-      button2    => key2,
-      button3    => key3,
-			sw0			=>	sw0,
-			sw1		 	=>	sw1,
-			sw2	 		=>	sw2,
-			sw3 		=>	sw3,
-			sw4 		=>	sw4,
-			sw5 		=>	sw5,
-			sw6 		=>	sw6,
-			sw7			=>	sw7,
-			sw8 		=>	sw8,
-			sw9			=>	sw9,
-			sw10		=>	sw10,
-			sw11		=>	sw11,
-			sw12		=>	sw12,
-			sw13		=>	sw13,
-			sw14		=>	sw14,
-			sw15		=>	sw15,
-			sw16		=>	sw16,
-			sw17		=>	sw17,
-
-			ledr_0		=>	ledr_0,
-			ledr_1		=>	ledr_1,	
-			ledr_2		=>	ledr_2,
-			ledr_3		=>	ledr_3,
-			ledr_4		=>	ledr_4,
-			ledr_5		=>	ledr_5,
-			ledr_6		=>	ledr_6,
-			ledr_7		=>	ledr_7,
-			ledr_8		=>	ledr_8,
-			ledr_9		=>	ledr_9,
-			ledr_10		=>	ledr_10,
-			ledr_11		=>	ledr_11,
-			ledr_12		=>	ledr_12,
-			ledr_13		=>	ledr_13,
-			ledr_14		=>	ledr_14,
-			ledr_15		=>	ledr_15,
-			ledr_16		=>	ledr_16,
-			ledr_17		=>	ledr_17,
-			ledg_0		=>	ledg_0,
-			ledg_1		=>	ledg_1,		
-			ledg_2		=>	ledg_2,		
-			ledg_3		=>	ledg_3,		
-			ledg_4		=>	ledg_4,	
-			ledg_5		=>	ledg_5,		
-			ledg_6		=>	ledg_6,	
-			ledg_7		=>	ledg_7,	
-			ledg_8		=>	ledg_8
+      button1    => KEY1,
+      button2    => KEY2,
+      button3    => KEY3,
+			sw				 =>	SW,
+			ledr			 => LEDR,
+			ledg			 => LEDG
      );
 
   counter_unit: ext_counter
@@ -533,7 +447,7 @@ begin
       exti   => exti,
       exto   => aux_uart_exto,
       RxD    => aux_uart_rx,
-      TxD    => aux_uart_txi
+      TxD    => aux_uart_tx
 		);
   
   comb : process(scarts_o, debugo_if, D_RxD, dis7segexto, counter_exto, aux_uart_exto, but_sw_led_exto, usb_exto)  --extend!

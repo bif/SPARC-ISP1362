@@ -38,13 +38,13 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 USE work.scarts_pkg.all;
 
-use work.pkg_button_switch_led.all;
+use work.pkg_but_sw_led.all;
 
 -----------------------------------------------------------------------
 -- ENTITY
 -----------------------------------------------------------------------
 
-entity ext_button_switch_led is
+entity ext_but_sw_led is
   port (
     ------------------------------------------------------------------
     -- Generic Ports
@@ -58,57 +58,13 @@ entity ext_button_switch_led is
     ------------------------------------------------------------------
     button1			: in std_logic;
 		button2			: in std_logic;
-		button3			: in std_logic
-		
-		sw0 	  		: in std_logic;
-		sw1 	  		: in std_logic;
-		sw2 	  		: in std_logic;
-		sw3 	  		: in std_logic;
-		sw4 	  		: in std_logic;
-		sw5 	  		: in std_logic;
-		sw6 	  		: in std_logic;
-		sw7	    		: in std_logic;
-		sw8     		: in std_logic;
-		sw9		   	  : in std_logic;
-		sw10	  		: in std_logic;
-		sw11	  		: in std_logic;
-		sw12	  		: in std_logic;
-		sw13	  		: in std_logic;
-		sw14	  		: in std_logic;
-		sw15	  		: in std_logic;
-		sw16	  		: in std_logic;
-		sw17	  		: in std_logic;
-
-		ledr_0			: out std_logic;
- 		ledr_1			: out std_logic;
- 		ledr_2			: out std_logic;
-		ledr_3			: out std_logic;
-		ledr_4			: out std_logic;
-		ledr_5			: out std_logic;
-		ledr_6			: out std_logic;
-		ledr_7			: out std_logic;
-		ledr_8			: out std_logic;
-		ledr_9			: out std_logic;
-		ledr_10			: out std_logic;
-		ledr_11			: out std_logic;
-		ledr_12			: out std_logic;
-		ledr_13			: out std_logic;
-		ledr_14			: out std_logic;
-		ledr_15			: out std_logic;
-		ledr_16			: out std_logic;
-		ledr_17			: out std_logic;
-		ledg_0			: out std_logic;
-		ledg_1			: out std_logic;
-		ledg_2			: out std_logic;
-		ledg_3			: out std_logic;
-		ledg_4			: out std_logic;
-		ledg_5			: out std_logic;
-		ledg_6			: out std_logic;
-		ledg_7			: out std_logic;
-		ledg_8			: out std_logic
+		button3			: in std_logic;
+		sw 					: in std_logic_vector(17 downto 0);
+		ledr				: out std_logic_vector(17 downto 0);
+		ledg				: out std_logic_vector(8 downto 0)
 	);
 
-end entity ext_button_switch_led;
+end entity ext_but_sw_led;
 
 ---------------------------------------------------------------------
 -- END ENTITY
