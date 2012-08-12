@@ -6,7 +6,7 @@
 #include <drivers/dis7seg.h>
 #include <drivers/vgatext.h>
 #include <string.h>
-#include "buttons.h"
+#include "but_sw_led.h"
 
 #define DISP7SEG_BADDR                  ((uint32_t)-288)
 #define VGATEXT_BADDR                   ((uint32_t)0xF0000100)
@@ -19,7 +19,8 @@ int main (int argc, char *argv[])
   char msg_key1[32] = "Pushbutton 1\r";
   char msg_key2[32] = "Pushbutton 2\r";
   char msg_key3[32] = "Pushbutton 3\r";
-  
+  char msg_sw[32]		= "            \r";
+
   UART_Cfg cfg;
     
   // Initialize peripheral components ...
@@ -35,6 +36,7 @@ int main (int argc, char *argv[])
   dis7seg_initHandle(&display_handle, DISP7SEG_BADDR, 8);
 
   uint32_t keys, keys_old;
+	uint8_t sw, i;
 	keys_old = 0;
 
   UART_write(0, msg, strlen(msg));
@@ -43,22 +45,37 @@ int main (int argc, char *argv[])
 
 	while(1) {
 		
-		keys = getKeys();
+		keys = getButtonsStatus();
 
 		if(keys != keys_old) {
-				if(keys & (1<<KEY3)) {
-					UART_write(0, msg_key3, strlen(msg));
-				}
-				if(keys & (1<<KEY2)) {
-					UART_write(0, msg_key2, strlen(msg));
-				}
-				if(keys & (1<<KEY1)) {
-					UART_write(0, msg_key1, strlen(msg));
-        }
-			} 
+			if(keys & (1<<BUTTON3)) {
+				UART_write(0, msg_key3, strlen(msg_key3));
+			}
+			if(keys & (1<<BUTTON2)) {
+				UART_write(0, msg_key2, strlen(msg_key2));
+			}
+			if(keys & (1<<BUTTON1)) {
+				UART_write(0, msg_key1, strlen(msg_key1));
+			}
+		} 
 		keys_old = keys;
 
+		for(i=0; i<18; i++)
+		{
+			sw = getSwitchStatus(i);	
+			if(sw == SW_ON)
+			{
+				msg_sw = "SW ", i, " ON      \r\n"; 	
+				UART_write(0, msg_sw, strlen(msg_sw));
+			}
+			if(sw == SW_OFF)
+			{
+				msg_sw = "SW ", i, " OFF     \r\n"; 	
+				UART_write(0, msg_sw, strlen(msg_sw));
+			}	
+		}
 	}
+
 
   return 0;
 }

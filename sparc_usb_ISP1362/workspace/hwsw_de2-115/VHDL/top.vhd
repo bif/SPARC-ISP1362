@@ -25,7 +25,7 @@ use work.scarts_amba_pkg.all;
 use work.pkg_dis7seg.all;
 use work.pkg_counter.all;
 use work.ext_miniUART_pkg.all;
-use work.pkg_pushbutton.all;
+use work.pkg_but_sw_led.all;
 use work.pkg_ISP1362.all;
 
 library grlib;
@@ -69,10 +69,58 @@ entity top is
     -- AUX UART
     aux_uart_rx : in  std_logic;
     aux_uart_tx : out std_logic;
-    -- Pushbuttons
+    -- but_sw_led
     key1        : in std_logic; 
     key2        : in std_logic;
     key3        : in std_logic;
+		-- Switches
+		sw0 	  		: in std_logic;
+		sw1 	  		: in std_logic;
+		sw2 	  		: in std_logic;
+		sw3 	  		: in std_logic;
+		sw4 	  		: in std_logic;
+		sw5 	  		: in std_logic;
+		sw6 	  		: in std_logic;
+		sw7	    		: in std_logic;
+		sw8     		: in std_logic;
+		sw9		   	  : in std_logic;
+		sw10	  		: in std_logic;
+		sw11	  		: in std_logic;
+		sw12	  		: in std_logic;
+		sw13	  		: in std_logic;
+		sw14	  		: in std_logic;
+		sw15	  		: in std_logic;
+		sw16	  		: in std_logic;
+		sw17	  		: in std_logic;
+		-- Leds
+		ledr_0			: out std_logic;
+ 		ledr_1			: out std_logic;
+ 		ledr_2			: out std_logic;
+		ledr_3			: out std_logic;
+		ledr_4			: out std_logic;
+		ledr_5			: out std_logic;
+		ledr_6			: out std_logic;
+		ledr_7			: out std_logic;
+		ledr_8			: out std_logic;
+		ledr_9			: out std_logic;
+		ledr_10			: out std_logic;
+		ledr_11			: out std_logic;
+		ledr_12			: out std_logic;
+		ledr_13			: out std_logic;
+		ledr_14			: out std_logic;
+		ledr_15			: out std_logic;
+		ledr_16			: out std_logic;
+		ledr_17			: out std_logic;
+		ledg_0			: out std_logic;
+		ledg_1			: out std_logic;
+		ledg_2			: out std_logic;
+		ledg_3			: out std_logic;
+		ledg_4			: out std_logic;
+		ledg_5			: out std_logic;
+		ledg_6			: out std_logic;
+		ledg_7			: out std_logic;
+		ledg_8			: out std_logic;
+
 		-- ISP1362 - usb controler
 		USB_DATA	: inout std_logic_vector (15 downto 0);
 		USB_ADDR	: out std_logic_vector (1 downto 0); 
@@ -104,9 +152,9 @@ architecture behaviour of top is
 	signal usb_sel	: std_logic;
   signal usb_exto	: module_out_type;
 
-  -- pushbuttons
-  signal pushbutton_sel	: std_ulogic;
-  signal pushbutton_exto	: module_out_type;
+  -- but_sw_led
+  signal but_sw_led_sel	: std_ulogic;
+  signal but_sw_led_exto	: module_out_type;
 
   -- 7-segment display
   signal dis7segsel  : std_ulogic;
@@ -413,16 +461,62 @@ begin
       PIN_select => open
     );
 
-  pushbutton_unit: ext_pushbutton
+  but_sw_led_unit: ext_but_sw_led
     port map(
       clk        => clk,
-      extsel     => pushbutton_sel,
+      extsel     => but_sw_led_sel,
       exti       => exti,
-      exto       => pushbutton_exto,
+      exto       => but_sw_led_exto,
       button1    => key1,
       button2    => key2,
-      button3    => key3
-      );
+      button3    => key3,
+			sw0			=>	sw0,
+			sw1		 	=>	sw1,
+			sw2	 		=>	sw2,
+			sw3 		=>	sw3,
+			sw4 		=>	sw4,
+			sw5 		=>	sw5,
+			sw6 		=>	sw6,
+			sw7			=>	sw7,
+			sw8 		=>	sw8,
+			sw9			=>	sw9,
+			sw10		=>	sw10,
+			sw11		=>	sw11,
+			sw12		=>	sw12,
+			sw13		=>	sw13,
+			sw14		=>	sw14,
+			sw15		=>	sw15,
+			sw16		=>	sw16,
+			sw17		=>	sw17,
+
+			ledr_0		=>	ledr_0,
+			ledr_1		=>	ledr_1,	
+			ledr_2		=>	ledr_2,
+			ledr_3		=>	ledr_3,
+			ledr_4		=>	ledr_4,
+			ledr_5		=>	ledr_5,
+			ledr_6		=>	ledr_6,
+			ledr_7		=>	ledr_7,
+			ledr_8		=>	ledr_8,
+			ledr_9		=>	ledr_9,
+			ledr_10		=>	ledr_10,
+			ledr_11		=>	ledr_11,
+			ledr_12		=>	ledr_12,
+			ledr_13		=>	ledr_13,
+			ledr_14		=>	ledr_14,
+			ledr_15		=>	ledr_15,
+			ledr_16		=>	ledr_16,
+			ledr_17		=>	ledr_17,
+			ledg_0		=>	ledg_0,
+			ledg_1		=>	ledg_1,		
+			ledg_2		=>	ledg_2,		
+			ledg_3		=>	ledg_3,		
+			ledg_4		=>	ledg_4,	
+			ledg_5		=>	ledg_5,		
+			ledg_6		=>	ledg_6,	
+			ledg_7		=>	ledg_7,	
+			ledg_8		=>	ledg_8
+     );
 
   counter_unit: ext_counter
     port map(
@@ -430,7 +524,7 @@ begin
       extsel     => counter_segsel,
       exti       => exti,
       exto       => counter_exto
-      );
+     );
 
   aux_uart_unit : ext_miniUART
     port map (
@@ -439,9 +533,10 @@ begin
       exti   => exti,
       exto   => aux_uart_exto,
       RxD    => aux_uart_rx,
-      TxD    => aux_uart_tx);
+      TxD    => aux_uart_txi
+		);
   
-  comb : process(scarts_o, debugo_if, D_RxD, dis7segexto, counter_exto, aux_uart_exto, pushbutton_exto, usb_exto)  --extend!
+  comb : process(scarts_o, debugo_if, D_RxD, dis7segexto, counter_exto, aux_uart_exto, but_sw_led_exto, usb_exto)  --extend!
     variable extdata : std_logic_vector(31 downto 0);
   begin   
     exti.reset    <= scarts_o.reset;
@@ -453,7 +548,7 @@ begin
     dis7segsel <= '0';
     counter_segsel <= '0';
     aux_uart_sel <= '0';
-    pushbutton_sel <= '0';
+    but_sw_led_sel <= '0';
     usb_sel <= '0';
     
 		if scarts_o.extsel = '1' then
@@ -468,8 +563,8 @@ begin
           -- AUX UART
           aux_uart_sel <= '1';
         when "1111110100" => -- (-384)
-          -- Pushbutton Module
-          pushbutton_sel <= '1';
+          -- but_sw_led Module
+          but_sw_led_sel <= '1';
         when "1111110011" => -- (-416)
 					-- usb_ISP1362 Module
 					usb_sel <= '1';
@@ -480,7 +575,7 @@ begin
     
     extdata := (others => '0');
     for i in extdata'left downto extdata'right loop
-      extdata(i) := dis7segexto.data(i) or counter_exto.data(i) or aux_uart_exto.data(i) or pushbutton_exto.data(i) or usb_exto.data(i); 
+      extdata(i) := dis7segexto.data(i) or counter_exto.data(i) or aux_uart_exto.data(i) or but_sw_led_exto.data(i) or usb_exto.data(i); 
     end loop;
 
     scarts_i.data <= (others => '0');

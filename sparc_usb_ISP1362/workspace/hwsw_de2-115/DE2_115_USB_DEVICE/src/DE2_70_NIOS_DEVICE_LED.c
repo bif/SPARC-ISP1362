@@ -70,9 +70,8 @@ USBCHECK_DEVICE_STATES bUSBCheck_Device_State; //USBCHECK_DEVICE_STATES defined 
 CONTROL_XFER ControlData; //USBCHECK_DEVICE_STATES defined in COMMON.h
 IO_REQUEST idata ioRequest; //USBCHECK_DEVICE_STATES defined in COMMON.h
 //-------------------------------------------------------------------------
-int main(void)
+int main(int argc, char *argv[])
 {
-    LCD_Test();
     disable();  //usb_irq.c
     disconnect_USB();   //MAINLOOP.c
     usleep(1000000);    //basic_io.h

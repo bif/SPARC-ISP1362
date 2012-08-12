@@ -17,13 +17,13 @@
 
 
 -----------------------------------------------------------------------
--- Title      : Pushbuttons and switches for fpga board DE2-115 
+-- Title      : button_switch_leds for fpga board DE2-115 
 -- Project    : SCARTS - Scalable Processor for Embedded Applications in
 --              Realtime Environment
 -----------------------------------------------------------------------
  
 -----------------------------------------------------------------------
--- Description:
+-- Description: 
 -- Package  
 -----------------------------------------------------------------------
 -- Copyright (c) 2012 
@@ -44,10 +44,10 @@ use work.scarts_pkg.all;
 -- PACKAGE
 ----------------------------------------------------------------------
 
-package pkg_pushbutton is
+package pkg_button_switch_led is
   
-  component ext_pushbutton
-    port (
+  component ext_button_switch_led
+  port (
     ------------------------------------------------------------------
     -- Generic Ports
     ------------------------------------------------------------------
@@ -62,28 +62,56 @@ package pkg_pushbutton is
 		button2			: in std_logic;
 		button3			: in std_logic
 		
---		sw0 	  		: in std_logic;
---		sw1 	  		: in std_logic;
---		sw2 	  		: in std_logic;
---		sw3 	  		: in std_logic;
---		sw4 	  		: in std_logic;
---		sw5 	  		: in std_logic;
---		sw6 	  		: in std_logic;
---		sw7	    		: in std_logic;
---		sw8     		: in std_logic;
---		sw9   	  	: in std_logic;
---		sw10	  		: in std_logic;
---		sw11	  		: in std_logic;
---		sw12	  		: in std_logic;
---		sw13	  		: in std_logic;
---		sw14	  		: in std_logic;
---		sw15	  		: in std_logic;
---		sw16	  		: in std_logic;
---		sw17	  		: in std_logic
-  );
+		sw0 	  		: in std_logic;
+		sw1 	  		: in std_logic;
+		sw2 	  		: in std_logic;
+		sw3 	  		: in std_logic;
+		sw4 	  		: in std_logic;
+		sw5 	  		: in std_logic;
+		sw6 	  		: in std_logic;
+		sw7	    		: in std_logic;
+		sw8     		: in std_logic;
+		sw9		   	  : in std_logic;
+		sw10	  		: in std_logic;
+		sw11	  		: in std_logic;
+		sw12	  		: in std_logic;
+		sw13	  		: in std_logic;
+		sw14	  		: in std_logic;
+		sw15	  		: in std_logic;
+		sw16	  		: in std_logic;
+		sw17	  		: in std_logic;
+
+		ledr_0			: out std_logic;
+ 		ledr_1			: out std_logic;
+ 		ledr_2			: out std_logic;
+		ledr_3			: out std_logic;
+		ledr_4			: out std_logic;
+		ledr_5			: out std_logic;
+		ledr_6			: out std_logic;
+		ledr_7			: out std_logic;
+		ledr_8			: out std_logic;
+		ledr_9			: out std_logic;
+		ledr_10			: out std_logic;
+		ledr_11			: out std_logic;
+		ledr_12			: out std_logic;
+		ledr_13			: out std_logic;
+		ledr_14			: out std_logic;
+		ledr_15			: out std_logic;
+		ledr_16			: out std_logic;
+		ledr_17			: out std_logic;
+		ledg_0			: out std_logic;
+		ledg_1			: out std_logic;
+		ledg_2			: out std_logic;
+		ledg_3			: out std_logic;
+		ledg_4			: out std_logic;
+		ledg_5			: out std_logic;
+		ledg_6			: out std_logic;
+		ledg_7			: out std_logic;
+		ledg_8			: out std_logic
+	);
 end component;
 
-end pkg_pushbutton;
+end pkg_button_switch_led;
 
 
 ---------------------------------------------------------------------
