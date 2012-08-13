@@ -26,30 +26,24 @@ uint8_t getSwitchStatus(uint32_t sw_nbr)
 
 	sw = 0;
 
-	sw |= (uint32_t) ((DATA_IO_0_3 >> 3) & SWITCH_MASK);
+	sw |= (uint32_t) ((DATA_IO_0_3 >> SW_OFFSET) & SWITCH_MASK);
 	if (sw & (1<<sw_nbr))
-	{
-		if ((sw_old & (1<<sw_nbr)) != (sw & (1<<sw_nbr)))
-		{
-			if (sw_old == 1)
-				return SW_OFF;
-			else
-				return SW_ON;
-		}
-	}
-	return 0;
+		return SW_ON;
+	else		
+		return SW_OFF;
+		
+	//SW error
+	return 2;
 }
 
 void setLeds(uint32_t leds)
 {
-	uint32_t i;
+	uint32_t tmp;
+	
+	tmp = 0;
+	tmp |= (leds << LED_OFFSET);
 
-	i = leds;
-
-	//for( i=0; i<27; i++)
-	//{
-
-	//}
+	DATA_IO_0_3 = 0xFFFF;	
 
 }
 

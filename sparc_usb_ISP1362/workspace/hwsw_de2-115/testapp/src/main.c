@@ -16,10 +16,10 @@ static dis7seg_handle_t display_handle;
 int main (int argc, char *argv[])
 {
   char msg[32] = "\n\rHallo Welt!\n\r";
-  char msg_key1[32] = "Pushbutton 1\r";
-  char msg_key2[32] = "Pushbutton 2\r";
-  char msg_key3[32] = "Pushbutton 3\r";
-  //char msg_sw[32]		= "            \r";
+  char msg_key1[32]		 	= "Pushbutton 1";
+  char msg_key2[32] 		= "Pushbutton 2";
+  char msg_key3[32] 		= "Pushbutton 3";
+  char msg_pos1[32]			= "\r";
 
   UART_Cfg cfg;
     
@@ -34,15 +34,17 @@ int main (int argc, char *argv[])
 
   // 7-Segment
   dis7seg_initHandle(&display_handle, DISP7SEG_BADDR, 8);
-
-  uint32_t keys, keys_old;
-	//uint8_t sw, i;
+	dis7seg_displayHexUInt32(&display_handle, 0, 0x00000042);
+  
+	
+	uint32_t keys, keys_old, led_port;
+	uint8_t i;
 	keys_old = 0;
+	led_port = 0;
 
   UART_write(0, msg, strlen(msg));
-  dis7seg_displayHexUInt32(&display_handle, 0, 0x00000042);
 
-
+	
 	while(1) {
 		keys = getButtonStatus();
 		
@@ -56,35 +58,27 @@ int main (int argc, char *argv[])
 			if(keys & (1<<BUTTON1)) {
 				UART_write(0, msg_key1, strlen(msg_key1));
 			}
-		} 
-		keys_old = keys;
+		}
 
-		/*for(i=0; i<18; i++)
+		 
+		keys_old = keys;
+/*
+		for(i=0; i<18; i++)
 		{
-			sw = getSwitchStatus(i);	
-			if(sw == SW_ON)
-			{
-				msg_sw = "SW ", i, " ON      \r\n"; 	
-				UART_write(0, msg_sw, strlen(msg_sw));
-			}
-			if(sw == SW_OFF)
-			{
-				msg_sw = "SW ", i, " OFF     \r\n"; 	
-				UART_write(0, msg_sw, strlen(msg_sw));
+			if (getSwitchStatus(i) == SW_ON) {
+				led_port |= (SW_ON<<i);
+			} else {
+				if (getSwitchStatus(i) == SW_OFF)
+					led_port &= (SW_OFF<<i);
+				else
+					UART_write(0, "        SW error        " , 25);	
 			}	
-		}*/
-/*		sw = getSwitchStatus(1);	
-		if(sw == SW_ON)
-		{
-			msg_sw = "SW 1 ON      \r\n"; 	
-			UART_write(0, msg_sw, strlen(msg_sw));
 		}
-		if(sw == SW_OFF)
-		{
-			msg_sw = "SW 1 OFF     \r\n"; 	
-			UART_write(0, msg_sw, strlen(msg_sw));
-		}
-	*/
+*/
+		//setLeds(led_port);	
+		led_port = 0;
+		led_port |= (1<<1);
+		setLeds(led_port);
 	}
 
 
