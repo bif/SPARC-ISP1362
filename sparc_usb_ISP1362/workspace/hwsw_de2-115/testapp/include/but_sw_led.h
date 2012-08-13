@@ -8,9 +8,9 @@
 
 #define SWITCH_MASK ((uint32_t) 0x3FFFF)
 
-#define BUTTON1	1
-#define BUTTON2 2
-#define BUTTON3 3
+#define BUTTON1	0
+#define BUTTON2 1
+#define BUTTON3 2
 
 #define SW0 0
 #define SW1 1

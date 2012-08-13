@@ -78,7 +78,7 @@ entity top is
 		-- Leds
 		LEDR				: out std_logic_vector(17 downto 0);
 		LEDG				: out std_logic_vector(8 downto 0);	
- 			-- ISP1362 - usb controler
+ 		-- ISP1362 - usb controler
 		USB_DATA	: inout std_logic_vector (15 downto 0);
 		USB_ADDR	: out std_logic_vector (1 downto 0); 
 		USB_RD_N	: out std_logic;

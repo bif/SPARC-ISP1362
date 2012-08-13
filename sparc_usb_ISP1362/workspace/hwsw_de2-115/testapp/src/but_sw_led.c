@@ -25,7 +25,7 @@ uint8_t getSwitchStatus(uint32_t sw_nbr)
 	uint32_t sw;
 
 	sw = 0;
-/*
+
 	sw |= (uint32_t) ((DATA_IO_0_3 >> 3) & SWITCH_MASK);
 	if (sw & (1<<sw_nbr))
 	{
@@ -36,7 +36,7 @@ uint8_t getSwitchStatus(uint32_t sw_nbr)
 			else
 				return SW_ON;
 		}
-	}*/
+	}
 	return 0;
 }
 

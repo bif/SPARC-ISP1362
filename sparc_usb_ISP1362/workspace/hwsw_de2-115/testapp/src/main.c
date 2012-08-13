@@ -45,8 +45,7 @@ int main (int argc, char *argv[])
 
 	while(1) {
 		keys = getButtonStatus();
-		//UART_write(0, ((char*)keys), 20);
-
+		
 		if(keys != keys_old) {
 			if(keys & (1<<BUTTON3)) {
 				UART_write(0, msg_key3, strlen(msg_key3));
