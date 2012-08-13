@@ -4,13 +4,13 @@
 #define BUT_SW_LED_BADDR ((uint32_t)-384)
 #define BUT_SW_LED_STATUS (*(volatile int *const) (BUT_SW_LED_BADDR))
 #define DATA_IO_0_3   (*(volatile int *const) (BUT_SW_LED_BADDR+4))
-#define DATA_IO_4_5   (*(volatile int *const) (BUT_SW_LED_BADDR+5))
+#define DATA_IO_4_5   (*(volatile int *const) (BUT_SW_LED_BADDR+8))
 
 #define SWITCH_MASK ((uint32_t) 0x3FFFF)
 
-#define BUTTON1	0
-#define BUTTON2 1
-#define BUTTON3 2
+#define BUTTON1	1
+#define BUTTON2 2
+#define BUTTON3 3
 
 #define SW0 0
 #define SW1 1
@@ -61,7 +61,7 @@
 #define G_LED8 8
 
 #define SW_ON 1
-#define SW_FF 2
+#define SW_OFF 2
 
 uint32_t sw_old;
 

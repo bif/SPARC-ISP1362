@@ -9,9 +9,10 @@ uint32_t getButtonStatus(void)
 	
 	ret_val = 0;
 
+	// negation because buttons are low-active
 	if(!(DATA_IO_0_3 & (1<<BUTTON1)))
 		ret_val |= (1<<BUTTON1);
-	if(!(DATAIO_0_3 & (1<<BUTTON2)))
+	if(!(DATA_IO_0_3 & (1<<BUTTON2)))
 		ret_val |= (1<<BUTTON2);
 	if(!(DATA_IO_0_3 & (1<<BUTTON3)))
 		ret_val |= (1<<BUTTON3);
@@ -24,7 +25,7 @@ uint8_t getSwitchStatus(uint32_t sw_nbr)
 	uint32_t sw;
 
 	sw = 0;
-
+/*
 	sw |= (uint32_t) ((DATA_IO_0_3 >> 3) & SWITCH_MASK);
 	if (sw & (1<<sw_nbr))
 	{
@@ -35,18 +36,15 @@ uint8_t getSwitchStatus(uint32_t sw_nbr)
 			else
 				return SW_ON;
 		}
-	}
-	else
-	{
-		return 0;
-	}
+	}*/
+	return 0;
 }
 
-void setLeds(uint32_t)
+void setLeds(uint32_t leds)
 {
 	uint32_t i;
 
-	i = 0;
+	i = leds;
 
 	//for( i=0; i<27; i++)
 	//{

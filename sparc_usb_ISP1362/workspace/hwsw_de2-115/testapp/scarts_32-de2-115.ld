@@ -1,7 +1,7 @@
 ENTRY(_start)
-OUTPUT_FORMAT("elf32-spear32", "elf32-spear32", "elf32-spear32")
-OUTPUT_ARCH(spear32)
-SEARCH_DIR("/homes/lechner/spear_mwalter_install/spear32/lib")
+OUTPUT_FORMAT("elf32-scarts_32", "elf32-scarts_32", "elf32-scarts_32")
+OUTPUT_ARCH(scarts_32)
+SEARCH_DIR("/opt/scarts/scarts_32/lib")
 
 /*
  * This is the map for the code memory (addresses grow downwards)
@@ -106,7 +106,7 @@ SECTIONS
   PROVIDE (_etext = .);
   PROVIDE (etext = .);
   /* MWA: The .rodata section is allocated in RAM, not in ROM, since, in the
-     SPEAR2 architecture, the ROM can only be addressed instruction-wise. As
+     SCARTS architecture, the ROM can only be addressed instruction-wise. As
      a result, the address for the data segment is reset before the .rodata
      section is defined. */
   /* Adjust the address for the data segment.  We want to adjust up to

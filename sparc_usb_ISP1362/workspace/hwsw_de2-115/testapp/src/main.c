@@ -16,10 +16,10 @@ static dis7seg_handle_t display_handle;
 int main (int argc, char *argv[])
 {
   char msg[32] = "\n\rHallo Welt!\n\r";
-  char msg_key1[32] = "*Pushbutton 1\r";
-  char msg_key2[32] = "#Pushbutton 2\r";
-  char msg_key3[32] = "_Pushbutton 3\r";
-  char msg_sw[32]		= "            \r";
+  char msg_key1[32] = "Pushbutton 1\r";
+  char msg_key2[32] = "Pushbutton 2\r";
+  char msg_key3[32] = "Pushbutton 3\r";
+  //char msg_sw[32]		= "            \r";
 
   UART_Cfg cfg;
     
@@ -36,7 +36,7 @@ int main (int argc, char *argv[])
   dis7seg_initHandle(&display_handle, DISP7SEG_BADDR, 8);
 
   uint32_t keys, keys_old;
-	uint8_t sw, i;
+	//uint8_t sw, i;
 	keys_old = 0;
 
   UART_write(0, msg, strlen(msg));
@@ -44,8 +44,8 @@ int main (int argc, char *argv[])
 
 
 	while(1) {
-		
-		keys = getButtonsStatus();
+		keys = getButtonStatus();
+		//UART_write(0, ((char*)keys), 20);
 
 		if(keys != keys_old) {
 			if(keys & (1<<BUTTON3)) {

@@ -28,6 +28,14 @@ case $2 in
                 echo "cat $COM"
                 cat $COM
         ;;
+				"c")
+								echo "********************************************"
+								echo "RECOMPILE"
+								echo "********************************************"
+								rm -rf main.srec
+								rm -rf main
+								make
+				;;
         "write")
                 if test -z $3
                 then
@@ -35,6 +43,7 @@ case $2 in
                         echo "Usage: $0 write <filename>"
                         echo "********************************************"
                 else
+												
                         echo "cat $3 > $COM"
                         cat $3 > $COM
                 fi
