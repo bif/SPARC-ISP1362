@@ -60,7 +60,7 @@ int main (int argc, char *argv[])
 		} 
 		keys_old = keys;
 
-		for(i=0; i<18; i++)
+		/*for(i=0; i<18; i++)
 		{
 			sw = getSwitchStatus(i);	
 			if(sw == SW_ON)
@@ -73,7 +73,19 @@ int main (int argc, char *argv[])
 				msg_sw = "SW ", i, " OFF     \r\n"; 	
 				UART_write(0, msg_sw, strlen(msg_sw));
 			}	
+		}*/
+/*		sw = getSwitchStatus(1);	
+		if(sw == SW_ON)
+		{
+			msg_sw = "SW 1 ON      \r\n"; 	
+			UART_write(0, msg_sw, strlen(msg_sw));
 		}
+		if(sw == SW_OFF)
+		{
+			msg_sw = "SW 1 OFF     \r\n"; 	
+			UART_write(0, msg_sw, strlen(msg_sw));
+		}
+	*/
 	}
 
 
