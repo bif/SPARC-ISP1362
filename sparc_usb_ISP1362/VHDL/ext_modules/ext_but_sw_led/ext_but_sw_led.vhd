@@ -82,12 +82,12 @@ type switches_type is array (0 to 17) of std_logic;
 signal switches : switches_type;
 
 -- signals for red leds
-type red_leds_type is array (0 to 17) of std_logic;
-signal red_leds : red_leds_type;
+--type red_leds_type is array (0 to 17) of std_logic;
+--signal red_leds : red_leds_type;
 
 -- signals for green leds
-type green_leds_type is array (0 to 8) of std_logic;
-signal green_leds : green_leds_type;
+--type green_leds_type is array (0 to 8) of std_logic;
+--signal green_leds : green_leds_type;
 
 
 begin -- behaviour
@@ -207,27 +207,27 @@ begin -- behaviour
 			-- REG_IO_2: sw13- sw17 / red led0 - red led2				| i < 3
 			-- REG_IO_3: red led3 - red led10 									| 2 < i < 11
 			-- REG_IO_4: red led11 - red led17 	/ green led0		| 10 < i < 18
-		for i in 0 to 17 loop
-			if i < 3 then 
-				red_leds(i) <= r.ifacereg(REG_IO_2)(i+5); 
-			else
-				if i < 11 then
-					red_leds(i) <= r.ifacereg(REG_IO_3)(i-3);
-				else
-					red_leds(i) <= r.ifacereg(REG_IO_4)(i-11);
-				end if;
-			end if; 
-		end loop;
+	--	for i in 0 to 17 loop
+	--		if i < 3 then 
+	--			red_leds(i) <= r.ifacereg(REG_IO_2)(i+5); 
+	--		else
+	--			if i < 11 then
+	--				red_leds(i) <= r.ifacereg(REG_IO_3)(i-3);
+	--			else
+	--				red_leds(i) <= r.ifacereg(REG_IO_4)(i-11);
+	--			end if;
+	--		end if; 
+	--	end loop;
 
 			-- REG_IO_4: red led11 - red led17 / green led0
 			-- REG_IO_5: green led1 - green led8
-		for i in 0 to 8 loop
-			if i > 0 then
-				green_leds(i) <= r.ifacereg(REG_IO_5)(i-1);
-			else
-				green_leds(i) <= r.ifacereg(REG_IO_4)(i+7);
-			end if;
-		end loop;
+	--	for i in 0 to 8 loop
+	--		if i > 0 then
+	--			green_leds(i) <= r.ifacereg(REG_IO_5)(i-1);
+	--		else
+	--			green_leds(i) <= r.ifacereg(REG_IO_4)(i+7);
+	--		end if;
+	--	end loop;
    
     r_next <= v;
   end process;
@@ -240,9 +240,9 @@ begin -- behaviour
         r.ifacereg <= (others => (others => '0'));
         buttons <= (others => '1'); -- '1' because buttons low activ
 				switches <= (others => '0');
-				--red_leds <= (others => '0');
-      	--green_leds <= (others => '0');
-				ledr <= (others => '0');
+--				red_leds <= (others => '0');
+ --     	green_leds <= (others => '0');
+				ledr <= (others => '1');
 				ledg <= (others => '0');
 			else
         r <= r_next;
@@ -252,12 +252,45 @@ begin -- behaviour
 				for i in 0 to 17 loop	
 					switches(i) <= sw(i);
 				end loop;
-				for i in 0 to 17 loop	
-					ledr(i) <= red_leds(i);
-				end loop;
-				for i in 0 to 8 loop	
-					ledg(i) <= green_leds(i);
-				end loop;
+				
+				ledr(2 downto 0) <= r.ifacereg(REG_IO_2)(7 downto 5);
+				ledr(10 downto 3) <= r.ifacereg(REG_IO_3)(7 downto 0);
+				ledr(17 downto 11) <= r.ifacereg(REG_IO_4)(6 downto 0);
+				ledg(0) <= r.ifacereg(REG_IO_4)(7);
+				ledg(8 downto 1) <= r.ifacereg(REG_IO_5)(7 downto 0);
+
+
+	--	for i in 0 to 17 loop
+	--		if i < 3 then 
+	--			red_leds(i) <= r.ifacereg(REG_IO_2)(i+5); 
+	--		else
+	--			if i < 11 then
+	--				red_leds(i) <= r.ifacereg(REG_IO_3)(i-3);
+	--			else
+	--				red_leds(i) <= r.ifacereg(REG_IO_4)(i-11);
+	--			end if;
+	--		end if; 
+	--	end loop;
+
+			-- REG_IO_4: red led11 - red led17 / green led0
+			-- REG_IO_5: green led1 - green led8
+	--	for i in 0 to 8 loop
+	--		if i > 0 then
+	--			green_leds(i) <= r.ifacereg(REG_IO_5)(i-1);
+	--		else
+	--			green_leds(i) <= r.ifacereg(REG_IO_4)(i+7);
+	--		end if;
+	
+
+
+
+	--			for i in 0 to 17 loop	
+	--				ledr(i) <= red_leds(i);
+	--			end loop;
+	--			for i in 0 to 8 loop	
+	--				ledg(i) <= green_leds(i);
+	--			end loop;
+
 			end if;
     end if;
   end process;

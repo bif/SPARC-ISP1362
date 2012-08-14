@@ -46,11 +46,11 @@ int main (int argc, char *argv[])
 	
 
   UART_write(0, msg, strlen(msg));
-
+	
 	
 	while(1) {
+		// pushbuttons
 		keys = getButtonStatus();
-		
 		if(keys != keys_old) {
 			if(keys & (1<<BUTTON3)) {
 				UART_write(0, msg_key3, strlen(msg_key3));
@@ -62,40 +62,21 @@ int main (int argc, char *argv[])
 				UART_write(0, msg_key1, strlen(msg_key1));
 			}
 		}
+		keys_old = keys;
+		// switches & leds
+		led_port = 0;
 		for(i=0; i<18; i++)
 		{
 			if (getSwitchStatus(i) == SW_ON) {
 				led_port |= (SW_ON<<i);
-				(void) sprintf(msg_tmp, "KEY %i ON", i);
-				UART_write(0, msg_tmp, strlen(msg_tmp));
-			} else {
-				if (getSwitchStatus(i) == SW_OFF) { 
-					led_port &= (SW_OFF<<i);
-				}	else
-					UART_write(0, "        SW error        " , 25);	
+				//(void) sprintf(msg_tmp, "KEY %i ON", i);
+				//UART_write(0, msg_tmp, strlen(msg_tmp));
 			}	
-		}
-
+		} 
 		UART_write(0, msg_pos1, strlen(msg_pos1));
 
-		keys_old = keys;
-/*
-		for(i=0; i<18; i++)
-		{
-			if (getSwitchStatus(i) == SW_ON) {
-				led_port |= (SW_ON<<i);
-			} else {
-				if (getSwitchStatus(i) == SW_OFF)
-					led_port &= (SW_OFF<<i);
-				else
-					UART_write(0, "        SW error        " , 25);	
-			}	
-		}
-*/
-		//setLeds(led_port);	
-		//led_port = 0;
-		//led_port |= (1<<1);
-		//setLeds(led_port);
+		// leds
+		setLeds(led_port | G_LED0 | G_LED2 | G_LED7);
 	}
 
 
