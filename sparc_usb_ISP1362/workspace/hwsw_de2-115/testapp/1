@@ -43,7 +43,7 @@ void setLeds(uint32_t leds)
 	tmp = 0;
 	tmp |= (leds << LED_OFFSET);
 
-	DATA_IO_0_3 = 0;	
+	DATA_IO_0_3 = 0xFFFF;	
 
 }
 

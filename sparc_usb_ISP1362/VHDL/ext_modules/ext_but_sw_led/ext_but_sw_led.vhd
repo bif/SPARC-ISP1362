@@ -93,7 +93,7 @@ signal green_leds : green_leds_type;
 begin -- behaviour
 
   -- extension module process
-  comb : process(r, exti, extsel, button1, button2, button3, buttons, sw, switches, red_leds, green_leds)
+  comb : process(r, exti, extsel, button1, button2, button3, buttons, sw, switches)--, red_leds, green_leds)
     variable v : reg_type;
   begin
     v := r;
@@ -148,10 +148,11 @@ begin -- behaviour
           if (r.ifacereg(CONFIGREG)(CONF_ID) = '1') then
             exto.data <= MODULE_VER & MODULE_ID;
           else
-            exto.data <= r.ifacereg(REG_IO_3) & r.ifacereg(REG_IO_2) & r.ifacereg(REG_IO_1) & r.ifacereg(REG_IO_0);
-          end if;
-				when "010" =>
-					exto.data <= "00000000" & "00000000" & r.ifacereg(REG_IO_5) & r.ifacereg(REG_IO_4);
+--            exto.data <= r.ifacereg(REG_IO_3) & r.ifacereg(REG_IO_2) & r.ifacereg(REG_IO_1) & r.ifacereg(REG_IO_0);
+            exto.data <= "00000000" & r.ifacereg(REG_IO_2) & r.ifacereg(REG_IO_1) & r.ifacereg(REG_IO_0);
+         end if;
+--				when "010" =>
+--					exto.data <= "00000000" & "00000000" & r.ifacereg(REG_IO_5) & r.ifacereg(REG_IO_4);
 	      when others =>
           null;
       end case;
@@ -184,6 +185,7 @@ begin -- behaviour
     exto.intreq <= r.ifacereg(STATUSREG)(STA_INT);
 
     -- module specific part
+			
 			-- REG_IO_0: buttons 1-3 / sw0 - sw4
 		for i in 0 to 7 loop
 			if i < 3 then
@@ -192,35 +194,41 @@ begin -- behaviour
 				v.ifacereg(REG_IO_0)(i) := switches(i-3);
 			end if;
   	end loop;
+			
 			-- REG_IO_1: sw5 - sw12
 		for i in 0 to 7 loop
      	v.ifacereg(REG_IO_1)(i) := switches(i+5);
 		end loop;
-			-- REG_IO_2: sw13- sw17 / red led0 - red led2
-		for i in 0 to 7 loop
-			if i < 5 then
+			-- REG_IO_2: sw13- sw17 
+		for i in 0 to 4 loop
       	v.ifacereg(REG_IO_2)(i) := switches(i+13);
-			else
-	 			red_leds(i-5) <= v.ifacereg(REG_IO_2)(i);
-			end if;
     end loop;
-			-- REG_IO_3: red led3 - red led10
-		for i in 0 to 7 loop
-    	red_leds(i+3) <= v.ifacereg(REG_IO_3)(i);
+
+			-- REG_IO_2: sw13- sw17 / red led0 - red led2				| i < 3
+			-- REG_IO_3: red led3 - red led10 									| 2 < i < 11
+			-- REG_IO_4: red led11 - red led17 	/ green led0		| 10 < i < 18
+		for i in 0 to 17 loop
+			if i < 3 then 
+				red_leds(i) <= r.ifacereg(REG_IO_2)(i+5); 
+			else
+				if i < 11 then
+					red_leds(i) <= r.ifacereg(REG_IO_3)(i-3);
+				else
+					red_leds(i) <= r.ifacereg(REG_IO_4)(i-11);
+				end if;
+			end if; 
 		end loop;
+
 			-- REG_IO_4: red led11 - red led17 / green led0
-		for i in 0 to 7 loop
-			if i < 7 then
-      	red_leds(i+11) <= v.ifacereg(REG_IO_4)(i);
-			else
-				green_leds(i-7) <= v.ifacereg(REG_IO_4)(i);
-			end if;
-    end loop;
 			-- REG_IO_5: green led1 - green led8
-    for i in 0 to 7 loop
-    	green_leds(i+1) <= 	v.ifacereg(REG_IO_5)(i);
-    end loop;
-    
+		for i in 0 to 8 loop
+			if i > 0 then
+				green_leds(i) <= r.ifacereg(REG_IO_5)(i-1);
+			else
+				green_leds(i) <= r.ifacereg(REG_IO_4)(i+7);
+			end if;
+		end loop;
+   
     r_next <= v;
   end process;
 
@@ -232,8 +240,8 @@ begin -- behaviour
         r.ifacereg <= (others => (others => '0'));
         buttons <= (others => '1'); -- '1' because buttons low activ
 				switches <= (others => '0');
-				red_leds <= (others => '0');
-      	green_leds <= (others => '0');
+				--red_leds <= (others => '0');
+      	--green_leds <= (others => '0');
 				ledr <= (others => '0');
 				ledg <= (others => '0');
 			else

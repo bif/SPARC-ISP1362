@@ -16,10 +16,11 @@ static dis7seg_handle_t display_handle;
 int main (int argc, char *argv[])
 {
   char msg[32] = "\n\rHallo Welt!\n\r";
-  char msg_key1[32]		 	= "Pushbutton 1";
-  char msg_key2[32] 		= "Pushbutton 2";
-  char msg_key3[32] 		= "Pushbutton 3";
+  char msg_key1[32]		 	= " Pushbutton 1 ";
+  char msg_key2[32] 		= " Pushbutton 2 ";
+  char msg_key3[32] 		= " Pushbutton 3 ";
   char msg_pos1[32]			= "\r";
+	char msg_tmp[32] = "";
 
   UART_Cfg cfg;
     
@@ -39,8 +40,10 @@ int main (int argc, char *argv[])
 	
 	uint32_t keys, keys_old, led_port;
 	uint8_t i;
+
 	keys_old = 0;
 	led_port = 0;
+	
 
   UART_write(0, msg, strlen(msg));
 
@@ -59,8 +62,22 @@ int main (int argc, char *argv[])
 				UART_write(0, msg_key1, strlen(msg_key1));
 			}
 		}
+		for(i=0; i<18; i++)
+		{
+			if (getSwitchStatus(i) == SW_ON) {
+				led_port |= (SW_ON<<i);
+				(void) sprintf(msg_tmp, "KEY %i ON", i);
+				UART_write(0, msg_tmp, strlen(msg_tmp));
+			} else {
+				if (getSwitchStatus(i) == SW_OFF) { 
+					led_port &= (SW_OFF<<i);
+				}	else
+					UART_write(0, "        SW error        " , 25);	
+			}	
+		}
 
-		 
+		UART_write(0, msg_pos1, strlen(msg_pos1));
+
 		keys_old = keys;
 /*
 		for(i=0; i<18; i++)
@@ -76,9 +93,9 @@ int main (int argc, char *argv[])
 		}
 */
 		//setLeds(led_port);	
-		led_port = 0;
-		led_port |= (1<<1);
-		setLeds(led_port);
+		//led_port = 0;
+		//led_port |= (1<<1);
+		//setLeds(led_port);
 	}
 
 
