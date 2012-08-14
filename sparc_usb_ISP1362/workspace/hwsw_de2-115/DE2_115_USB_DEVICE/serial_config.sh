@@ -35,6 +35,7 @@ case $2 in
                         echo "Usage: $0 write <filename>"
                         echo "********************************************"
                 else
+												
                         echo "cat $3 > $COM"
                         cat $3 > $COM
                 fi

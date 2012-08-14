@@ -28,14 +28,6 @@ case $2 in
                 echo "cat $COM"
                 cat $COM
         ;;
-				"c")
-								echo "********************************************"
-								echo "RECOMPILE"
-								echo "********************************************"
-								rm -rf main.srec
-								rm -rf main
-								make
-				;;
         "write")
                 if test -z $3
                 then

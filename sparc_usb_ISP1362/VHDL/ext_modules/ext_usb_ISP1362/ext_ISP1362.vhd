@@ -137,6 +137,12 @@ begin -- behaviour
           if ((exti.byte_en(1) = '1')) then
             v(DC_WRITE_DATA_HIGH) := exti.data(15 downto 8);
           end if;
+          if ((exti.byte_en(2) = '1')) then
+            v(DC_WRITE_DATA_HIGH) := (others => '0');
+          end if;
+          if ((exti.byte_en(3) = '1')) then
+            v(DC_WRITE_DATA_HIGH) := (others => '0');
+          end if;
         when others =>
           null;
       end case;

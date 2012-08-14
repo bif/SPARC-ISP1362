@@ -1,50 +1,19 @@
-// --------------------------------------------------------------------
-// Copyright (c) 2010 by Terasic Technologies Inc. 
-// --------------------------------------------------------------------
-//
-// Permission:
-//
-//   Terasic grants permission to use and modify this code for use
-//   in synthesis for all Terasic Development Boards and Altera Development 
-//   Kits made by Terasic.  Other use of this code, including the selling 
-//   ,duplication, or modification of any portion is strictly prohibited.
-//
-// Disclaimer:
-//
-//   This VHDL/Verilog or C/C++ source code is intended as a design reference
-//   which illustrates how these types of functions can be implemented.
-//   It is the user's responsibility to verify their design for
-//   consistency and functionality through the use of formal
-//   verification methods.  Terasic provides no warranty regarding the use 
-//   or functionality of this code.
-//
-// --------------------------------------------------------------------
-//           
-//                     Terasic Technologies Inc
-//                     356 Fu-Shin E. Rd Sec. 1. JhuBei City,
-//                     HsinChu County, Taiwan
-//                     302
-//
-//                     web: http://www.terasic.com/
-//                     email: support@terasic.com
-//
-// --------------------------------------------------------------------
-//
-// Major Functions: It can realize a led controller through the USB slave 
-//                  interface, then you can light on or off the leds on the
-//                  board through a windows appliacation.
-// --------------------------------------------------------------------
-//
-// Revision History :
-// --------------------------------------------------------------------
-//   Ver  :| Author            :| Mod. Date :| Changes Made:
-//   V1.0 :| Peli Li           :| 03/25/2010:| Initial Revision
-// --------------------------------------------------------------------
 
-#include "system.h"
+#include <inttypes.h>
+#include <machine/modules.h>
+#include <machine/interrupts.h>
+//#include <machine/UART.h>
+#include <drivers/dis7seg.h>
+#include <drivers/vgatext.h>
+
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+//#include "system.h"
 #include "basic_io.h"
-#include "LCD.h"
-#include "sys/alt_irq.h"
+//#include "sys/alt_irq.h"
+#include "but_sw_led.h"
 
 //  for USB
 #include "BASICTYP.h"
@@ -54,14 +23,15 @@
 #include "MAINLOOP.h"
 
 #include "ISP1362_HAL.h"
-#include "SEG7.h"
 
-#include "altera_avalon_pio_regs.h"
-#include "alt_types.h"
+//#include "altera_avalon_pio_regs.h"
+//#include "alt_types.h"
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+
+#define DISP7SEG_BADDR                  ((uint32_t)-288)
+#define VGATEXT_BADDR                   ((uint32_t)0xF0000100)
+#define BUT_SW_LED_BADDR                ((uint32_t)-384)
+#define USB_ISP1362_BADDR               ((uint32_t)-416)
 
 //-------------------------------------------------------------------------
 //  Global Variable

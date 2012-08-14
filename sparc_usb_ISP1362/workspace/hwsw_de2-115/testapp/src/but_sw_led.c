@@ -36,7 +36,6 @@ uint8_t getSwitchStatus(uint32_t sw_nbr)
 	return 2;
 }
 
-
 // usage: setLeds(R_LEDx | ... | GLEDx | ... )
 void setLeds(uint32_t leds)
 {

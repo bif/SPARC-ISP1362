@@ -4,17 +4,27 @@
 
 #include "BasicTyp.h"
 
-//***************************************************************************
+//*******************************************************************
+// defines for connection to SPARC
+//*******************************************************************
+#define USB_ISP1362_BADDR ((uint32_t)-416)
+#define USB_ISP1362_STATUS (*(volatile int *const) (USB_ISP1362_BADDR))
+#define DATA_IO_0_3   (*(volatile int *const) (BUT_SW_LED_BADDR+4))
+#define DATA_IO_4_5   (*(volatile int *const) (BUT_SW_LED_BADDR+8))
+
+//*******************************************************************
+// defines for USB function 
+//*******************************************************************
 #define DMA_IDLE		0
 #define DMA_RUNNING	1
 #define DMA_PENDING	2
 #define DMA_IN_DONE	3
-// **************************************************************************
+
 #define DMA_BUFFER_SIZE		65536
 
-   //*************************************************************************
-   // Function Prototypes
-   //*************************************************************************
+//*******************************************************************
+// Function Prototypes
+//*******************************************************************
 void SetupToken_Handler(void);
 void DeviceRequest_Handler(void);
 void help_devreq(UCHAR type, UCHAR req);

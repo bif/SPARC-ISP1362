@@ -6,6 +6,14 @@ LDFLAGS=-Wl,--nmagic,--no-check-sections,--strip-all,-Tscarts_32-de2-115.ld
 LIBS=-lscartsdrivers
 
 SOURCES=src/main.c \
+	src/CHAP_9.c \
+	src/D13BUS.c \
+	src/debug.c \
+	src/HAL4D13.c \
+	src/ISO.c \
+	src/ISR.c \
+	src/MAINLOOP.c \
+	src/usb_irq.c \
 	src/but_sw_led.c
 
 OBJECTS=$(SOURCES:.c=.o)

@@ -8,8 +8,11 @@
 #include <string.h>
 #include "but_sw_led.h"
 
+
 #define DISP7SEG_BADDR                  ((uint32_t)-288)
 #define VGATEXT_BADDR                   ((uint32_t)0xF0000100)
+#define BUT_SW_LED_BADDR                ((uint32_t)-384)
+
 
 static dis7seg_handle_t display_handle;
 
@@ -23,7 +26,8 @@ int main (int argc, char *argv[])
 	char msg_tmp[32] = "";
 
   UART_Cfg cfg;
-    
+  
+  
   // Initialize peripheral components ...
   // UART
   cfg.fclk = 50000000;
@@ -76,7 +80,7 @@ int main (int argc, char *argv[])
 		UART_write(0, msg_pos1, strlen(msg_pos1));
 
 		// leds
-		setLeds(led_port | G_LED0 | G_LED2 | G_LED7);
+		setLeds(led_port | G_LED0 | G_LED2 | G_LED7 | G_LED6);
 	}
 
 

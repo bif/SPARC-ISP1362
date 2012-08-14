@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "BasicTyp.h"
 #include "common.h"
-#include "mainloop.h"
+#include "MAINLOOP.h"
 #include "usb.h"
 #include "Hal4D13.h"
 #include "chap_9.h"
@@ -11,12 +11,12 @@
 
 extern IO_REQUEST idata ioRequest;
 extern D13FLAGS bD13flags;
-extern USBCHECK_DEVICE_STATES bUSBCheck_Device_State;;
+extern USBCHECK_DEVICE_STATES bUSBCheck_Device_State;
 extern CONTROL_XFER ControlData;
 
-//*************************************************************************
+//*******************************************************************
 // USB protocol function pointer arrays
-//*************************************************************************
+//*******************************************************************
 
 #define MAX_STANDARD_REQUEST    0x0D
 code void (*StandardDeviceRequest[])(void) =
@@ -76,9 +76,9 @@ code CHAR * _NAME_USB_STANDARD_REQUEST[] =
 "SYNC_FRAME"
 };
 
-//*************************************************************************
+//*******************************************************************
 // Class device requests
-//*************************************************************************
+//*******************************************************************
    
 #define MAX_CLASS_REQUEST    0x00
 code void (*ClassDeviceRequest[])(void) =
@@ -91,9 +91,9 @@ code CHAR * _NAME_USB_CLASS_REQUEST[] =
    " ML_Reserved"
 };
 
-//*************************************************************************
+//*******************************************************************
 // Vendor Device Request
-//*************************************************************************
+//*******************************************************************
 
 #define MAX_VENDOR_REQUEST    0x0f
 
