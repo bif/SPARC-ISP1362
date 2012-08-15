@@ -128,7 +128,7 @@ begin
           if (r.ifacereg(CONFIGREG)(CONF_ID) = '1') then
             exto.data <= MODULE_VER & MODULE_ID;
           else
-            exto.data <= r.ifacereg(7) & r.ifacereg(6) & r.ifacereg(5) & r.ifacereg(4);
+            exto.data <= r.ifacereg(7) & r.ifacereg(6) & r.ifacereg(5) & r.ifacereg(PRESCALER_REG);
           end if;
         when "010" =>
           exto.data <= r.counter;

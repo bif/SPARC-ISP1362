@@ -7,12 +7,13 @@
 #include <drivers/vgatext.h>
 #include <string.h>
 #include "but_sw_led.h"
-
+//#include "counter.h"
 
 #define DISP7SEG_BADDR                  ((uint32_t)-288)
 #define VGATEXT_BADDR                   ((uint32_t)0xF0000100)
 #define BUT_SW_LED_BADDR                ((uint32_t)-384)
-
+#define EXPH_BADDR											((uint32_t)-448)
+#define DATA_EXPH   (*(volatile int *const) (EXPH_BADDR+3))
 
 static dis7seg_handle_t display_handle;
 
@@ -75,7 +76,12 @@ int main (int argc, char *argv[])
 				led_port |= (SW_ON<<i);
 				//(void) sprintf(msg_tmp, "KEY %i ON", i);
 				//UART_write(0, msg_tmp, strlen(msg_tmp));
-			}	
+				if(i==0)
+					DATA_EXPH = (1<<0);	
+			} else {
+				if(i == 0)
+					DATA_EXPH = 0;
+			}
 		} 
 		UART_write(0, msg_pos1, strlen(msg_pos1));
 

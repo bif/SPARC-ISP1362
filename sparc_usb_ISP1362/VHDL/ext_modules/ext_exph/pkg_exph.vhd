@@ -1,24 +1,26 @@
 -------------------------------------------------------------------------------
--- Title      : Package Extension-Module
--- Project    : SPEAR - Scalable Processor for Embedded Applications in
+-- Title      : Extention Module for Expansion header of DE2 board 
+-- Project    : SCARTS - Scalable Processor for Embedded Applications in
 --              Realtime Environment
 -------------------------------------------------------------------------------
--- File       : pkg_display.vhd
--- Author     : Dipl. Ing. Martin Delvai
--- Company    : TU Wien - Institut fr Technische Informatik
--- Created    : 2002-02-11
--- Last update: 2011-04-01
--- Platform   : SUN Solaris
+-- File       : pkg_exph.vhd
+-- Author     : Ing. Stefan Simhandl
+-- Company    : 
+-- Created    : 2012-08-15
+-- Last update: 
+-- Platform   : CENTOS 5 
 -------------------------------------------------------------------------------
 -- Description:
--- Package for counter module
+--
 -------------------------------------------------------------------------------
--- Copyright (c) 2002 
+-- Copyright (c) 2012 
 -------------------------------------------------------------------------------
 -- Revisions  :
--- Date        Version  Author  Description
--- 2002-02-11  1.0      delvai	Created
+-- Date      	  Version	  Author		  Description
+-- 2012-08-15	  1.0    	  ssimhandl		Created
 -------------------------------------------------------------------------------
+
+
 -------------------------------------------------------------------------------
 -- LIBRARIES
 -------------------------------------------------------------------------------
@@ -26,43 +28,32 @@
 LIBRARY IEEE;
 use IEEE.std_logic_1164.all;
 
-use work.spear_pkg.all;
+use work.scarts_pkg.all;
 
 
 -------------------------------------------------------------------------------
 -- PACKAGE
 -------------------------------------------------------------------------------
 
-package pkg_counter is
+package pkg_exph is
 
-
--------------------------------------------------------------------------------
---                             CONSTANT
--------------------------------------------------------------------------------  
-
-constant MY_CONFIGREG : natural := 3;
-constant PRESCALER_REG : natural := 4;
-constant CMD_COUNT : natural := 0;
-constant CMD_CLEAR : natural := 1;
-
- 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 --                             COMPONENT
 -------------------------------------------------------------------------------  
 -------------------------------------------------------------------------------
-    component ext_counter
-      port (
-        clk        : IN  std_logic;
-        extsel     : in   std_ulogic;
-        exti       : in  module_in_type;
-        exto       : out module_out_type);
-    end component;
+component ext_exph
+	port(
+		clk         : IN  std_logic;
+		extsel      : in std_ulogic;
+		exti        : in  module_in_type;
+		exto        : out module_out_type;
+		--PINS			: out std_logic_vector(39 downto 0)
+		PINS				: out std_logic					
+	);
+end component;
   
-   
-
-
-end pkg_counter;
+end pkg_exph;
 -------------------------------------------------------------------------------
 --                             END PACKAGE
 ------------------------------------------------------------------------------- 

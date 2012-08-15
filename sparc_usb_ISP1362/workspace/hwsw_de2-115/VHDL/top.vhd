@@ -27,6 +27,7 @@ use work.pkg_counter.all;
 use work.ext_miniUART_pkg.all;
 use work.pkg_but_sw_led.all;
 use work.pkg_ISP1362.all;
+use work.pkg_exph.all;
 
 library grlib;
 use grlib.amba.all;
@@ -85,8 +86,11 @@ entity top is
 		USB_WR_N	: out std_logic;
 		USB_CS_N	: out std_logic;
 		USB_RST_N	: out std_logic;
-		USB_INT1	: in std_logic
+		USB_INT1	: in std_logic;
 
+		-- pins from expansion header
+		--GPIO			: out std_logic_vector(39 downto 0)
+		GPIO			: out std_logic
   );
 end top;
 
@@ -104,6 +108,12 @@ architecture behaviour of top is
   signal sysrst      : std_ulogic;
 
   signal clk         : std_logic;
+
+	-- expansion header
+	signal exph_sel		: std_logic;
+	signal exph_exto	: module_out_type;
+	-- 	signal exph_pins	: std_logic_vector(39 downto 0);
+	signal exph_pins	: std_logic;
 
 	-- ISP1362 
 	signal usb_sel	: std_logic;
@@ -404,6 +414,16 @@ begin
 		USB_INT1		=> USB_INT1
 	); 
 
+	expansion_header_unit: ext_exph
+	port map(
+		clk        	=> clk,
+    extsel     	=> exph_sel,
+    exti       	=> exti,
+    exto       	=> exph_exto,
+		-- IO PINS 
+		PINS				=> exph_pins	
+	);
+
 	dis7seg_unit: ext_dis7seg
     generic map (
       DIGIT_COUNT => 8,
@@ -450,7 +470,7 @@ begin
       TxD    => aux_uart_tx
 		);
   
-  comb : process(scarts_o, debugo_if, D_RxD, dis7segexto, counter_exto, aux_uart_exto, but_sw_led_exto, usb_exto)  --extend!
+  comb : process(scarts_o, debugo_if, D_RxD, dis7segexto, counter_exto, aux_uart_exto, but_sw_led_exto, usb_exto, exph_exto)  --extend!
     variable extdata : std_logic_vector(31 downto 0);
   begin   
     exti.reset    <= scarts_o.reset;
@@ -464,6 +484,7 @@ begin
     aux_uart_sel <= '0';
     but_sw_led_sel <= '0';
     usb_sel <= '0';
+		exph_sel <= '0';
     
 		if scarts_o.extsel = '1' then
       case scarts_o.addr(14 downto 5) is
@@ -482,6 +503,8 @@ begin
         when "1111110011" => -- (-416)
 					-- usb_ISP1362 Module
 					usb_sel <= '1';
+				when "1111110010" => -- (-448)
+					exph_sel <= '1';
 				when others =>
           null;
       end case;
@@ -489,7 +512,7 @@ begin
     
     extdata := (others => '0');
     for i in extdata'left downto extdata'right loop
-      extdata(i) := dis7segexto.data(i) or counter_exto.data(i) or aux_uart_exto.data(i) or but_sw_led_exto.data(i) or usb_exto.data(i); 
+      extdata(i) := dis7segexto.data(i) or counter_exto.data(i) or aux_uart_exto.data(i) or but_sw_led_exto.data(i) or usb_exto.data(i) or exph_exto.data(i); 
     end loop;
 
     scarts_i.data <= (others => '0');
@@ -501,7 +524,11 @@ begin
     --Debug interface
     D_TxD             <= debugo_if.D_TxD;
     debugi_if.D_RxD   <= D_RxD;
-  end process;
+
+		-- expansion header
+		--GPIO <= exph_pins;
+		GPIO <= exph_pins;
+ end process;
 
 
   reg : process(clk)
@@ -513,5 +540,6 @@ begin
       syncrst <= rst;
     end if;
   end process;
+
 
 end behaviour;

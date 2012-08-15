@@ -1,23 +1,23 @@
 -------------------------------------------------------------------------------
--- Title      : 7 Segment Display Architecture
--- Project    : SPEAR - Scalable Processor for Embedded Applications in
+-- Title      : Extention Module for Expansion header of DE2 board 
+-- Project    : SCARTS - Scalable Processor for Embedded Applications in
 --              Realtime Environment
 -------------------------------------------------------------------------------
--- File       : ext_sysctrl_ent.vhd
--- Author     : Dipl. Ing. Martin Delvai
--- Company    : TU Wien - Institut fr technische Informatik
--- Created    : 2002-02-11
--- Last update: 2011-10-20
--- Platform   : SUN Solaris 
+-- File       : ext_exph_ent.vhd
+-- Author     : Ing. Stefan Simhandl
+-- Company    : 
+-- Created    : 2012-08-15
+-- Last update: 
+-- Platform   : CENTOS 5 
 -------------------------------------------------------------------------------
 -- Description:
 --
 -------------------------------------------------------------------------------
--- Copyright (c) 2002 
+-- Copyright (c) 2012 
 -------------------------------------------------------------------------------
 -- Revisions  :
--- Date        Version  Author  Description
--- 2002-02-11  1.0      delvai	Created
+-- Date      	  Version	  Author		  Description
+-- 2012-08-15	  1.0    	  ssimhandl		Created
 -------------------------------------------------------------------------------
 
 
@@ -29,21 +29,23 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 
 USE work.scarts_pkg.all;
-use work.pkg_counter.all;
+use work.pkg_exph.all;
 
 ----------------------------------------------------------------------------------
 -- ENTITY
 ----------------------------------------------------------------------------------
 
 
-entity ext_counter is
+entity ext_exph is
   port(
-        clk                     : IN  std_logic;
-        extsel                  : in std_ulogic;
-        exti                    : in  module_in_type;
-        exto                    : out module_out_type
-    );
-end ext_counter;
+        clk         : IN  std_logic;
+        extsel      : in std_ulogic;
+        exti        : in  module_in_type;
+        exto        : out module_out_type;
+				--PINS			: out std_logic_vector(39 downto 0)
+				PINS				: out std_logic
+  );
+end ext_exph;
 
 ----------------------------------------------------------------------------------
 -- END ENTITY
