@@ -36,9 +36,11 @@ $(PROGRAM): $(OBJECTS)
 	$(CC) $(CFLAGS) $< -o $@
 
 install:
+	./serial_config.sh lab init
 	./serial_config.sh lab write main.srec	
 
 hinstall:
+	./serial_config.sh home init
 	./serial_config.sh home write main.srec	
 
 clean:

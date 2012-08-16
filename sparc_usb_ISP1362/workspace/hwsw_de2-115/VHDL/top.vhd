@@ -89,8 +89,7 @@ entity top is
 		USB_INT1	: in std_logic;
 
 		-- pins from expansion header
-		--GPIO			: out std_logic_vector(39 downto 0)
-		GPIO			: out std_logic
+		GPIO			: out std_logic_vector(2 downto 0)
   );
 end top;
 
@@ -112,8 +111,7 @@ architecture behaviour of top is
 	-- expansion header
 	signal exph_sel		: std_logic;
 	signal exph_exto	: module_out_type;
-	-- 	signal exph_pins	: std_logic_vector(39 downto 0);
-	signal exph_pins	: std_logic;
+	signal exph_pins	: std_logic_vector(2 downto 0);
 
 	-- ISP1362 
 	signal usb_sel	: std_logic;
@@ -450,7 +448,7 @@ begin
 			sw				 =>	SW,
 			ledr			 => LEDR,
 			ledg			 => LEDG
-     );
+    );
 
   counter_unit: ext_counter
     port map(
@@ -525,18 +523,12 @@ begin
     D_TxD             <= debugo_if.D_TxD;
     debugi_if.D_RxD   <= D_RxD;
 
-		-- expansion header
-		--GPIO <= exph_pins;
-		GPIO <= exph_pins;
  end process;
-
 
   reg : process(clk)
   begin
     if rising_edge(clk) then
-      --
-      -- input flip-flops
-      --
+ 			GPIO <= exph_pins;
       syncrst <= rst;
     end if;
   end process;

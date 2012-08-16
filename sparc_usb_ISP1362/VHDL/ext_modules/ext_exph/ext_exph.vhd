@@ -35,7 +35,7 @@ use work.pkg_exph.all;
 architecture behaviour of ext_exph is
 
 subtype BYTE is std_logic_vector(7 downto 0);
-type register_set is array (0 to 7) of BYTE;
+type register_set is array (0 to 4) of BYTE;
 
 constant STATUSREG_CUST : integer := 1;
 constant CONFIGREG_CUST : integer := 3;
@@ -49,7 +49,8 @@ signal r : reg_type :=
   (
     ifacereg => (others => (others => '0'))
   ); 
-signal rstint : std_ulogic;
+signal rstint 		: std_ulogic;
+signal exph_next	: std_logic_vector(2 downto 0);
 
 begin
 
@@ -69,8 +70,15 @@ begin
             if ((exti.byte_en(2) = '1')) then
               v.ifacereg(2) := exti.data(23 downto 16);
             end if;
+            if ((exti.byte_en(3) = '1')) then
+              v.ifacereg(3) := exti.data(31 downto 24);
+            end if;
+					end if;
+				when "001" =>
+					if ((exti.byte_en(0) = '1')) then
+          	v.ifacereg(4) := exti.data(7 downto 0);
           end if;
-				when others =>
+        when others =>
           null;
       end case;
     end if;
@@ -81,12 +89,10 @@ begin
       case exti.addr(4 downto 2) is
         when "000" =>
           exto.data <= r.ifacereg(3) & r.ifacereg(2) & r.ifacereg(1) & r.ifacereg(0);
-        when "001" =>
-          if (r.ifacereg(CONFIGREG)(CONF_ID) = '1') then
+				when "001" => 
+					if (r.ifacereg(CONFIGREG)(CONF_ID) = '1') then
             exto.data <= MODULE_VER & MODULE_ID;
-          else
-            exto.data <= r.ifacereg(7) & r.ifacereg(6) & r.ifacereg(5) & r.ifacereg(4);
-          end if;
+					end if;
         when others =>
           null;
       end case;
@@ -116,16 +122,35 @@ begin
     if r.ifacereg(STATUSREG)(STA_INT) = '1' and r.ifacereg(CONFIGREG)(CONF_INTA) ='0' then
       v.ifacereg(STATUSREG)(STA_INT) := '0';
     end if; 
-    exto.intreq <= '0';
-
-    -- module specific part
---		PINS(7 downto 0)	  <= r.ifacereg(3);
--- 		PINS(15 downto 8) 	<= r.ifacereg(4);
---		PINS(23 downto 16)  <= r.ifacereg(5);
---		PINS(31 downto 24)  <= r.ifacereg(6);
---		PINS(39 downto 32)  <= r.ifacereg(7);
-		PINS <= r.ifacereg(3)(0);
-    r_next <= v;
+    exto.intreq <= r.ifacereg(STATUSREG)(STA_INT);
+		
+		-- module specific part
+		--case (to_integer(unsigned(r.ifacereg(4)(7 downto 0)))) is
+    --	when 0 =>	
+		--		exph_next <= "000";
+		--	when 1 =>	
+		--		exph_next <= "001";
+		--	when 2 =>	
+		--		exph_next <= "010";
+		--	when 3 =>	
+		--		exph_next <= "100";
+		--	when others =>
+		--		null;
+		--end case;
+		case r.ifacereg(4)(2 downto 0) is
+    	when "000" =>	
+				exph_next <= "000";
+			when "001" =>	
+				exph_next <= "001";
+			when "010" =>	
+				exph_next <= "010";
+			when "011" =>	
+				exph_next <= "100";
+			when others =>
+				null;
+		end case;
+    
+		r_next <= v;
   end process;
 
   reg : process(clk)
@@ -135,6 +160,7 @@ begin
         r.ifacereg <= (others => (others => '0'));
       else
         r <= r_next;
+				PINS <= exph_next;
       end if;
     end if;
   end process;

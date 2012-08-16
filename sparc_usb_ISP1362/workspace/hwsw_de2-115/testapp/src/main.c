@@ -13,7 +13,7 @@
 #define VGATEXT_BADDR                   ((uint32_t)0xF0000100)
 #define BUT_SW_LED_BADDR                ((uint32_t)-384)
 #define EXPH_BADDR											((uint32_t)-448)
-#define DATA_EXPH   (*(volatile int *const) (EXPH_BADDR+3))
+#define DATA_EXPH   (*(volatile int *const) (EXPH_BADDR+4))
 
 static dis7seg_handle_t display_handle;
 
@@ -24,7 +24,6 @@ int main (int argc, char *argv[])
   char msg_key2[32] 		= " Pushbutton 2 ";
   char msg_key3[32] 		= " Pushbutton 3 ";
   char msg_pos1[32]			= "\r";
-	char msg_tmp[32] = "";
 
   UART_Cfg cfg;
   
@@ -52,7 +51,8 @@ int main (int argc, char *argv[])
 
   UART_write(0, msg, strlen(msg));
 	
-	
+	uint32_t tmp;	
+	char msg_tmp[32] = "DATA_EXPH = 1\n\r";
 	while(1) {
 		// pushbuttons
 		keys = getButtonStatus();
@@ -76,17 +76,34 @@ int main (int argc, char *argv[])
 				led_port |= (SW_ON<<i);
 				//(void) sprintf(msg_tmp, "KEY %i ON", i);
 				//UART_write(0, msg_tmp, strlen(msg_tmp));
-				if(i==0)
-					DATA_EXPH = (1<<0);	
+				switch(i) {
+					case 0:
+						tmp = 0;
+						break;
+					case 1:
+						DATA_EXPH = 1;	
+						break;
+					case 2:
+						DATA_EXPH = 2;
+						break;
+					case 3:
+						DATA_EXPH = 3;
+						break;
+					default:
+						break; 
+				}
 			} else {
-				if(i == 0)
-					DATA_EXPH = 0;
+				if(i == 0) {
+					tmp = 0;
+					DATA_EXPH = tmp;
+				}
 			}
-		} 
+		}
+		 
 		UART_write(0, msg_pos1, strlen(msg_pos1));
 
 		// leds
-		setLeds(led_port | G_LED0 | G_LED2 | G_LED7 | G_LED6);
+		setLeds(led_port | G_LED0);
 	}
 
 

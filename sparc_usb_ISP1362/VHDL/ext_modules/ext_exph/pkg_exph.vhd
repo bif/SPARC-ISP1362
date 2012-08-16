@@ -48,8 +48,7 @@ component ext_exph
 		extsel      : in std_ulogic;
 		exti        : in  module_in_type;
 		exto        : out module_out_type;
-		--PINS			: out std_logic_vector(39 downto 0)
-		PINS				: out std_logic					
+		PINS			: out std_logic_vector(2 downto 0)
 	);
 end component;
   
