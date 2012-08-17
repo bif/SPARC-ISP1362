@@ -44,7 +44,7 @@
 LIBRARY IEEE;
 use IEEE.std_logic_1164.all;
 
-use work.pkg_basic.all;
+use work.scarts_pkg.all;
 
 
 -------------------------------------------------------------------------------

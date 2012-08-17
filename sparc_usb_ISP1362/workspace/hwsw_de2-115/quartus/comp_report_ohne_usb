@@ -1,0 +1,189 @@
+Warning (12090): Entity "altera_pll" obtained from "../VHDL/altera_pll.vhd" instead of from Quartus II megafunction library
+Warning (10036): Verilog HDL or VHDL warning at top.vhd(151): object "vga_clk_sel" assigned a value but never read
+Warning (10873): Using initial value X (don't care) for net "apbo[1].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[1].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[1].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[2].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[2].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[2].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[3].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[3].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[3].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[4].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[4].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[4].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[5].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[5].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[5].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[6].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[6].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[6].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[7].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[7].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[7].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[8].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[8].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[8].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[9].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[9].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[9].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[10].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[10].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[10].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[11].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[11].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[11].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[12].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[12].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[12].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[13].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[13].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[13].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[14].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[14].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[14].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[15].prdata" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[15].pirq" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "apbo[15].pconfig" at top.vhd(140)
+Warning (10873): Using initial value X (don't care) for net "sdi.data[127..32]" at top.vhd(145)
+Warning (10873): Using initial value X (don't care) for net "sdi.wprot" at top.vhd(145)
+Warning (10873): Using initial value X (don't care) for net "sdi.cb" at top.vhd(145)
+Warning (10873): Using initial value X (don't care) for net "sdi.regrdata" at top.vhd(145)
+Warning (10036): Verilog HDL or VHDL warning at scarts.vhd(170): object "breakpointsel" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at scarts.vhd(172): object "watchpointsel" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at scarts.vhd(174): object "s_watchpoint_act" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at scarts.vhd(181): object "s_debugo_read_en" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at scarts.vhd(182): object "s_debugo_hi_addr" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at ahbctrl.vhd(336): object "rsplitin" assigned a value but never read
+Warning (10027): Verilog HDL or VHDL warning at the ahbctrl.vhd(543): index expression is not wide enough to address all of the elements in the array
+Warning (10036): Verilog HDL or VHDL warning at sdctrl.vhd(170): object "hsize" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at sdctrl.vhd(171): object "hwrite" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at sdctrl.vhd(175): object "bdrive" assigned a value but never read
+Warning (10873): Using initial value X (don't care) for net "sdo.qdrive" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.data[127..32]" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.cb" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.ce" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.ba" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.sdck" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.moben" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.cal_en" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.cal_inc" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.cal_pll" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.cal_rst" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.odt" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.conf" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.oct" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.vcbdrive" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.cbdqm" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.cbcal_en" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.cbcal_inc" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.read_pend" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.regwdata" at sdctrl.vhd(57)
+Warning (10873): Using initial value X (don't care) for net "sdo.regwrite" at sdctrl.vhd(57)
+Warning (10036): Verilog HDL or VHDL warning at svgactrl.vhd(198): object "vcc" assigned a value but never read
+Warning (10631): VHDL Process Statement warning at ext_exph.vhd(57): inferring latch(es) for signal or variable "exph_next", which holds its previous value in one or more paths through the process
+Warning (276027): Inferred dual-clock RAM node "scarts:scarts_unit|scarts_regf:regf_unit|scarts_regfram:ram2|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "scarts:scarts_unit|scarts_dram:dram_unit|scarts_byteram:ram3|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "scarts:scarts_unit|scarts_dram:dram_unit|scarts_byteram:ram2|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "scarts:scarts_unit|scarts_dram:dram_unit|scarts_byteram:ram1|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "scarts:scarts_unit|scarts_dram:dram_unit|scarts_byteram:ram0|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "scarts:scarts_unit|scarts_iram:\use_prog_gen:iram_unit|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "scarts:scarts_unit|scarts_regf:regf_unit|scarts_regfram:ram1|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "scarts:scarts_unit|scarts_vectab:vect_unit|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (13024): Output pins are stuck at VCC or GND
+	Warning (13410): Pin "ltm_grest" is stuck at VCC
+Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Warning (335093): Timing Analysis is analyzing one or more combinational loops as latches
+	Warning (335094): Node "expansion_header_unit|exph_next[2]|combout" is a latch
+	Warning (335094): Node "expansion_header_unit|exph_next[1]|combout" is a latch
+	Warning (335094): Node "expansion_header_unit|exph_next[0]|combout" is a latch
+Warning (332060): Node: ext_exph:expansion_header_unit|r.ifacereg[4][2] was determined to be a clock but was found without an associated clock assignment.
+Warning (15064): PLL "altera_pll:altera_pll_inst|altpll:altpll_component|altpll_e5j2:auto_generated|pll1" output port clk[1] feeds output pin "ltm_nclk~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance
+Warning (15705): Ignored locations or region assignments to the following nodes
+	Warning (15706): Node "USB_ADDR[0]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_ADDR[1]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_CS_N" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[0]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[10]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[11]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[12]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[13]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[14]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[15]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[1]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[2]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[3]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[4]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[5]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[6]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[7]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[8]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_DATA[9]" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_INT1" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_RD_N" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_RST_N" is assigned to location or region, but does not exist in design
+	Warning (15706): Node "USB_WR_N" is assigned to location or region, but does not exist in design
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Warning (169177): 57 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
+	Info (169178): Pin sd[0] uses I/O standard 3.3-V LVTTL at W3
+	Info (169178): Pin sd[1] uses I/O standard 3.3-V LVTTL at W2
+	Info (169178): Pin sd[2] uses I/O standard 3.3-V LVTTL at V4
+	Info (169178): Pin sd[3] uses I/O standard 3.3-V LVTTL at W1
+	Info (169178): Pin sd[4] uses I/O standard 3.3-V LVTTL at V3
+	Info (169178): Pin sd[5] uses I/O standard 3.3-V LVTTL at V2
+	Info (169178): Pin sd[6] uses I/O standard 3.3-V LVTTL at V1
+	Info (169178): Pin sd[7] uses I/O standard 3.3-V LVTTL at U3
+	Info (169178): Pin sd[8] uses I/O standard 3.3-V LVTTL at Y3
+	Info (169178): Pin sd[9] uses I/O standard 3.3-V LVTTL at Y4
+	Info (169178): Pin sd[10] uses I/O standard 3.3-V LVTTL at AB1
+	Info (169178): Pin sd[11] uses I/O standard 3.3-V LVTTL at AA3
+	Info (169178): Pin sd[12] uses I/O standard 3.3-V LVTTL at AB2
+	Info (169178): Pin sd[13] uses I/O standard 3.3-V LVTTL at AC1
+	Info (169178): Pin sd[14] uses I/O standard 3.3-V LVTTL at AB3
+	Info (169178): Pin sd[15] uses I/O standard 3.3-V LVTTL at AC2
+	Info (169178): Pin sd[16] uses I/O standard 3.3-V LVTTL at M8
+	Info (169178): Pin sd[17] uses I/O standard 3.3-V LVTTL at L8
+	Info (169178): Pin sd[18] uses I/O standard 3.3-V LVTTL at P2
+	Info (169178): Pin sd[19] uses I/O standard 3.3-V LVTTL at N3
+	Info (169178): Pin sd[20] uses I/O standard 3.3-V LVTTL at N4
+	Info (169178): Pin sd[21] uses I/O standard 3.3-V LVTTL at M4
+	Info (169178): Pin sd[22] uses I/O standard 3.3-V LVTTL at M7
+	Info (169178): Pin sd[23] uses I/O standard 3.3-V LVTTL at L7
+	Info (169178): Pin sd[24] uses I/O standard 3.3-V LVTTL at U5
+	Info (169178): Pin sd[25] uses I/O standard 3.3-V LVTTL at R7
+	Info (169178): Pin sd[26] uses I/O standard 3.3-V LVTTL at R1
+	Info (169178): Pin sd[27] uses I/O standard 3.3-V LVTTL at R2
+	Info (169178): Pin sd[28] uses I/O standard 3.3-V LVTTL at R3
+	Info (169178): Pin sd[29] uses I/O standard 3.3-V LVTTL at T3
+	Info (169178): Pin sd[30] uses I/O standard 3.3-V LVTTL at U4
+	Info (169178): Pin sd[31] uses I/O standard 3.3-V LVTTL at U1
+	Info (169178): Pin db_clk uses I/O standard 3.3-V LVTTL at Y2
+	Info (169178): Pin rst uses I/O standard 3.3-V LVTTL at M23
+	Info (169178): Pin SW[16] uses I/O standard 3.3-V LVTTL at Y24
+	Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at AC25
+	Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at AB28
+	Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at AC26
+	Info (169178): Pin KEY1 uses I/O standard 3.3-V LVTTL at M21
+	Info (169178): Pin SW[13] uses I/O standard 3.3-V LVTTL at AA24
+	Info (169178): Pin KEY2 uses I/O standard 3.3-V LVTTL at N21
+	Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at AD26
+	Info (169178): Pin SW[14] uses I/O standard 3.3-V LVTTL at AA23
+	Info (169178): Pin SW[12] uses I/O standard 3.3-V LVTTL at AB23
+	Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at AB27
+	Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at AB26
+	Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at AB25
+	Info (169178): Pin SW[10] uses I/O standard 3.3-V LVTTL at AC24
+	Info (169178): Pin SW[11] uses I/O standard 3.3-V LVTTL at AB24
+	Info (169178): Pin SW[15] uses I/O standard 3.3-V LVTTL at AA22
+	Info (169178): Pin SW[17] uses I/O standard 3.3-V LVTTL at Y23
+	Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at AD27
+	Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at AC27
+	Info (169178): Pin KEY3 uses I/O standard 3.3-V LVTTL at R24
+	Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at AC28
+	Info (169178): Pin D_RxD uses I/O standard 3.3-V LVTTL at G12
+	Info (169178): Pin aux_uart_rx uses I/O standard 3.3-V LVTTL at E27
+Warning (335093): Timing Analysis is analyzing one or more combinational loops as latches
+	Warning (335094): Node "expansion_header_unit|exph_next[2]|combout" is a latch
+	Warning (335094): Node "expansion_header_unit|exph_next[1]|combout" is a latch
+	Warning (335094): Node "expansion_header_unit|exph_next[0]|combout" is a latch
+Warning (332060): Node: ext_exph:expansion_header_unit|r.ifacereg[4][2] was determined to be a clock but was found without an associated clock assignment.
