@@ -6,8 +6,9 @@ LDFLAGS=-Wl,--nmagic,--no-check-sections,--strip-all,-Tscarts_32-de2-115.ld
 LIBS=-lscartsdrivers
 
 SOURCES=src/main.c \
-	src/but_sw_led.c
-
+	src/but_sw_led.c \
+	src/timer.c
+	
 OBJECTS=$(SOURCES:.c=.o)
 PROGRAM=main
 INCLUDE=-Iinclude

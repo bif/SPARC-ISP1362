@@ -16,8 +16,31 @@
 #define DATA_EXPH   (*(volatile int *const) (EXPH_BADDR+4))
 #define TIMER_BADDR											((uint32_t)-480)
 
-
+module_handle_t timer_handle = {1};
 static dis7seg_handle_t display_handle;
+
+
+//void isr() __attribute__ ((interrupt));
+
+uint8_t isr(uint8_t* tog) {
+	// todo do PWM signal
+	uint8_t toggle;	
+	(uint8_t*)toggle = tog;
+
+	if(toggle) {
+		DATA_EXPH |= (1<<0);
+		toggle = 0;
+	}	else {
+		DATA_EXPH &= ~(1<<0);
+		toggle = 1;
+	}
+
+	timer_irq_ack(&timer_handle);
+
+	return toggle;
+}
+
+
 
 int main (int argc, char *argv[])
 {
@@ -26,9 +49,21 @@ int main (int argc, char *argv[])
   char msg_key2[32] 		= " Pushbutton 2 ";
   char msg_key3[32] 		= " Pushbutton 3 ";
   char msg_pos1[32]			= "\r";
+	uint8_t* toggle;
+
+	*toggle = 0;
 
   UART_Cfg cfg;
-  
+ 
+	//register interrupt to line 2
+	//
+	//TODO: wie übergebe ich an eine callback function einen wert und wie bekomme ich ihn wieder?
+	REGISTER_INTERRUPT((*toggle=isr(toggle)), 2);
+	// unmask interrupt line 2
+	UNMASKI(2);
+	// globally enable interrupts
+	SEI();
+ 
   
   // Initialize peripheral components ...
   // UART
@@ -42,7 +77,11 @@ int main (int argc, char *argv[])
   // 7-Segment
   dis7seg_initHandle(&display_handle, DISP7SEG_BADDR, 8);
 	dis7seg_displayHexUInt32(&display_handle, 0, 0x00000042);
-  
+ 
+	// timer 80000 ticks = 1ms
+	config_timer(TIMER_C, 80000, INT_ON);
+	timer_initHandle(&timer_handle, TIMER_BADDR);
+	start_timer(TIMER_C);
 	
 	uint32_t keys, keys_old, led_port;
 	uint8_t i;
@@ -70,42 +109,21 @@ int main (int argc, char *argv[])
 			}
 		}
 		keys_old = keys;
+		UART_write(0, msg_pos1, strlen(msg_pos1));
+
 		// switches & leds
 		led_port = 0;
 		for(i=0; i<18; i++)
 		{
-			if (getSwitchStatus(i) == SW_ON) {
+			if (getSwitchStatus(i) == SW_ON)
 				led_port |= (SW_ON<<i);
-				//(void) sprintf(msg_tmp, "KEY %i ON", i);
-				//UART_write(0, msg_tmp, strlen(msg_tmp));
-				switch(i) {
-					case 0:
-						tmp = 0;
-						break;
-					case 1:
-						DATA_EXPH = 1;	
-						break;
-					case 2:
-						DATA_EXPH = 2;
-						break;
-					case 3:
-						DATA_EXPH = 3;
-						break;
-					default:
-						break; 
-				}
-			} else {
-				if(i == 0) {
-					tmp = 0;
-					DATA_EXPH = tmp;
-				}
-			}
+			else 
+				led_port &= ~(SW_ON<<i);				
 		}
 		 
-		UART_write(0, msg_pos1, strlen(msg_pos1));
 
-		// leds
-		setLeds(led_port | G_LED0);
+		// set leds
+		setLeds(led_port);
 	}
 
 
