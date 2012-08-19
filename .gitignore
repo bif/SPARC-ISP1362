@@ -34,7 +34,7 @@ sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/dumpdata.txt
 *.swp
 *.orig
 transcript
-#*.srec
+*.srec
 *.tga
 tags
 *.info
