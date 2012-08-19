@@ -63,7 +63,7 @@ uint32_t timer_getValue(uint8_t timer)
 		if(timer == TIMER_I) {
 			return TIMER_INST_CNT;
 		} else {
-			return 4294967295; 
+			return 0xFFFFFFFF; 
 		}
 	}
 }

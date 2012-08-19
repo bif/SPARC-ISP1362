@@ -1,7 +1,7 @@
 #ifndef __timer_h__
 #define __timer_H__
 
-#include "drivers.h"
+#include <drivers/drivers.h>
 
 #define TIMER_BADDR				((uint32_t)-480)
 #define TIMER_CLK_CNT   	(*(volatile int *const) (TIMER_BADDR+4))
@@ -14,7 +14,7 @@
 #define TIMER_STATUS_REG 	(*(volatile int *const) (TIMER_BADDR+1)) 
 
 #define TIMER_C	0
-#define TIMER_V 1
+#define TIMER_I 1
 #define INT_ON	1
 #define INT_OFF	0
 
@@ -34,13 +34,13 @@ void timer_releaseHandle(module_handle_t *h);
 
 void timer_irq_ack(module_handle_t *h);
 
-void start_timer()uint8_t timer;
+void start_timer(uint8_t timer);
 
-void stop_timer()uint8_t timer;
+void stop_timer(uint8_t timer);
 
 void config_timer(uint8_t timer, uint32_t value, uint8_t int_on);
 
-uint32_t timer_getValue()uint8_t timer;
+uint32_t timer_getValue(uint8_t timer);
 
 
 #endif //__timer_h__

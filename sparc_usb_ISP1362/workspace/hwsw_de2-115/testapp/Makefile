@@ -1,17 +1,9 @@
--CC=scarts_32-none-eabi-gcc
--OBJCOPY=scarts_32-none-eabi-objcopy
--OBJDUMP=scarts_32-none-eabi-objdump
--CFLAGS=-c -Wall -O2
--LDFLAGS=-Wl,--nmagic,--no-check-sections,--strip-all,-Tscarts_32-de2-115.ld
--LIBS=-lscartsdrivers
-
-CC=spear32-gcc
-OBJCOPY=spear32-objcopy
-OBJDUMP=spear32-objdump
+CC=scarts_32-none-eabi-gcc
+OBJCOPY=scarts_32-none-eabi-objcopy
+OBJDUMP=scarts_32-none-eabi-objdump
 CFLAGS=-c -Wall -O2
-LDFLAGS=-Wl,--nmagic,--no-check-sections,--strip-all,-Tspear32-de2-115.ld
-LIBS=-lspeardrivers
-
+LDFLAGS=-Wl,--nmagic,--no-check-sections,--strip-all,-Tscarts_32-de2-115.ld
+LIBS=-lscartsdrivers
 
 SOURCES=src/main.c \
 	src/but_sw_led.c \
@@ -22,7 +14,6 @@ PROGRAM=main
 INCLUDE=-Iinclude 
 
 CFLAGS+=$(INCLUDE)
-CFLAGS+=$(SPEAR_INCLUDE)
 
 ifeq ($(DEBUG), 1)
   CFLAGS+=-g
