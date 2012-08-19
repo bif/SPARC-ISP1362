@@ -22,22 +22,19 @@ static dis7seg_handle_t display_handle;
 
 //void isr() __attribute__ ((interrupt));
 
-uint8_t isr(uint8_t* tog) {
+void isr(uint8_t* toggle) {
 	// todo do PWM signal
-	uint8_t toggle;	
-	(uint8_t*)toggle = tog;
 
 	if(toggle) {
 		DATA_EXPH |= (1<<0);
-		toggle = 0;
+		*toggle = 0;
 	}	else {
 		DATA_EXPH &= ~(1<<0);
-		toggle = 1;
+		*toggle = 1;
 	}
 
 	timer_irq_ack(&timer_handle);
 
-	return toggle;
 }
 
 
@@ -58,7 +55,7 @@ int main (int argc, char *argv[])
 	//register interrupt to line 2
 	//
 	//TODO: wie übergebe ich an eine callback function einen wert und wie bekomme ich ihn wieder?
-	REGISTER_INTERRUPT((*toggle=isr(toggle)), 2);
+	REGISTER_INTERRUPT(isr, 2);
 	// unmask interrupt line 2
 	UNMASKI(2);
 	// globally enable interrupts
