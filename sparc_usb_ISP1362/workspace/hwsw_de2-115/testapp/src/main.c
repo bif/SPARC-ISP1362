@@ -25,14 +25,14 @@ static dis7seg_handle_t display_handle;
 
 void isr(uint8_t* toggle) {
 	// todo do PWM signal
-
+  setLeds(R_LED0);
 	if(toggle) {
 		//DATA_EXPH |= (1<<0);
-    setLeds(G_LED0);
+    //setLeds(G_LED0);
 		*toggle = 0;
 	}	else {
 		//DATA_EXPH &= ~(1<<0);
-  setLeds(~G_LED0);
+    //setLeds(~G_LED0);
 		*toggle = 1;
 	}
 
@@ -117,9 +117,9 @@ int main (int argc, char *argv[])
 				led_port &= ~(SW_ON<<i);				
 		}
 		 
-
+    setLeds(R_LED1);
 		// set leds
-		setLeds(led_port);
+		//setLeds(led_port);
 	}
 
 
