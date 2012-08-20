@@ -16,11 +16,7 @@ INCLUDE=-Iinclude
 CFLAGS+=$(INCLUDE)
 
 ifeq ($(DEBUG), 1)
-  CFLAGS+=-g
-endif
-
-ifeq ($(TEST), 1)
-  CFLAGS+=-DTEST
+  CFLAGS+=-g -O0 -melf
 endif
 
 all: tags $(SOURCES) $(PROGRAM)
