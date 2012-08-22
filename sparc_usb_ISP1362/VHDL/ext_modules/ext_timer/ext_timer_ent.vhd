@@ -1,37 +1,19 @@
------------------------------------------------------------------------
--- This file is part of SCARTS.
--- 
--- SCARTS is free software: you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation, either version 3 of the License, or
--- (at your option) any later version.
--- 
--- SCARTS is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
--- 
--- You should have received a copy of the GNU General Public License
--- along with SCARTS.  If not, see <http://www.gnu.org/licenses/>.
------------------------------------------------------------------------
-
-
 -------------------------------------------------------------------------------
--- Title      : Timer Extension Module
+-- Title      : 7 Segment Display Architecture
 -- Project    : SCARTS - Scalable Processor for Embedded Applications in
 --              Realtime Environment
 -------------------------------------------------------------------------------
--- File       : ext_timer_ent.vhd
--- Author     : Martin Delvai
+-- File       : ext_sysctrl_ent.vhd
+-- Author     : Dipl. Ing. Martin Delvai
 -- Company    : TU Wien - Institut fr technische Informatik
--- Created    : 2007-05-01
--- Last update: 2007-08-21
--- Platform   : Linux
+-- Created    : 2002-02-11
+-- Last update: 2011-10-20
+-- Platform   : SUN Solaris 
 -------------------------------------------------------------------------------
 -- Description:
 --
 -------------------------------------------------------------------------------
--- Copyright (c) 2007 
+-- Copyright (c) 2002 
 -------------------------------------------------------------------------------
 -- Revisions  :
 -- Date        Version  Author  Description
@@ -45,24 +27,23 @@
 
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
+
 USE work.scarts_pkg.all;
-use work.pkg_timer.all;
+use work.pkg_counter.all;
 
 ----------------------------------------------------------------------------------
 -- ENTITY
 ----------------------------------------------------------------------------------
 
 
-entity ext_timer is
+entity ext_counter is
   port(
-    -- SCARTS Interface
-    clk                     : IN  std_logic;
-    extsel                  : in std_ulogic;
-    exti                    : in  module_in_type;
-    exto                    : out module_out_type
-    -- Modul specific interface (= Pins) 
+        clk                     : IN  std_logic;
+        extsel                  : in std_ulogic;
+        exti                    : in  module_in_type;
+        exto                    : out module_out_type
     );
-end ext_timer;
+end ext_counter;
 
 ----------------------------------------------------------------------------------
 -- END ENTITY
