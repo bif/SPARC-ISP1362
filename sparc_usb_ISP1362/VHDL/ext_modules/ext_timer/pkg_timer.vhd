@@ -1,68 +1,54 @@
 -------------------------------------------------------------------------------
--- Title      : Package Extension-Module
+-- Title      : 32 Bit Timer Architecture
 -- Project    : SCARTS - Scalable Processor for Embedded Applications in
 --              Realtime Environment
 -------------------------------------------------------------------------------
--- File       : pkg_display.vhd
--- Author     : Dipl. Ing. Martin Delvai
--- Company    : TU Wien - Institut fr Technische Informatik
--- Created    : 2002-02-11
--- Last update: 2011-10-20
--- Platform   : SUN Solaris
+-- File       : ext_timer.vhd
+-- Author     : Ing. Stefan Simhandl
+-- Company    : 
+-- Created    : 2012-08-22
+-- Last update: 
+-- Platform   : CentOS 5
 -------------------------------------------------------------------------------
 -- Description:
--- Package for counter module
+-- Impelementation of 32 bit timer with 8 bit preescaler and option to set
+-- a timer max/match value based on the extension counter module
+-- (ext_counter.vhd)
+-- TODO_: implement PWM mode
 -------------------------------------------------------------------------------
--- Copyright (c) 2002 
+-- Copyright (c) 2012 
 -------------------------------------------------------------------------------
 -- Revisions  :
--- Date        Version  Author  Description
--- 2002-02-11  1.0      delvai	Created
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
--- LIBRARIES
+-- Date        Version  Author      Description
+-- 2002-04-16  1.0      ssimhandl	  Created
 -------------------------------------------------------------------------------
 
-LIBRARY IEEE;
-use IEEE.std_logic_1164.all;
-
+library ieee;;
+use ieee.std_logic_1164.all;
 use work.scarts_pkg.all;
-
 
 -------------------------------------------------------------------------------
 -- PACKAGE
 -------------------------------------------------------------------------------
 
-package pkg_counter is
+package pkg_timer is
 
-
--------------------------------------------------------------------------------
---                             CONSTANT
--------------------------------------------------------------------------------  
-
-constant MY_CONFIGREG : natural := 3;
-constant PRESCALER_REG : natural := 4;
-constant CMD_COUNT : natural := 0;
-constant CMD_CLEAR : natural := 1;
-
- 
--------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 --                             COMPONENT
--------------------------------------------------------------------------------  
 -------------------------------------------------------------------------------
-    component ext_counter
+    component ext_timer
       port (
-        clk        : IN  std_logic;
+        clk        : in   std_logic;
         extsel     : in   std_ulogic;
-        exti       : in  module_in_type;
-        exto       : out module_out_type);
+        exti       : in   module_in_type;
+        exto       : out  module_out_type);
     end component;
-  
-   
+-------------------------------------------------------------------------------
+--                           END COMPONENT
+-------------------------------------------------------------------------------
 
-
-end pkg_counter;
+end pkg_timer;
 -------------------------------------------------------------------------------
 --                             END PACKAGE
-------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------
+

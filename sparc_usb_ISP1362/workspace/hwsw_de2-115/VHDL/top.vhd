@@ -161,24 +161,24 @@ architecture behaviour of top is
   signal aux_uart_exto     : module_out_type;
   
   component altera_pll IS
-    PORT
-      (
+    port (
         areset		: IN STD_LOGIC  := '0';
         inclk0		: IN STD_LOGIC  := '0';
         c0		: OUT STD_LOGIC ;
         c1		: OUT STD_LOGIC;
         locked		: OUT STD_LOGIC 
-        );
-   END component;
+    );
+   end component;
 
 begin
 	
-  altera_pll_inst : altera_pll PORT MAP (
-    areset	 => '0',
-    inclk0	 => db_clk,
-    c0	         => clk,
-    c1	         => vga_clk_int,
-    locked	 => open
+  altera_pll_inst : altera_pll 
+    port map (
+      areset	 => '0',
+      inclk0	 => db_clk,
+      c0	         => clk,
+      c1	         => vga_clk_int,
+      locked	 => open
     );
 
   scarts_unit: scarts
