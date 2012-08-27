@@ -36,7 +36,6 @@ use work.pkg_but_sw_led.all;
 entity top is
   port(
     db_clk      : in  std_ulogic;
-    --clk      : in  std_ulogic;
     rst         : in  std_ulogic;
 
 -- ISP1362 - usb controler
@@ -92,28 +91,30 @@ architecture behaviour of top is
   signal ahbmi            : ahb_master_in_type;
   signal scarts_ahbmo     : ahb_master_out_type;
 
- 
---  component altera_pll IS
---    port (
---        areset		: IN STD_LOGIC  := '0';
---        inclk0		: IN STD_LOGIC  := '0';
---        c0		: OUT STD_LOGIC ;
---        c1		: OUT STD_LOGIC;
---        locked		: OUT STD_LOGIC 
---    );
---   end component;
+  signal vga_clk_int : std_logic;
+
+
+  component altera_pll is
+    port (
+      areset		: in STD_LOGIC  := '0';
+      inclk0		: in STD_LOGIC  := '0';
+      c0		: out STD_LOGIC ;
+      c1		: out STD_LOGIC;
+      locked		: out STD_LOGIC 
+    );
+   end component;
 
 
 begin
-	clk <= db_clk;
---  altera_pll_inst : altera_pll 
---    port map (
---      areset	 => '0',
---      inclk0	 => db_clk,
---      c0	         => clk,
---      c1	         => open, --vga_clk_int,
---      locked	 => open
---    );
+  
+  altera_pll_inst : altera_pll 
+    port map (
+      areset	 => '0',
+      inclk0	 => db_clk,
+      c0	         => clk,
+      c1	         => vga_clk_int,
+      locked	 => open
+    );
 
   scarts_unit: scarts
     generic map (

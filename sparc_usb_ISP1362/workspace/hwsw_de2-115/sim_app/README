@@ -1,0 +1,14 @@
+Build instructions
+==================
+Run "make" in a terminal
+
+Run instructions
+================
+
+Either run
+
+./serial_config.sh init
+./serial_config.sh write main.srec
+
+or download the file main.srec with your preferred serial terminal.
+Settings: 115200 Baud, 8E1, no flow control

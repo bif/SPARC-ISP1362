@@ -7,6 +7,28 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package scarts_pkg
 -- Compiling package pkg_timer
 
+} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_tb.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package scarts_amba_pkg
+-- Loading package scarts_pkg
+-- Loading package pkg_timer
+-- Compiling entity top_tb
+-- Compiling architecture behaviour of top_tb
+
+} {} {}} /opt/altera/quartus-11.1_173/quartus/eda/sim_lib/cycloneiiils_components.vhd {1 {vcom -work altera_mf -2002 -explicit -vopt /opt/altera/quartus-11.1_173/quartus/eda/sim_lib/cycloneiiils_components.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package VITAL_Timing
+-- Loading package VITAL_Primitives
+-- Loading package cycloneiiils_atom_pack
+-- Compiling package cycloneiiils_components
+
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
@@ -24,6 +46,14 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package std_logic_1164
 -- Compiling package top_pkg
 
+} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package scarts_amba_pkg
+-- Compiling package scarts_pkg
+
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer.vhd
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
@@ -36,13 +66,256 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Compiling architecture behaviour of ext_timer
 -- Loading entity ext_timer
 
-} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd
+} {} {}} /opt/altera/quartus-11.1_173/quartus/eda/sim_lib/altera_mf_components.vhd {1 {vcom -work altera_mf -2002 -explicit -vopt /opt/altera/quartus-11.1_173/quartus/eda/sim_lib/altera_mf_components.vhd
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package scarts_amba_pkg
--- Compiling package scarts_pkg
+-- Compiling package altera_mf_components
+
+} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/altera_pll.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/altera_pll.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity altera_pll
+-- Compiling architecture SYN of altera_pll
+
+} {} {}} /opt/altera/quartus-11.1_173/quartus/eda/sim_lib/altera_mf.vhd {1 {vcom -work altera_mf -2002 -explicit -vopt /opt/altera/quartus-11.1_173/quartus/eda/sim_lib/altera_mf.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity LCELL
+-- Compiling architecture BEHAVIOR of LCELL
+-- Compiling package ALTERA_COMMON_CONVERSION
+-- Compiling package body ALTERA_COMMON_CONVERSION
+-- Loading package ALTERA_COMMON_CONVERSION
+-- Compiling package ALTERA_MF_HINT_EVALUATION
+-- Compiling package body ALTERA_MF_HINT_EVALUATION
+-- Loading package ALTERA_MF_HINT_EVALUATION
+-- Compiling package ALTERA_DEVICE_FAMILIES
+-- Compiling package body ALTERA_DEVICE_FAMILIES
+-- Loading package ALTERA_DEVICE_FAMILIES
+-- Compiling package MF_pllpack
+-- Compiling package body MF_pllpack
+-- Loading package MF_pllpack
+-- Compiling entity DFFP
+-- Compiling architecture behave of DFFP
+-- Compiling entity pll_iobuf
+-- Compiling architecture BEHAVIOR of pll_iobuf
+-- Compiling entity MF_m_cntr
+-- Compiling architecture behave of MF_m_cntr
+-- Compiling entity MF_n_cntr
+-- Compiling architecture behave of MF_n_cntr
+-- Compiling entity stx_scale_cntr
+-- Compiling architecture behave of stx_scale_cntr
+-- Compiling entity MF_pll_reg
+-- Compiling architecture behave of MF_pll_reg
+-- Loading package MF_pllpack
+-- Loading entity MF_m_cntr
+-- Loading entity MF_n_cntr
+-- Loading entity stx_scale_cntr
+-- Loading entity DFFP
+-- Loading entity MF_pll_reg
+-- Compiling entity MF_stratix_pll
+-- Compiling architecture vital_pll of MF_stratix_pll
+-- Compiling entity arm_m_cntr
+-- Compiling architecture behave of arm_m_cntr
+-- Compiling entity arm_n_cntr
+-- Compiling architecture behave of arm_n_cntr
+-- Compiling entity arm_scale_cntr
+-- Compiling architecture behave of arm_scale_cntr
+-- Loading entity arm_m_cntr
+-- Loading entity arm_n_cntr
+-- Loading entity arm_scale_cntr
+-- Compiling entity MF_stratixii_pll
+-- Compiling architecture vital_pll of MF_stratixii_pll
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity MF_ttn_mn_cntr
+-- Compiling architecture behave of MF_ttn_mn_cntr
+-- Compiling entity MF_ttn_scale_cntr
+-- Compiling architecture behave of MF_ttn_scale_cntr
+-- Loading entity MF_ttn_mn_cntr
+-- Loading entity MF_ttn_scale_cntr
+-- Compiling entity MF_stratixiii_pll
+-- Compiling architecture vital_pll of MF_stratixiii_pll
+-- Compiling entity MF_cda_mn_cntr
+-- Compiling architecture behave of MF_cda_mn_cntr
+-- Compiling entity MF_cda_scale_cntr
+-- Compiling architecture behave of MF_cda_scale_cntr
+-- Loading entity MF_cda_mn_cntr
+-- Loading entity MF_cda_scale_cntr
+-- Compiling entity MF_cycloneiii_pll
+-- Compiling architecture vital_pll of MF_cycloneiii_pll
+-- Compiling entity MF_stingray_mn_cntr
+-- Compiling architecture behave of MF_stingray_mn_cntr
+-- Compiling entity MF_stingray_post_divider
+-- Compiling architecture behave of MF_stingray_post_divider
+-- Compiling entity MF_stingray_scale_cntr
+-- Compiling architecture behave of MF_stingray_scale_cntr
+-- Loading entity MF_stingray_mn_cntr
+-- Loading entity MF_stingray_scale_cntr
+-- Compiling entity MF_cycloneiiigl_pll
+-- Compiling architecture vital_pll of MF_cycloneiiigl_pll
+-- Loading package ALTERA_DEVICE_FAMILIES
+-- Loading entity MF_stratix_pll
+-- Loading entity MF_stratixii_pll
+-- Loading entity MF_stratixiii_pll
+-- Loading entity MF_cycloneiii_pll
+-- Loading entity MF_cycloneiiigl_pll
+-- Loading entity pll_iobuf
+-- Compiling entity altpll
+-- Compiling architecture behavior of altpll
+-- Compiling entity altaccumulate
+-- Compiling architecture behaviour of altaccumulate
+-- Compiling entity altmult_accum
+-- Compiling architecture behaviour of altmult_accum
+-- Compiling entity altmult_add
+-- Compiling architecture behaviour of altmult_add
+-- Loading package ALTERA_COMMON_CONVERSION
+-- Compiling entity altfp_mult
+-- Compiling architecture behavior of altfp_mult
+-- Compiling entity altsqrt
+-- Compiling architecture behavior of altsqrt
+-- Compiling entity altclklock
+-- Compiling architecture behavior of altclklock
+-- Compiling entity altddio_in
+-- Compiling architecture behave of altddio_in
+-- Compiling entity altddio_out
+-- Compiling architecture behave of altddio_out
+-- Loading entity altddio_in
+-- Loading entity altddio_out
+-- Compiling entity altddio_bidir
+-- Compiling architecture struct of altddio_bidir
+-- Compiling entity stratixii_lvds_rx
+-- Compiling architecture behavior of stratixii_lvds_rx
+-- Compiling entity flexible_lvds_rx
+-- Compiling architecture behavior of flexible_lvds_rx
+-- Compiling entity stratixiii_lvds_rx_dpa
+-- Compiling architecture behavior of stratixiii_lvds_rx_dpa
+-- Compiling entity stratixv_local_clk_divider
+-- Compiling architecture behavior of stratixv_local_clk_divider
+-- Loading entity stratixiii_lvds_rx_dpa
+-- Loading entity stratixv_local_clk_divider
+-- Compiling entity stratixiii_lvds_rx_channel
+-- Compiling architecture behavior of stratixiii_lvds_rx_channel
+-- Loading entity stratixiii_lvds_rx_channel
+-- Compiling entity stratixiii_lvds_rx
+-- Compiling architecture behavior of stratixiii_lvds_rx
+-- Loading entity stratixii_lvds_rx
+-- Loading entity flexible_lvds_rx
+-- Loading entity stratixiii_lvds_rx
+-- Compiling entity altlvds_rx
+-- Compiling architecture behavior of altlvds_rx
+-- Compiling entity stratix_tx_outclk
+-- Compiling architecture behavior of stratix_tx_outclk
+-- Compiling entity stratixii_tx_outclk
+-- Compiling architecture behavior of stratixii_tx_outclk
+-- Compiling entity flexible_lvds_tx
+-- Compiling architecture behavior of flexible_lvds_tx
+-- Loading entity stratix_tx_outclk
+-- Loading entity stratixii_tx_outclk
+-- Loading entity flexible_lvds_tx
+-- Compiling entity altlvds_tx
+-- Compiling architecture behavior of altlvds_tx
+-- Compiling entity altdpram
+-- Compiling architecture behavior of altdpram
+-- Compiling entity altsyncram
+-- Compiling architecture translated of altsyncram
+-- Loading entity altsyncram
+-- Loading package ALTERA_MF_HINT_EVALUATION
+-- Compiling entity alt3pram
+-- Compiling architecture behavior of alt3pram
+-- Loading package altera_mf_components
+-- Compiling entity parallel_add
+-- Compiling architecture behaviour of parallel_add
+-- Compiling entity SCFIFO
+-- Compiling architecture behavior of SCFIFO
+-- Compiling entity DCFIFO_DFFPIPE
+-- Compiling architecture behavior of DCFIFO_DFFPIPE
+-- Compiling entity DCFIFO_FEFIFO
+-- Compiling architecture behavior of DCFIFO_FEFIFO
+-- Loading entity DCFIFO_FEFIFO
+-- Loading entity DCFIFO_DFFPIPE
+-- Compiling entity DCFIFO_ASYNC
+-- Compiling architecture behavior of DCFIFO_ASYNC
+-- Compiling entity DCFIFO_SYNC
+-- Compiling architecture behavior of DCFIFO_SYNC
+-- Compiling entity DCFIFO_LOW_LATENCY
+-- Compiling architecture behavior of DCFIFO_LOW_LATENCY
+-- Loading entity DCFIFO_ASYNC
+-- Loading entity DCFIFO_SYNC
+-- Loading entity DCFIFO_LOW_LATENCY
+-- Compiling entity DCFIFO_MIXED_WIDTHS
+-- Compiling architecture behavior of DCFIFO_MIXED_WIDTHS
+-- Loading entity DCFIFO_MIXED_WIDTHS
+-- Compiling entity DCFIFO
+-- Compiling architecture behavior of DCFIFO
+-- Compiling entity altshift_taps
+-- Compiling architecture behavioural of altshift_taps
+-- Compiling entity A_GRAYCOUNTER
+-- Compiling architecture behavior of A_GRAYCOUNTER
+-- Compiling entity altsquare
+-- Compiling architecture altsquare_syn of altsquare
+-- Compiling entity altera_std_synchronizer
+-- Compiling architecture behavioral of altera_std_synchronizer
+-- Compiling entity altera_std_synchronizer_bundle
+-- Compiling architecture behavioral of altera_std_synchronizer_bundle
+-- Compiling entity alt_cal
+-- Compiling architecture RTL of alt_cal
+-- Compiling entity alt_cal_mm
+-- Compiling architecture RTL of alt_cal_mm
+-- Compiling entity alt_cal_c3gxb
+-- Compiling architecture RTL of alt_cal_c3gxb
+-- Compiling entity alt_cal_sv
+-- Compiling architecture RTL of alt_cal_sv
+-- Compiling package alt_aeq_s4_func
+-- Compiling package body alt_aeq_s4_func
+-- Loading package alt_aeq_s4_func
+-- Loading package alt_aeq_s4_func
+-- Compiling entity alt_aeq_s4
+-- Compiling architecture trans of alt_aeq_s4
+-- Compiling package alt_eyemon_func
+-- Compiling package body alt_eyemon_func
+-- Loading package alt_eyemon_func
+-- Loading package alt_eyemon_func
+-- Compiling entity alt_eyemon
+-- Compiling architecture trans of alt_eyemon
+-- Compiling package alt_dfe_func
+-- Compiling package body alt_dfe_func
+-- Loading package alt_dfe_func
+-- Loading package alt_dfe_func
+-- Compiling entity alt_dfe
+-- Compiling architecture trans of alt_dfe
+-- Compiling package SLD_NODE
+-- Compiling package body SLD_NODE
+-- Loading package SLD_NODE
+-- Loading package SLD_NODE
+-- Compiling entity signal_gen
+-- Compiling architecture simModel of signal_gen
+-- Compiling entity jtag_tap_controller
+-- Compiling architecture FSM of jtag_tap_controller
+-- Compiling entity dummy_hub
+-- Compiling architecture behavior of dummy_hub
+-- Loading entity signal_gen
+-- Loading entity jtag_tap_controller
+-- Loading entity dummy_hub
+-- Compiling entity sld_virtual_jtag
+-- Compiling architecture structural of sld_virtual_jtag
+-- Compiling entity sld_signaltap
+-- Compiling architecture sim_sld_signaltap of sld_signaltap
+-- Compiling entity altstratixii_oct
+-- Compiling architecture sim_altstratixii_oct of altstratixii_oct
+-- Compiling entity altparallel_flash_loader
+-- Compiling architecture sim_altparallel_flash_loader of altparallel_flash_loader
+-- Compiling entity altserial_flash_loader
+-- Compiling architecture sim_altserial_flash_loader of altserial_flash_loader
+-- Compiling entity sld_virtual_jtag_basic
+-- Compiling architecture sim_sld_virtual_jtag_basic of sld_virtual_jtag_basic
+-- Compiling entity altsource_probe
+-- Compiling architecture sim_altsource_probe of altsource_probe
 
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
@@ -65,6 +338,16 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package pkg_but_sw_led
 -- Compiling architecture behaviour of ext_but_sw_led
 -- Loading entity ext_but_sw_led
+
+} {} {}} /opt/altera/quartus-11.1_173/quartus/eda/sim_lib/cycloneiii_components.vhd {1 {vcom -work altera_mf -2002 -explicit -vopt /opt/altera/quartus-11.1_173/quartus/eda/sim_lib/cycloneiii_components.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package VITAL_Timing
+-- Loading package VITAL_Primitives
+-- Loading package cycloneiii_atom_pack
+-- Compiling package cycloneiii_components
 
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
