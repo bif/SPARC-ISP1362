@@ -1,200 +1,212 @@
+/* Copyright (C) 2010, 2011 Embedded Computing Systems Group,
+Department of Computer Engineering, Vienna University of Technology.
+Contributed by Martin Walter <mwalter@opencores.org>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published
+by the Free Software Foundation, either version 2.1 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+
+
 #include <inttypes.h>
-#include <machine/modules.h>
-#include <machine/interrupts.h>
 #include <machine/UART.h>
-#include <stdio.h>
-#include <drivers/drivers.h>
+#include <machine/modules.h>
+#include <drivers/dis7seg.h>
 
-// --------------- defines for buttons/switche/leds ----------------
-#define BUT_SW_LED_BADDR                ((uint32_t)-320)
-#define BUT_SW_LED_STATUS (*(volatile int *const) (BUT_SW_LED_BADDR))
-#define DATA_IO_0_3   (*(volatile int *const) (BUT_SW_LED_BADDR+4))
-#define DATA_IO_4_5   (*(volatile int *const) (BUT_SW_LED_BADDR+8))
+#if defined __SCARTS_16__
+  #include "gdb/sim-scarts_16.h"
+  #define SCARTS_ADDR_CTYPE  uint16_t
+#elif defined __SCARTS_32__
+  #include "gdb/sim-scarts_32.h"
+  #define SCARTS_ADDR_CTYPE  uint32_t
+#else
+  #error "Unsupported target machine type"
+#endif
 
-#define SWITCH_MASK ((uint32_t) 0x3FFFF)
-#define LED_MASK ((uint32_t) 0xFFFF)
+#define SCARTS_INSN_SIZE 2
 
-#define BUTTON1	0
-#define BUTTON2 1
-#define BUTTON3 2
+#define NUM_HEX_CHARS_PER_BYTE     2
+#define SREC_MAX_LINE_LEN         80
+#define SREC_FIELD_TYPE_OFFSET     1
+#define SREC_FIELD_LENGTH_LEN      2
+#define SREC_FIELD_LENGTH_OFFSET   2
+#define SREC_FIELD_ADDRESS_OFFSET  4
+#define SREC_FIELD_CHECKSUM_LEN    2
+#define SREC_TYPE_HEADER           0
+#define SREC_TYPE_DATA2            1
+#define SREC_TYPE_DATA2_TERM       9
+#define SREC_TYPE_DATA4            3
+#define SREC_TYPE_DATA4_TERM       7
 
-#define SW_ON 1
-#define SW_OFF 0
-#define SW_OFFSET 3
-#define LED_OFFSET_IO_0_3 21
-#define LED_OFFSET_IO_4_5 11
-
-#define R_LED0 (1<<0)
-#define R_LED1 (1<<1)
-#define R_LED2 (1<<2)
-#define R_LED3 (1<<3)
-#define R_LED4 (1<<4)
-#define R_LED5 (1<<5)
-#define R_LED6 (1<<6)
-#define R_LED7 (1<<7)
-#define R_LED8 (1<<8)
-#define R_LED9 (1<<9)
-#define R_LED10 (1<<10)
-#define R_LED11 (1<<11)
-#define R_LED12 (1<<12)
-#define R_LED13 (1<<13)
-#define R_LED14 (1<<14)
-#define R_LED15 (1<<15)
-#define R_LED16 (1<<16)
-#define R_LED17 (1<<17)
-
-#define G_LED0 (1<<18)
-#define G_LED1 (1<<19)
-#define G_LED2 (1<<20)
-#define G_LED3 (1<<21)
-#define G_LED4 (1<<22)
-#define G_LED5 (1<<23)
-#define G_LED6 (1<<24)
-#define G_LED7 (1<<25)
-#define G_LED8 (1<<26)
-
-// ----------------------- defines for timer -----------------------
-#define TIMER_BADDR											((uint32_t)-288)
-#define TIMER_CONF_REG 		(*(volatile int *const) (TIMER_BADDR+3)) 
-#define TIMER_STATUS_REG 	(*(volatile int *const) (TIMER_BADDR+1)) 
-
-
-#define TIMER_CLK_MATCH   (*(volatile int *const) (TIMER_BADDR+4))
-#define TIMER_PREESCLER   (*(volatile int *const) (TIMER_BADDR+8))
-
-#define START_TIMER	0	// bit to start inst_timer
-#define STOP_TIMER	1	// bit to stop inst_timer
-
-
-
-// ---------------- functions for buttons/switches/leds ------------
-uint32_t getButtonStatus(void)
+typedef struct
 {
-	uint32_t ret_val;
-	
-	ret_val = 0;
+  uint8_t           type;
+  uint8_t           length;
+  uint8_t           address_length;
+  SCARTS_ADDR_CTYPE address;
+  uint8_t           payload_num_bytes;
+  uint8_t           payload_offset;
+  uint8_t           size;
+} srecord_t;
 
-	// negation because buttons are low-active
-	if(!(DATA_IO_0_3 & (1<<BUTTON1)))
-		ret_val |= (1<<BUTTON1);
-	if(!(DATA_IO_0_3 & (1<<BUTTON2)))
-		ret_val |= (1<<BUTTON2);
-	if(!(DATA_IO_0_3 & (1<<BUTTON3)))
-		ret_val |= (1<<BUTTON3);
-	
-	return ret_val;
-}
-
-uint8_t getSwitchStatus(uint32_t sw_nbr)
+static uint8_t
+char_to_int (char c)
 {
-	uint32_t sw;
-
-	sw = 0;
-
-	sw |= (uint32_t) ((DATA_IO_0_3 >> SW_OFFSET) & SWITCH_MASK);
-	if (sw & (1<<sw_nbr))
-		return SW_ON;
-	else		
-		return SW_OFF;
-		
-	//SW error
-	return 2;
+  if (c >= '0' && c <= '9')
+    return c - 48;
+  else if (c >= 'A' && c <= 'F')
+    return c - 55;
+  else
+    return 0;
 }
 
-// usage: setLeds(R_LEDx | ... | GLEDx | ... )
-void setLeds(uint32_t leds)//, uint8_t on_off))
+static void
+program_codemem (srecord_t *srec, char *buffer)
 {
-	uint32_t tmp;
-//	if(on_off) {
-    tmp = (leds << LED_OFFSET_IO_0_3);
-    DATA_IO_0_3 = tmp;
-    
-    tmp = (leds >> LED_OFFSET_IO_4_5);
-    tmp &= LED_MASK;
-    DATA_IO_4_5 = tmp;
-//  } else {
-//    tmp = ~(leds << LED_OFFSET_IO_0_3);
-//    DATA_IO_0_3 &= tmp;
-//    
-//    tmp = ~(leds >> LED_OFFSET_IO_4_5);
-//    tmp &= LED_MASK;
-//    DATA_IO_4_5 &= tmp;
-//  }
+  int8_t i;
+
+  srec->address -= SCARTS_CODEMEM_LMA;
+  srec->address /= SCARTS_INSN_SIZE;
+
+  /* Iterate over the number of codewords in the current srecord. */
+  for (i = 0; i < srec->payload_num_bytes / SCARTS_INSN_SIZE; ++i)
+  {
+    /* Write the address of the current codeword to
+     * the address register of the programmer module. */
+    PROGRAMMER_ADDRESS = srec->address + i;
+
+    /* Prepare the characters in the buffer to form a proper codeword
+     * and write this to the data register of the programmer module. */
+    PROGRAMMER_DATA = (char_to_int (buffer[srec->payload_offset + 2]) << 12)
+                    + (char_to_int (buffer[srec->payload_offset + 3]) << 8)
+                    + (char_to_int (buffer[srec->payload_offset + 0]) << 4)
+                    + (char_to_int (buffer[srec->payload_offset + 1]));
+
+    /* Advance the payload offset pointer to point to the next codeword. */
+    srec->payload_offset += (SCARTS_INSN_SIZE * NUM_HEX_CHARS_PER_BYTE);
+
+    /* Tell the programmer module to perform the download. */
+    PROGRAMMER_CONFIG_C |= (1 << PROGRAMMER_CONFIG_C_PREXE);
+  }
 }
 
-
-// ---------------------- functions for timer  ---------------------
-void timer_initHandle(module_handle_t *h, scarts_addr_t baseAddress) {
-  h->baseAddress = baseAddress;
-}
-
-void timer_releaseHandle(module_handle_t *h) {
-}
-
-void timer_irq_ack(module_handle_t *h) {
-  volatile uint8_t *reg;
-  reg = (uint8_t *)(h->baseAddress+MODULE_CONFIG_BOFF);
-  *reg |= (1<<MODULE_CONFIG_INTA);
-}
-
-void start_timer()
+static void
+program_datamem (srecord_t *srec, char *buffer)
 {
-	TIMER_CONF_REG &= ~(1<<STOP_TIMER);
-	TIMER_CONF_REG |= (1<<START_TIMER);
-	}
+  int8_t i;
+  uint8_t data;
+  volatile uint8_t *address;
+
+  /* Iterate over the number of data bytes in the current srecord. */
+  for (i = 0; i < srec->payload_num_bytes; ++i)
+  {
+    /* Write the address of the current data byte to
+     * the address register of the programmer module. */
+    address = (uint8_t *) srec->address + i;
+
+    /* Prepare the characters in the buffer to form a proper data byte. */
+    data = (char_to_int (buffer[srec->payload_offset + 0]) << 4)
+         + (char_to_int (buffer[srec->payload_offset + 1]));
+
+    /* Advance the payload offset pointer to point to the next datum. */
+    srec->payload_offset += NUM_HEX_CHARS_PER_BYTE;
+
+    *address = data;
+  }
 }
-
-void stop_timer()
-{
-  TIMER_CONF_REG &= ~(1<<START_TIMER);
-  TIMER_CONF_REG |= (1<<STOP_TIMER);
-}
-
-void config_timer(uint32_t timer_top_match, uint8_t preescaler)
-{
-		TIMER_CLK_MATCH = timer_top_match;
-    TIMER_PREESCALER = preescaler;
-}
-
-
-static module_handle_t timer_handle;
-
-//void isr() __attribute__ ((interrupt));
-
-void isr(uint8_t* toggle) {
-	// todo do PWM signal
-  setLeds(R_LED0);
-	if(toggle) {
-    setLeds(G_LED0);
-		*toggle = 0;
-	}	else {
-    setLeds(~G_LED0);
-		*toggle = 1;
-	}
-
-	timer_irq_ack(&timer_handle);
-
-}
-
-
 
 int main (int argc, char *argv[])
 {
+  char buffer[SREC_MAX_LINE_LEN+1];
+  int8_t i, j;
+  srecord_t srec;
+  UART_Cfg cfg;
+  dis7seg_handle_t display_handle;
 
-  //register interrupt to line 2
-  REGISTER_INTERRUPT(isr, 2);
-  // unmask interrupt line 2
-  UMASKI(2);
-  // globally enable interrupts
-  SEI();
-   
-    // timer 80000 ticks = 1ms, 80 ticks = 1s
-  config_timer(TIMER_C, 50, INT_ON);
-  timer_initHandle(&timer_handle, TIMER_BADDR);
-  start_timer(TIMER_C);
+  /* Define the UART settings. */
+  cfg.fclk = 50000000;
+  cfg.baud = UART_CFG_BAUD_115200;
+  cfg.frame.msg_len = UART_CFG_MSG_LEN_8;
+  cfg.frame.parity = UART_CFG_PARITY_EVEN;
+  cfg.frame.stop_bits = UART_CFG_STOP_BITS_1;
 
-	while(1);	
+  UART_init (cfg);
+  dis7seg_initHandle(&display_handle, -288, 8);
+  dis7seg_displayHexUInt32(&display_handle, 0, 0x01234567);
 
+  while (1)
+  {
+    srec.size = UART_read_line (0, buffer, SREC_MAX_LINE_LEN);
+
+    if (srec.size == 0)
+      continue;
+
+    /* Check if the line starts with an 'S'. */
+    if (buffer[0] != 'S')
+      continue;
+
+    /* Extract the srecord type. */
+    srec.type = char_to_int (buffer[SREC_FIELD_TYPE_OFFSET]);
+
+    /* Extract the srecord length. */
+    srec.length = (char_to_int (buffer[SREC_FIELD_LENGTH_OFFSET]) << 4)
+                 + char_to_int (buffer[SREC_FIELD_LENGTH_OFFSET + 1]);
+
+    /* Process the current srecord. */
+    switch (srec.type)
+    {
+      case SREC_TYPE_DATA4:
+      {
+        /* Deduce the address field length from the srecord type. */
+        srec.address_length = 8;
+
+        /* Extract the address at which the payload is to be loaded. */
+        srec.address = 0;
+        for (i = 0; i < srec.address_length; ++i)
+        {
+          j = srec.address_length - 1 - i;
+          srec.address += char_to_int (buffer[SREC_FIELD_ADDRESS_OFFSET + i]) << 4 * j;
+        }
+
+        /* Compute the offset and length (bytes) of the payload field. */
+        srec.payload_offset = SREC_FIELD_ADDRESS_OFFSET + srec.address_length;
+        srec.payload_num_bytes = (srec.size - srec.payload_offset - SREC_FIELD_CHECKSUM_LEN) / NUM_HEX_CHARS_PER_BYTE;
+
+        if (srec.address >= SCARTS_CODEMEM_LMA)
+          program_codemem (&srec, buffer);
+        else
+          program_datamem (&srec, buffer);
+
+        break;
+      }
+      case SREC_TYPE_DATA4_TERM:
+      {
+        /* Set the program counter to SCARTS_CODEMEM_LMA. */
+#if defined __SCARTS_16__
+        asm ("ldhi r13, 0");
+#elif defined __SCARTS_32__
+        asm ("ldhi r13, 0");
+        asm ("ldliu r13, 0");
+        asm ("sli r13, 0x8");
+        asm ("ldliu r13, 0");
+        asm ("sli r13, 0x8");
+#endif
+        asm ("ldliu r13, 0");
+        asm ("jmp r13");
+      }
+      default:
+        continue;
+    }
+  }
 
   return 0;
 }
+
