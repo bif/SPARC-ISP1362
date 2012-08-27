@@ -171,22 +171,22 @@ void isr(uint8_t* toggle) {
 
 int main (int argc, char *argv[])
 {
-  TIMER_BADDR |= (1<<2);
+  //TIMER_BADDR |= (1<<2);
   setLeds(R_LED1);
   //register interrupt to line 2
-  REGISTER_INTERRUPT(isr, 2);
+//  REGISTER_INTERRUPT(isr, 2);
   // unmask interrupt line 2
-  UMASKI(2);
+//  UMASKI(2);
   // globally enable interrupts
-  SEI();
+//  SEI();
    
   setLeds(R_LED2);
     // timer 80000 ticks = 1ms, 80 ticks = 1s
-  config_timer(TIMER_C, 0, INT_ON);
-  timer_initHandle(&timer_handle, TIMER_BADDR);
-  start_timer(TIMER_C);
+//  config_timer(50000, 0);
+//  timer_initHandle(&timer_handle, TIMER_BADDR);
+//  start_timer();
   
-  TIMER_BADDR &= ~(1<<2);
+  //TIMER_BADDR &= ~(1<<2);
 	while(1);	
 
 

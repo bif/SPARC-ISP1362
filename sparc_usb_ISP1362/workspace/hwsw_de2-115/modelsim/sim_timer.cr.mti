@@ -7,31 +7,6 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package scarts_pkg
 -- Compiling package pkg_timer
 
-} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top.vhd
-Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package top_pkg
--- Loading package scarts_amba_pkg
--- Loading package scarts_pkg
--- Loading package pkg_timer
--- Loading package pkg_but_sw_led
--- Compiling entity top
--- Compiling architecture behaviour of top
-
-} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led.vhd
-Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package scarts_amba_pkg
--- Loading package scarts_pkg
--- Loading package pkg_but_sw_led
--- Compiling architecture behaviour of ext_but_sw_led
--- Loading entity ext_but_sw_led
-
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
@@ -42,43 +17,12 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package pkg_timer
 -- Compiling entity ext_timer
 
-} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_tb.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_tb.vhd
-Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package scarts_amba_pkg
--- Loading package scarts_pkg
--- Loading package pkg_timer
--- Compiling entity top_tb
--- Compiling architecture behaviour of top_tb
-
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_pkg.vhd
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling package top_pkg
-
-} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd
-Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package scarts_amba_pkg
--- Loading package scarts_pkg
--- Compiling package pkg_but_sw_led
-
-} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd
-Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package scarts_amba_pkg
--- Loading package scarts_pkg
--- Loading package pkg_but_sw_led
--- Compiling entity ext_but_sw_led
 
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer.vhd
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
@@ -92,13 +36,6 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Compiling architecture behaviour of ext_timer
 -- Loading entity ext_timer
 
-} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_amba_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_amba_pkg.vhd
-Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling package scarts_amba_pkg
-
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
@@ -106,5 +43,43 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package std_logic_1164
 -- Loading package scarts_amba_pkg
 -- Compiling package scarts_pkg
+
+} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package scarts_amba_pkg
+-- Loading package scarts_pkg
+-- Loading package pkg_but_sw_led
+-- Compiling entity ext_but_sw_led
+
+} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package scarts_amba_pkg
+-- Loading package scarts_pkg
+-- Loading package pkg_but_sw_led
+-- Compiling architecture behaviour of ext_but_sw_led
+-- Loading entity ext_but_sw_led
+
+} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package scarts_amba_pkg
+-- Loading package scarts_pkg
+-- Compiling package pkg_but_sw_led
+
+} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_amba_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_amba_pkg.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package scarts_amba_pkg
 
 } {} {}}
