@@ -20,19 +20,16 @@
 static module_handle_t timer_handle;
 static dis7seg_handle_t display_handle;
 
-
-//void isr() __attribute__ ((interrupt));
+void isr() __attribute__ ((interrupt));
 
 void isr(uint8_t* toggle) {
 	// todo do PWM signal
   setLeds(R_LED0);
 	if(toggle) {
-		//DATA_EXPH |= (1<<0);
-    //setLeds(G_LED0);
+    setLeds(G_LED0);
 		*toggle = 0;
 	}	else {
-		//DATA_EXPH &= ~(1<<0);
-    //setLeds(~G_LED0);
+    setLeds(~G_LED0);
 		*toggle = 1;
 	}
 
@@ -52,15 +49,16 @@ int main (int argc, char *argv[])
 
   UART_Cfg cfg;
 
+
+
+  setLeds(R_LED1);
   //register interrupt to line 2
-  //
-  //TODO: wie übergebe ich an eine callback function einen wert und wie bekomme ich ihn wieder?
   REGISTER_INTERRUPT(isr, 2);
   // unmask interrupt line 2
   UMASKI(2);
   // globally enable interrupts
   SEI();
-   
+
     
   // Initialize peripheral components ...
   // UART
@@ -75,10 +73,14 @@ int main (int argc, char *argv[])
   dis7seg_initHandle(&display_handle, DISP7SEG_BADDR, 8);
   dis7seg_displayHexUInt32(&display_handle, 0, 0x00000042);
 
-  // timer 80000 ticks = 1ms, 80 ticks = 1s
-  config_timer(TIMER_C, 80, INT_ON);
+
+
+  setLeds(R_LED2);
+    // timer 80000 ticks = 1ms, 80 ticks = 1s
+  config_timer(50000000, 0);
   timer_initHandle(&timer_handle, TIMER_BADDR);
-  start_timer(TIMER_C);
+  start_timer();
+  
 
   uint32_t keys, keys_old, led_port;
   uint8_t i;

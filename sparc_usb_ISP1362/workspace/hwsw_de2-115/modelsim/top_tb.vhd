@@ -6,18 +6,6 @@ use work.scarts_pkg.all;
 use work.pkg_timer.all;
 
 entity top_tb is
-  port (
-      -- buttons
-      button1        : out std_logic; 
-      button2        : out std_logic;
-      button3        : out std_logic;
-      -- Switches
-      sw 	  			: out std_logic_vector(17 downto 0);
-      -- Leds
-      ledr				: in std_logic_vector(17 downto 0);
-      ledg				: in std_logic_vector(8 downto 0);	
-    );
-  
 end top_tb;
 
 architecture behaviour of top_tb is
@@ -53,6 +41,18 @@ architecture behaviour of top_tb is
   signal but_sw_led_exto	: module_out_type;
 
 
+  -- buttons
+  signal button1 : std_logic; 
+  signal button2 : std_logic;
+  signal button3 : std_logic;
+  -- Switches
+  signal sw : std_logic_vector(17 downto 0);
+  -- Leds
+  signal ledr	: std_logic_vector(17 downto 0);
+  signal ledg	: std_logic_vector(8 downto 0);	
+
+  signal rst : std_logic;
+
   component top
     port (
       db_clk      : in    std_ulogic;
@@ -66,7 +66,7 @@ architecture behaviour of top_tb is
       SW 	  			: in std_logic_vector(17 downto 0);
       -- Leds
       LEDR				: out std_logic_vector(17 downto 0);
-      LEDG				: out std_logic_vector(8 downto 0);	
+      LEDG				: out std_logic_vector(8 downto 0)	
     );    
   end component;
 
@@ -75,9 +75,14 @@ begin
 
   top_1: top
     port map (
-      db_clk         => clk,
-      rst            => rst,
-   
+      db_clk       => clk,
+      rst          => rst,
+      KEY1         => button1,
+      KEY2         => button2,
+      KEY3         => button3,
+			SW			  	 =>	sw,
+			LEDR		  	 => ledr,
+			LEDG		  	 => ledg
     
     );
 
@@ -90,11 +95,17 @@ begin
   end process clkgen;
   
   test: process
+
+    procedure icwait(cycles: Natural) is
+    begin 
+      for i in 1 to cycles loop 
+        wait until clk= '0' and clk'event;
+      end loop;
+    end ;
+
   begin
 
     rst <= RST_ACT;
-    D_Rxd <= '1';
-    aux_uart_rx <= '1';
     icwait(100);
     rst <= not RST_ACT;
 

@@ -8,7 +8,7 @@
 #define TIMER_STATUS_REG 	(*(volatile int *const) (TIMER_BADDR+1)) 
 
 #define TIMER_CLK_MATCH   (*(volatile int *const) (TIMER_BADDR+4))
-#define TIMER_PREESCLER   (*(volatile int *const) (TIMER_BADDR+8))
+#define TIMER_PRESCALER   (*(volatile int *const) (TIMER_BADDR+8))
 
 #define START_TIMER	0	// bit to start inst_timer
 #define STOP_TIMER	1	// bit to stop inst_timer

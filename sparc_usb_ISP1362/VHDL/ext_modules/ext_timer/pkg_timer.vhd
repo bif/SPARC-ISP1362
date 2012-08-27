@@ -23,7 +23,7 @@
 -- 2002-04-16  1.0      ssimhandl	  Created
 -------------------------------------------------------------------------------
 
-library ieee;;
+library ieee;
 use ieee.std_logic_1164.all;
 use work.scarts_pkg.all;
 
@@ -41,7 +41,8 @@ package pkg_timer is
         clk        : in   std_logic;
         extsel     : in   std_ulogic;
         exti       : in   module_in_type;
-        exto       : out  module_out_type);
+        exto       : out  module_out_type
+      );
     end component;
 -------------------------------------------------------------------------------
 --                           END COMPONENT

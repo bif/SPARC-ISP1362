@@ -21,16 +21,17 @@ use ieee.std_logic_1164.all;
 
 use work.top_pkg.all;
 use work.scarts_pkg.all;
+use work.scarts_amba_pkg.all;
 --use work.pkg_ISP1362.all;
 use work.pkg_timer.all;
-use work.but_sw_led.all;
+use work.pkg_but_sw_led.all;
 
-library techmap;
-use techmap.gencomp.all;
+--library techmap;
+--use techmap.gencomp.all;
 
-library gaisler;
-use gaisler.misc.all;
-use gaisler.memctrl.all;
+--library gaisler;
+--use gaisler.misc.all;
+--use gaisler.memctrl.all;
 
 entity top is
   port(
@@ -54,7 +55,7 @@ entity top is
 		SW 	  			: in std_logic_vector(17 downto 0);
 		-- Leds
 		LEDR				: out std_logic_vector(17 downto 0);
-		LEDG				: out std_logic_vector(8 downto 0);	
+		LEDG				: out std_logic_vector(8 downto 0)	
 
   );
 end top;
@@ -86,6 +87,10 @@ architecture behaviour of top is
   signal but_sw_led_sel	: std_ulogic;
   signal but_sw_led_exto	: module_out_type;
 
+  -- signals for AHB slaves and APB slaves
+  signal ahbmi            : ahb_master_in_type;
+  signal scarts_ahbmo     : ahb_master_out_type;
+
 begin
 
   scarts_unit: scarts
@@ -109,8 +114,8 @@ begin
       extrst => syncrst,
       scarts_i => scarts_i,
       scarts_o => scarts_o,
---      ahbmi  => ahbmi,
---      ahbmo  => scarts_ahbmo,
+      ahbmi  => ahbmi,
+      ahbmo  => scarts_ahbmo,
       debugi_if => debugi_if,
       debugo_if => debugo_if
     );

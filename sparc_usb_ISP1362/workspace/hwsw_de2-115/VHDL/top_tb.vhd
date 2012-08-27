@@ -208,7 +208,7 @@ begin
     procedure icwait(cycles: Natural) is
     begin 
       for i in 1 to cycles loop 
-	wait until clk= '0' and clk'event;
+      	wait until clk= '0' and clk'event;
       end loop;
     end ;
 
