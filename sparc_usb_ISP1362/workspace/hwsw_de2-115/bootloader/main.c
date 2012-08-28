@@ -3,6 +3,7 @@
 #include <machine/interrupts.h>
 #include <machine/UART.h>
 #include <stdio.h>
+#include <string.h>
 #include <drivers/drivers.h>
 
 // --------------- defines for buttons/switche/leds ----------------
@@ -171,8 +172,20 @@ void isr(uint8_t* toggle) {
 
 int main (int argc, char *argv[])
 {
+  UART_Cfg cfg;
+
+  // Initialize peripheral components ...
+  // UART
+  cfg.fclk = 50000000;
+  cfg.baud = UART_CFG_BAUD_115200;
+  cfg.frame.msg_len = UART_CFG_MSG_LEN_8;
+  cfg.frame.parity = UART_CFG_PARITY_EVEN;
+  cfg.frame.stop_bits = UART_CFG_STOP_BITS_1;
+  UART_init (cfg);
+
+  UART_write(0, "Hello", 5);
   //TIMER_BADDR |= (1<<2);
-  setLeds(R_LED1);
+  //setLeds(R_LED1);
   //register interrupt to line 2
 //  REGISTER_INTERRUPT(isr, 2);
   // unmask interrupt line 2
@@ -180,9 +193,9 @@ int main (int argc, char *argv[])
   // globally enable interrupts
 //  SEI();
    
-  setLeds(R_LED2 | G_LED0);
+  //setLeds(R_LED2 | G_LED0);
     // timer 80000 ticks = 1ms, 80 ticks = 1s
-//  config_timer(50000, 0);
+  config_timer(50000, 50);
 //  timer_initHandle(&timer_handle, TIMER_BADDR);
 //  start_timer();
   

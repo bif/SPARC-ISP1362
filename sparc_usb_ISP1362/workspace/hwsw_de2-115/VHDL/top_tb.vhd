@@ -52,12 +52,17 @@ architecture behaviour of top_tb is
   signal ledg	: std_logic_vector(8 downto 0);	
 
   signal rst : std_logic;
+  
+  signal UART_RX : std_logic;
+  signal UART_TX : std_logic;
 
   component top
     port (
       db_clk      : in    std_ulogic;
       rst         : in    std_ulogic;
-      
+      -- Debug Interface
+      D_RxD       : in std_logic;
+      D_TxD       : out std_logic;
       -- buttons
       KEY1        : in std_logic; 
       KEY2        : in std_logic;
@@ -77,6 +82,8 @@ begin
     port map (
       db_clk       => clk,
       rst          => rst,
+      D_RxD        => UART_RX,
+      D_TxD        => UART_TX,
       KEY1         => button1,
       KEY2         => button2,
       KEY3         => button3,

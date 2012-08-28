@@ -37,8 +37,11 @@ entity top is
   port(
     db_clk      : in  std_ulogic;
     rst         : in  std_ulogic;
+    -- Debug Interface
+    D_RxD : in std_logic;
+    D_TxD : out std_logic;
 
--- ISP1362 - usb controler
+    -- ISP1362 - usb controler
 --		USB_DATA	: inout std_logic_vector (15 downto 0);
 --		USB_ADDR	: out std_logic_vector (1 downto 0); 
 --		USB_RD_N	: out std_logic;
@@ -98,8 +101,8 @@ architecture behaviour of top is
     port (
       areset		: in STD_LOGIC  := '0';
       inclk0		: in STD_LOGIC  := '0';
-      c0		: out STD_LOGIC ;
-      c1		: out STD_LOGIC;
+      c0	    	: out STD_LOGIC ;
+      c1	    	: out STD_LOGIC;
       locked		: out STD_LOGIC 
     );
    end component;
@@ -111,8 +114,8 @@ begin
     port map (
       areset	 => '0',
       inclk0	 => db_clk,
-      c0	         => clk,
-      c1	         => vga_clk_int,
+      c0	     => clk,
+      c1	     => vga_clk_int,
       locked	 => open
     );
 
@@ -187,7 +190,7 @@ begin
 --	); 
 
   
-  comb : process(scarts_o, timer_exto, but_sw_led_exto) -- usb_exto)  --extend!
+  comb : process(scarts_o, debugo_if, D_RxD, timer_exto, but_sw_led_exto) -- usb_exto)  --extend!
     variable extdata : std_logic_vector(31 downto 0);
   begin   
     exti.reset    <= scarts_o.reset;
@@ -203,12 +206,14 @@ begin
 		if scarts_o.extsel = '1' then
       case scarts_o.addr(14 downto 5) is
         when "1111110111" => -- (-288)
+          -- select timer module
           timer_sel <= '1';
         when "1111110110" => -- (-320)              
+          -- select button/switch/led module
           but_sw_led_sel <= '1';
-           --next eytension module
         --when "1111110101" => -- (-352)              
-			  --  xxx_sel <= '1';
+          -- select uart module
+          --aux_uart_sel <= '1';
         when others =>
           null;
       end case;
@@ -224,7 +229,11 @@ begin
     scarts_i.data <= extdata;
     scarts_i.hold <= '0';
     scarts_i.interruptin <= (others => '0');
-    
+   
+    -- Debug Interface
+    D_TxD <= debugo_if.D_TxD;
+    debugi_if.D_RxD <= D_RxD; 
+
  end process;
 
   reg : process(clk)

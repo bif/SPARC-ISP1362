@@ -206,7 +206,7 @@ begin
       if rstint = RST_ACT then
         r.ifacereg <= (others => (others => '0'));
         r.counter <= (others => '0');
-        r.prescaler <= x"0F";--(others => '0');
+        r.prescaler <= x"00";--(others => '0');
         debug <= '0';
       else
         r <= r_next;
