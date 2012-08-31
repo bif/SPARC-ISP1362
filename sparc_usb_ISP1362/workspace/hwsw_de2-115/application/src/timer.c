@@ -17,7 +17,6 @@ void start_timer()
 {
 	TIMER_CONF_REG &= ~(1<<STOP_TIMER);
 	TIMER_CONF_REG |= (1<<START_TIMER);
-	}
 }
 
 void stop_timer()
@@ -26,9 +25,9 @@ void stop_timer()
   TIMER_CONF_REG |= (1<<STOP_TIMER);
 }
 
-void config_timer(uint32_t timer_top_match, uint8_t preescaler)
+void config_timer(uint32_t timer_top_match, uint8_t prescaler)
 {
 		TIMER_CLK_MATCH = timer_top_match;
-    TIMER_PREESCALER = preescaler;
+    TIMER_PRESCALER = prescaler;
 }
 

@@ -25,14 +25,14 @@ static dis7seg_handle_t display_handle;
 
 void isr(uint8_t* toggle) {
 	// todo do PWM signal
-  setLeds(R_LED0);
+  setLeds(G_LED0);
 	if(toggle) {
 		//DATA_EXPH |= (1<<0);
-    //setLeds(G_LED0);
+    setLeds(G_LED1);
 		*toggle = 0;
 	}	else {
 		//DATA_EXPH &= ~(1<<0);
-    //setLeds(~G_LED0);
+    setLeds(~G_LED1);
 		*toggle = 1;
 	}
 
@@ -76,9 +76,9 @@ int main (int argc, char *argv[])
   dis7seg_displayHexUInt32(&display_handle, 0, 0x00000042);
 
   // timer 80000 ticks = 1ms, 80 ticks = 1s
-  config_timer(TIMER_C, 80, INT_ON);
+  config_timer(50000000, 0);
   timer_initHandle(&timer_handle, TIMER_BADDR);
-  start_timer(TIMER_C);
+  start_timer();
 
   uint32_t keys, keys_old, led_port;
   uint8_t i;
@@ -117,9 +117,8 @@ int main (int argc, char *argv[])
 				led_port &= ~(SW_ON<<i);				
 		}
 		 
-    setLeds(R_LED1);
 		// set leds
-		//setLeds(led_port);
+		setLeds(led_port);
 	}
 
 
