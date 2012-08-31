@@ -30,3 +30,4 @@ void config_timer(uint32_t timer_top_match, uint8_t prescaler)
 		TIMER_CLK_MATCH = timer_top_match;
     TIMER_PRESCALER = prescaler;
 }
+

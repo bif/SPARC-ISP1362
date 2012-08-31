@@ -1,7 +1,10 @@
 #ifndef BUT_SW_LED_H
 #define BUT_SW_LED_H
 
+#ifndef BUT_SW_LED_BADDR
 #define BUT_SW_LED_BADDR ((uint32_t)-384)
+#endif
+
 #define BUT_SW_LED_STATUS (*(volatile int *const) (BUT_SW_LED_BADDR))
 #define DATA_IO_0_3   (*(volatile int *const) (BUT_SW_LED_BADDR+4))
 #define DATA_IO_4_5   (*(volatile int *const) (BUT_SW_LED_BADDR+8))
@@ -48,11 +51,8 @@
 #define G_LED7 (1<<25)
 #define G_LED8 (1<<26)
 
-//#define LEDS_ON 1
-//#define LEDS_OFF 0
-
 extern uint32_t getButtonStatus(void);
 extern uint8_t getSwitchStatus(uint32_t sw_nbr);
-extern void setLeds(uint32_t leds);//, uint8_t on_off);
+extern void setLeds(uint32_t leds);
 
 #endif 

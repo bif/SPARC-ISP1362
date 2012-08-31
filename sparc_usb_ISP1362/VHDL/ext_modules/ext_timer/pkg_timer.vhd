@@ -41,8 +41,7 @@ package pkg_timer is
         clk        : in   std_logic;
         extsel     : in   std_ulogic;
         exti       : in   module_in_type;
-        exto       : out  module_out_type
-      );
+        exto       : out  module_out_type);
     end component;
 -------------------------------------------------------------------------------
 --                           END COMPONENT

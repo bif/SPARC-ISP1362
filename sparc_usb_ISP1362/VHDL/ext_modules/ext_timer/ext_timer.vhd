@@ -28,7 +28,6 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 use work.scarts_pkg.all;
-use work.pkg_timer.all;
 
 architecture behaviour of ext_timer is
 
@@ -53,7 +52,6 @@ type reg_type is record
   prescaler : std_logic_vector(7 downto 0);
 end record;
 
-signal debug : std_logic; 
 
 signal r_next : reg_type;
 signal r : reg_type := 
@@ -70,13 +68,11 @@ signal rstint : std_ulogic;
 begin
 
 
-  comb : process(r, exti, extsel, debug)
+  comb : process(r, exti, extsel)
   variable v : reg_type;
   begin
     v := r;
- 
-    debug <= '1';
-
+  
     --schreiben
     if ((extsel = '1') and (exti.write_en = '1')) then
       case exti.addr(4 downto 2) is
@@ -206,8 +202,7 @@ begin
       if rstint = RST_ACT then
         r.ifacereg <= (others => (others => '0'));
         r.counter <= (others => '0');
-        r.prescaler <= x"00";--(others => '0');
-        debug <= '0';
+        r.prescaler <= (others => '0');
       else
         r <= r_next;
       end if;

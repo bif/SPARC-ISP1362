@@ -8,7 +8,7 @@ LIBS=-lscartsdrivers
 SOURCES=src/main.c \
 	src/but_sw_led.c \
 	src/timer.c
-	
+
 OBJECTS=$(SOURCES:.c=.o)
 PROGRAM=main
 INCLUDE=-Iinclude 
