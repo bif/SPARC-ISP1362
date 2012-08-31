@@ -26,12 +26,15 @@ use work.scarts_amba_pkg.all;
 use work.pkg_timer.all;
 use work.pkg_but_sw_led.all;
 
---library techmap;
---use techmap.gencomp.all;
+library grlib;
+use grlib.amba.all;
 
---library gaisler;
---use gaisler.misc.all;
---use gaisler.memctrl.all;
+library techmap;
+use techmap.gencomp.all;
+
+library gaisler;
+use gaisler.misc.all;
+use gaisler.memctrl.all;
 
 entity top is
   port(
@@ -115,7 +118,7 @@ begin
       areset	 => '0',
       inclk0	 => db_clk,
       c0	     => clk,
-      c1	     => vga_clk_int,
+      c1	     => open,
       locked	 => open
     );
 
