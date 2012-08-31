@@ -15,7 +15,25 @@
 #define TIMER_BADDR		              		((uint32_t)-416)
 
 
+static module_handle_t timer_handle;
 static dis7seg_handle_t display_handle;
+
+void isr() __attribute__ ((interrupt));
+
+void isr() { //uint8_t* toggle) {
+	// todo do PWM signal
+  setLeds(G_LED0);
+/*	if(toggle) {
+    setLeds(G_LED0);
+		*toggle = 0;
+	}	else {
+    setLeds(~G_LED0);
+		*toggle = 1;
+	}
+*/
+	timer_irq_ack(&timer_handle);
+
+}
 
 int main (int argc, char *argv[])
 {
@@ -50,9 +68,20 @@ int main (int argc, char *argv[])
 	
 
   UART_write(0, msg, strlen(msg));
-	
-	
-	while(1) {
+
+  //register interrupt to line 2
+  REGISTER_INTERRUPT(isr, 2);
+  // unmask interrupt line 2
+  UMASKI(2);
+  // globally enable interrupts
+  SEI();
+
+  // timer 80000 ticks = 1ms, 80 ticks = 1s
+  config_timer(50000000, 0);
+  timer_initHandle(&timer_handle, TIMER_BADDR);
+  start_timer();
+
+  while(1) {
 		// pushbuttons
 		keys = getButtonStatus();
 		if(keys != keys_old) {
@@ -80,7 +109,7 @@ int main (int argc, char *argv[])
 		UART_write(0, msg_pos1, strlen(msg_pos1));
 
 		// leds
-		setLeds(led_port | G_LED0 | G_LED2 | G_LED7);
+		//setLeds(led_port);
 	}
 
 
