@@ -3,7 +3,10 @@
 
 #include <drivers/drivers.h>
 
-#define TIMER_BADDR				((uint32_t)-480)
+#ifndef TIMER_BADDR
+#define TIMER_BADDR				((uint32_t)-416)
+#endif
+
 #define TIMER_CONF_REG 		(*(volatile int *const) (TIMER_BADDR+3)) 
 #define TIMER_STATUS_REG 	(*(volatile int *const) (TIMER_BADDR+1)) 
 
