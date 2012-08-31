@@ -34,7 +34,7 @@ use work.pkg_timer.all;
 ----------------------------------------------------------------------------------
 
 
-entity ext_counter is
+entity ext_timer is
   port(
         clk                     : in  std_logic;
         extsel                  : in  std_ulogic;

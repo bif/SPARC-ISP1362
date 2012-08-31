@@ -23,7 +23,7 @@
 -- 2002-04-16  1.0      ssimhandl	  Created
 -------------------------------------------------------------------------------
 
-library ieee;;
+library ieee;
 use ieee.std_logic_1164.all;
 use work.scarts_pkg.all;
 

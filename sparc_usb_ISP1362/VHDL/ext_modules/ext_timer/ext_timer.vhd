@@ -89,7 +89,7 @@ begin
 --             v.ifacereg(3) := exti.data(31 downto 24);
 --            end if;
           if ((exti.byte_en(0) = '1')) then
-            v.ifacereg(STATUSREG) := exti.data(7 down to 0);
+            v.ifacereg(STATUSREG) := exti.data(7 downto 0);
           end if;
           if ((exti.byte_en(1) = '1')) then
             v.ifacereg(STATUSREG_CUST) := exti.data(15 downto 8);
@@ -202,8 +202,8 @@ begin
     if rising_edge(clk) then 
       if rstint = RST_ACT then
         r.ifacereg <= (others => (others => '0'));
-        r.counter <= y
-        r.prescaler <=(others => '0');
+        r.counter <= (others => '0');
+        r.prescaler <= (others => '0');
       else
         r <= r_next;
       end if;
