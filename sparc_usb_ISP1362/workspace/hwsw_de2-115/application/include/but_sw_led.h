@@ -48,11 +48,8 @@
 #define G_LED7 (1<<25)
 #define G_LED8 (1<<26)
 
-//#define LEDS_ON 1
-//#define LEDS_OFF 0
-
 extern uint32_t getButtonStatus(void);
 extern uint8_t getSwitchStatus(uint32_t sw_nbr);
-extern void setLeds(uint32_t leds);//, uint8_t on_off);
+extern void setLeds(uint32_t leds);
 
 #endif 

@@ -36,24 +36,17 @@ uint8_t getSwitchStatus(uint32_t sw_nbr)
 	return 2;
 }
 
+
 // usage: setLeds(R_LEDx | ... | GLEDx | ... )
-void setLeds(uint32_t leds)//, uint8_t on_off))
+void setLeds(uint32_t leds)
 {
 	uint32_t tmp;
-//	if(on_off) {
-    tmp = (leds << LED_OFFSET_IO_0_3);
-    DATA_IO_0_3 = tmp;
-    
-    tmp = (leds >> LED_OFFSET_IO_4_5);
-    tmp &= LED_MASK;
-    DATA_IO_4_5 = tmp;
-//  } else {
-//    tmp = ~(leds << LED_OFFSET_IO_0_3);
-//    DATA_IO_0_3 &= tmp;
-//    
-//    tmp = ~(leds >> LED_OFFSET_IO_4_5);
-//    tmp &= LED_MASK;
-//    DATA_IO_4_5 &= tmp;
-//  }
+	
+	tmp = (leds << LED_OFFSET_IO_0_3);
+	DATA_IO_0_3 = tmp;
+	
+	tmp = (leds >> LED_OFFSET_IO_4_5);
+	tmp &= LED_MASK;
+	DATA_IO_4_5 = tmp;
 }
 
