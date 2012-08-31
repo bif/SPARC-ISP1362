@@ -7,7 +7,7 @@
 #include <drivers/drivers.h>
 
 // --------------- defines for buttons/switche/leds ----------------
-#define BUT_SW_LED_BADDR                ((uint32_t)-320)
+#define BUT_SW_LED_BADDR                ((uint32_t)-288)
 #define BUT_SW_LED_STATUS (*(volatile int *const) (BUT_SW_LED_BADDR))
 #define DATA_IO_0_3   (*(volatile int *const) (BUT_SW_LED_BADDR+4))
 #define DATA_IO_4_5   (*(volatile int *const) (BUT_SW_LED_BADDR+8))
@@ -55,7 +55,7 @@
 #define G_LED8 (1<<26)
 
 // ----------------------- defines for timer -----------------------
-#define TIMER_BADDR											((uint32_t)-288)
+#define TIMER_BADDR											((uint32_t)-320)
 #define TIMER_CONF_REG 		(*(volatile int *const) (TIMER_BADDR+3)) 
 #define TIMER_STATUS_REG 	(*(volatile int *const) (TIMER_BADDR+1)) 
 
@@ -151,19 +151,19 @@ void config_timer(uint32_t timer_top_match, uint8_t preescaler)
 
 static module_handle_t timer_handle;
 
-//void isr() __attribute__ ((interrupt));
+void isr() __attribute__ ((interrupt));
 
 void isr(uint8_t* toggle) {
 	// todo do PWM signal
   setLeds(R_LED0);
-	if(toggle) {
+/*	if(toggle) {
     setLeds(G_LED0);
 		*toggle = 0;
 	}	else {
     setLeds(~G_LED0);
 		*toggle = 1;
 	}
-
+*/
 	timer_irq_ack(&timer_handle);
 
 }

@@ -529,10 +529,8 @@ begin
     if scarts_o.extsel = '1' then
       case scarts_o.addr(14 downto 5) is
         when "1111110111" => -- (-288)
-          --DIS7SEG Module
           but_sw_led_sel <= '1';
         when "1111110110" => -- (-320)              
-          --Counter Module
           timer_sel <= '1';
 --        when "1111110101" => -- (-352)
           -- next module
