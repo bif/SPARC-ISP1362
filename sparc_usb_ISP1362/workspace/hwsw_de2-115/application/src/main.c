@@ -7,12 +7,12 @@
 #include <drivers/vgatext.h>
 #include <string.h>
 #include "but_sw_led.h"
-#include "timer.h"
+//#include "timer.h"
 
 #define DISP7SEG_BADDR                  ((uint32_t)-288)
 #define VGATEXT_BADDR                   ((uint32_t)0xF0000100)
 #define BUT_SW_LED_BADDR                ((uint32_t)-384)
-#define TIMER_BADDR		              		((uint32_t)-416)
+//#define TIMER_BADDR		              		((uint32_t)-416)
 
 
 static dis7seg_handle_t display_handle;

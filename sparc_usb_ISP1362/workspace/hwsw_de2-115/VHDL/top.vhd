@@ -26,7 +26,7 @@ use work.pkg_dis7seg.all;
 use work.pkg_counter.all;
 use work.ext_miniUART_pkg.all;
 use work.pkg_but_sw_led.all;
-use work.pkg_timer.all;
+--use work.pkg_timer.all;
 --use work.pkg_ISP1362.all;
 --use work.pkg_exph.all;
 
@@ -110,8 +110,8 @@ architecture behaviour of top is
   signal clk         : std_logic;
 
 	-- timer
-	signal timer_sel		: std_logic;
-	signal timer_exto		: module_out_type;
+--	signal timer_sel		: std_logic;
+--	signal timer_exto		: module_out_type;
 
 	-- expansion header
 --	signal exph_sel		: std_logic;
@@ -402,13 +402,13 @@ begin
   -- Scarts extension modules
   -----------------------------------------------------------------------------
 
-	timer_unit : ext_timer
-  port map (
-    clk				=> clk, 
-    extsel		=> timer_sel,
-    exti 			=> exti,
-    exto			=> timer_exto
-	);
+--	timer_unit : ext_timer
+--  port map (
+--    clk				=> clk, 
+--    extsel		=> timer_sel,
+--    exti 			=> exti,
+--    exto			=> timer_exto
+--	);
 
 
 --  ISP1362_usb_unit: ext_ISP1362
@@ -483,7 +483,7 @@ begin
       TxD    => aux_uart_tx
 		);
   
-  comb : process(scarts_o, debugo_if, D_RxD, dis7segexto, counter_exto, aux_uart_exto, but_sw_led_exto,timer_exto) --  exph_exto, usb_exto)  --extend!
+  comb : process(scarts_o, debugo_if, D_RxD, dis7segexto, counter_exto, aux_uart_exto, but_sw_led_exto)--, timer_exto) --  exph_exto, usb_exto)  --extend!
     variable extdata : std_logic_vector(31 downto 0);
   begin   
     exti.reset    <= scarts_o.reset;
@@ -496,7 +496,7 @@ begin
     counter_segsel <= '0';
     aux_uart_sel <= '0';
     but_sw_led_sel <= '0';
-		timer_sel <= '0';
+--		timer_sel <= '0';
 --    usb_sel <= '0';
 --		exph_sel <= '0';
     
@@ -514,9 +514,9 @@ begin
         when "1111110100" => -- (-384)
           -- but_sw_led Module
           but_sw_led_sel <= '1';
-				when "1111110011" => -- (-416)
-          -- timer Module
-          timer_sel <= '1';
+--				when "1111110011" => -- (-416)
+--          -- timer Module
+--          timer_sel <= '1';
 --				when "1111110010" => -- (-448)
 --					exph_sel <= '1'; 
 --      	when "1111110000" => -- (-480)
@@ -531,7 +531,7 @@ begin
 -- TODO: hier interrupts erkennen und unterscheiden? 
     extdata := (others => '0');
     for i in extdata'left downto extdata'right loop
-      extdata(i) := dis7segexto.data(i) or counter_exto.data(i) or aux_uart_exto.data(i) or but_sw_led_exto.data(i) or timer_exto.data(i);  --exph_exto.data(i) or  usb_exto.data(i);
+      extdata(i) := dis7segexto.data(i) or counter_exto.data(i) or aux_uart_exto.data(i) or but_sw_led_exto.data(i);-- or timer_exto.data(i);  --exph_exto.data(i) or  usb_exto.data(i);
     end loop;
 
     scarts_i.data <= (others => '0');
