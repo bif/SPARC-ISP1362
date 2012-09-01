@@ -3,20 +3,15 @@
 #include <machine/interrupts.h>
 #include <machine/UART.h>
 #include <stdio.h>
-#include <drivers/dis7seg.h>
-#include <drivers/vgatext.h>
 #include <string.h>
 #include "but_sw_led.h"
 #include "timer.h"
 
-#define DISP7SEG_BADDR                  ((uint32_t)-288)
-#define VGATEXT_BADDR                   ((uint32_t)0xF0000100)
-#define BUT_SW_LED_BADDR                ((uint32_t)-384)
-#define TIMER_BADDR		              		((uint32_t)-416)
+#define BUT_SW_LED_BADDR                ((uint32_t)-288)
+#define TIMER_BADDR		              		((uint32_t)-320)
 
 
 static module_handle_t timer_handle;
-static dis7seg_handle_t display_handle;
 
 void isr() __attribute__ ((interrupt));
 
@@ -37,13 +32,6 @@ void isr() { //uint8_t* toggle) {
 
 int main (int argc, char *argv[])
 {
-  char msg[32] = "\n\rHallo Welt!\n\r";
-  char msg_key1[32]		 	= " Pushbutton 1 ";
-  char msg_key2[32] 		= " Pushbutton 2 ";
-  char msg_key3[32] 		= " Pushbutton 3 ";
-  char msg_pos1[32]			= "\r";
-	char msg_tmp[32] = "";
-
   UART_Cfg cfg;
     
   // Initialize peripheral components ...
@@ -55,31 +43,23 @@ int main (int argc, char *argv[])
   cfg.frame.stop_bits = UART_CFG_STOP_BITS_1;
   UART_init (cfg);
 
-  // 7-Segment
-  dis7seg_initHandle(&display_handle, DISP7SEG_BADDR, 8);
-	dis7seg_displayHexUInt32(&display_handle, 0, 0x00000042);
-  
-	
-	uint32_t keys, keys_old, led_port;
 	uint8_t i;
 
 	keys_old = 0;
 	led_port = 0;
 	
 
-  UART_write(0, msg, strlen(msg));
-
   //register interrupt to line 2
-  REGISTER_INTERRUPT(isr, 2);
+//  REGISTER_INTERRUPT(isr, 2);
   // unmask interrupt line 2
-  UMASKI(2);
+//  UMASKI(2);
   // globally enable interrupts
-  SEI();
+//  SEI();
 
   // timer 80000 ticks = 1ms, 80 ticks = 1s
-  config_timer(50000000, 0);
-  timer_initHandle(&timer_handle, TIMER_BADDR);
-  start_timer();
+//  config_timer(50000000, 0);
+//  timer_initHandle(&timer_handle, TIMER_BADDR);
+//  start_timer();
 
   while(1) {
 		// pushbuttons
@@ -109,7 +89,7 @@ int main (int argc, char *argv[])
 		UART_write(0, msg_pos1, strlen(msg_pos1));
 
 		// leds
-		//setLeds(led_port);
+		setLeds(led_port);
 	}
 
 
