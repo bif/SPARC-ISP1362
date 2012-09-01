@@ -77,28 +77,29 @@ begin
     if ((extsel = '1') and (exti.write_en = '1')) then
       case exti.addr(4 downto 2) is
         when "000" =>
---          if ((exti.byte_en(0) = '1') or (exti.byte_en(1) = '1')) then
---            v.ifacereg(STATUSREG)(STA_INT) := '1';
---            v.ifacereg(CONFIGREG)(CONF_INTA) :='0';
---          else
---            if ((exti.byte_en(2) = '1')) then
---              v.ifacereg(2) := exti.data(23 downto 16);
---            end if;
---            if ((exti.byte_en(3) = '1')) then
---             v.ifacereg(3) := exti.data(31 downto 24);
---            end if;
-          if ((exti.byte_en(0) = '1')) then
-            v.ifacereg(STATUSREG) := exti.data(7 downto 0);
+          if ((exti.byte_en(0) = '1') or (exti.byte_en(1) = '1')) then
+            v.ifacereg(STATUSREG)(STA_INT) := '1';
+            v.ifacereg(CONFIGREG)(CONF_INTA) :='0';
+          else
+            if ((exti.byte_en(2) = '1')) then
+              v.ifacereg(STATUSREG_CUST) := exti.data(23 downto 16);
+            end if;
+            if ((exti.byte_en(3) = '1')) then
+             v.ifacereg(CONFIGREG_CUST) := exti.data(31 downto 24);
+            end if;
           end if;
-          if ((exti.byte_en(1) = '1')) then
-            v.ifacereg(STATUSREG_CUST) := exti.data(15 downto 8);
-          end if; 
-          if ((exti.byte_en(2) = '1')) then
-             v.ifacereg(CONFIGREG) := exti.data(23 downto 16);
-          end if;
-          if ((exti.byte_en(3) = '1')) then
-            v.ifacereg(CONFIGREG_CUST) := exti.data(31 downto 24);
-          end if;
+--          if ((exti.byte_en(0) = '1')) then
+--            v.ifacereg(STATUSREG) := exti.data(7 downto 0);
+--          end if;
+--          if ((exti.byte_en(1) = '1')) then
+--            v.ifacereg(STATUSREG_CUST) := exti.data(15 downto 8);
+--          end if; 
+--          if ((exti.byte_en(2) = '1')) then
+--             v.ifacereg(CONFIGREG) := exti.data(23 downto 16);
+--          end if;
+--          if ((exti.byte_en(3) = '1')) then
+--            v.ifacereg(CONFIGREG_CUST) := exti.data(31 downto 24);
+--          end if;
         when "001" =>
           if ((exti.byte_en(0) = '1')) then
             v.ifacereg(BASE_COUNTER_MATCH) := exti.data(7 downto 0);
