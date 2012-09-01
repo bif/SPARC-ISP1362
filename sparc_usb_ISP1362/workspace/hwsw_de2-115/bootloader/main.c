@@ -187,17 +187,17 @@ int main (int argc, char *argv[])
   //TIMER_BADDR |= (1<<2);
   setLeds(R_LED1);
   //register interrupt to line 2
-//  REGISTER_INTERRUPT(isr, 2);
+  REGISTER_INTERRUPT(isr, 2);
   // unmask interrupt line 2
-//  UMASKI(2);
+  UMASKI(2);
   // globally enable interrupts
-//  SEI();
+  SEI();
    
   //setLeds(R_LED2 | G_LED0);
     // timer 80000 ticks = 1ms, 80 ticks = 1s
-//  config_timer(50000, 50);
-//  timer_initHandle(&timer_handle, TIMER_BADDR);
-//  start_timer();
+  config_timer(50000, 50);
+  timer_initHandle(&timer_handle, TIMER_BADDR);
+  start_timer();
   
   //TIMER_BADDR &= ~(1<<2);
 	while(1);	
