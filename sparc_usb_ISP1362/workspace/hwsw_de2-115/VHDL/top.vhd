@@ -110,7 +110,7 @@ architecture behaviour of top is
   signal clk         : std_logic;
 
 	-- timer
-	signal timer_sel		: std_logic;
+	signal timer_sel		: std_ulogic;
   signal timer_exto		: module_out_type;
 
 	-- expansion header

@@ -155,7 +155,7 @@ void isr() __attribute__ ((interrupt));
 
 void isr(uint8_t* toggle) {
 	// todo do PWM signal
-  setLeds(R_LED0);
+  setLeds(R_LED4);
 /*	if(toggle) {
     setLeds(G_LED0);
 		*toggle = 0;
@@ -185,23 +185,35 @@ int main (int argc, char *argv[])
 
 //  UART_write(0, "Hello", 5);
   //TIMER_BADDR |= (1<<2);
-  setLeds(R_LED1);
+  setLeds(R_LED0);
   //register interrupt to line 2
-  REGISTER_INTERRUPT(isr, 2);
+//  REGISTER_INTERRUPT(isr, 2);
   // unmask interrupt line 2
-  UMASKI(2);
+//  UMASKI(2);
   // globally enable interrupts
-  SEI();
+//  SEI();
    
   //setLeds(R_LED2 | G_LED0);
     // timer 80000 ticks = 1ms, 80 ticks = 1s
-  config_timer(50000, 50);
-  timer_initHandle(&timer_handle, TIMER_BADDR);
-  start_timer();
+//  config_timer(50000, 50);
+//  timer_initHandle(&timer_handle, TIMER_BADDR);
+//  start_timer();
   
   //TIMER_BADDR &= ~(1<<2);
-	while(1);	
-
+  
+  uint8_t i=0;
+	while (1){	
+    i++;
+    if(i==100)
+      setLeds(R_LED2);
+    if(i==200)
+      setLeds(R_LED3);
+    if(i==250) {
+      i=0;
+      setLeds(G_LED1);
+    }
+  }
+  
 
   return 0;
 }
