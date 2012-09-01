@@ -4,6 +4,7 @@ use ieee.numeric_std.all;
 
 use work.scarts_pkg.all;
 use work.pkg_timer.all;
+use work.pkg_but_sw_led.all;
 
 entity top_tb is
 end top_tb;
@@ -28,7 +29,7 @@ architecture behaviour of top_tb is
   signal clk         : std_logic;
 
 	-- timer
-	signal timer_sel		: std_logic;
+	signal timer_sel		: std_ulogic;
 	signal timer_exto		: module_out_type;
 
  
