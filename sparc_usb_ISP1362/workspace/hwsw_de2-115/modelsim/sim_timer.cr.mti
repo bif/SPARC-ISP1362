@@ -3,14 +3,14 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/wpt.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_AHBMasterStatemachine.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_AHBMasterStatemachine.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_AHBMasterStatemachine.vhd" in read mode.
-No such file or directory. (errno = ENOENT)
-
 } {3.0 4.0} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/vectab.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/vectab.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/vectab.vhd" in read mode.
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_AHBMasterStatemachine.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_AHBMasterStatemachine.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_AHBMasterStatemachine.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
 } {3.0 4.0} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd
@@ -18,13 +18,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/iram.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/iram.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/iram.vhd" in read mode.
-No such file or directory. (errno = ENOENT)
-
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/prog.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/prog.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/prog.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/prog.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -35,15 +30,13 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity scarts_prog
 -- Compiling architecture behaviour of scarts_prog
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf_components.vhd {1 {vcom -work altera_mf -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf_components.vhd
+} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/iram.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/iram.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling package altera_mf_components
+** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/iram.vhd" in read mode.
+No such file or directory. (errno = ENOENT)
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/core.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/core.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/core.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/core.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -54,8 +47,22 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity scarts_core
 -- Compiling architecture behaviour of scarts_core
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf_components.vhd {1 {vcom -work altera_mf -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf_components.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package altera_mf_components
+
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_amba_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_amba_pkg.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package scarts_amba_pkg
+
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -65,13 +72,6 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package pkg_timer
 -- Compiling architecture behaviour of ext_timer
 -- Loading entity ext_timer
-
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_amba_pkg.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_amba_pkg.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling package scarts_amba_pkg
 
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf.vhd {0 {vcom -work altera_mf -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
@@ -83,8 +83,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/altera_pll.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/vectab.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/vectab.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/vectab.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/vectab.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -95,16 +95,16 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity scarts_vectab
 -- Compiling architecture behaviour of scarts_vectab
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/altera_pll.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/altera_pll.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/altera_pll.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/altera_pll.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity altera_pll
 -- Compiling architecture SYN of altera_pll
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -138,8 +138,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/ext_AMBA.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/pkg_timer.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/pkg_timer.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/pkg_timer.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/pkg_timer.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -152,8 +152,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/byteram.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/regf.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/regf.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/regf.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/regf.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -169,8 +169,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/ext_AMBA_sharedmem.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_tb.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_tb.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_tb.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -178,6 +178,7 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package scarts_amba_pkg
 -- Loading package scarts_pkg
 -- Loading package pkg_timer
+-- Loading package pkg_but_sw_led
 -- Compiling entity top_tb
 -- Compiling architecture behaviour of top_tb
 
@@ -186,8 +187,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_timer/ext_timer_ent.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -196,8 +197,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package pkg_timer
 -- Compiling entity ext_timer
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd {2 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -207,58 +208,58 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package scarts_core_pkg
 -- Compiling entity scarts
 -- Compiling architecture behaviour of scarts
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(51): Nonresolved signal 'ahbmo' may have multiple sources.
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(51): Nonresolved signal 'ahbmo' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(539):Instantiation amba_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(544):Conditional signal assignment line__544
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(97): Nonresolved signal 'progrst' may have multiple sources.
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(539):Instantiation amba_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(544):Conditional signal assignment line__544
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(97): Nonresolved signal 'progrst' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(396):Instantiation prog_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(406):Conditional signal assignment line__406
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(146): Nonresolved signal 'progo_instrsrc' may have multiple sources.
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(396):Instantiation prog_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(406):Conditional signal assignment line__406
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(146): Nonresolved signal 'progo_instrsrc' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(396):Instantiation prog_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(401):Conditional signal assignment line__401
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(147): Nonresolved signal 'progo_prupdate' may have multiple sources.
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(396):Instantiation prog_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(401):Conditional signal assignment line__401
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(147): Nonresolved signal 'progo_prupdate' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(396):Instantiation prog_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(402):Conditional signal assignment line__402
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(159): Nonresolved signal 'progexto' may have multiple sources.
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(396):Instantiation prog_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(402):Conditional signal assignment line__402
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(159): Nonresolved signal 'progexto' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(396):Instantiation prog_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(405):Conditional signal assignment line__405
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(171): Nonresolved signal 'breakpointexto' may have multiple sources.
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(396):Instantiation prog_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(405):Conditional signal assignment line__405
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(171): Nonresolved signal 'breakpointexto' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(443):Instantiation ext_breakpoint_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(462):Conditional signal assignment line__462
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(173): Nonresolved signal 'watchpointexto' may have multiple sources.
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(443):Instantiation ext_breakpoint_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(462):Conditional signal assignment line__462
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(173): Nonresolved signal 'watchpointexto' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(455):Instantiation ext_watchpoint_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(463):Conditional signal assignment line__463
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(188): Nonresolved signal 'ambadramexto' may have multiple sources.
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(455):Instantiation ext_watchpoint_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(463):Conditional signal assignment line__463
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(188): Nonresolved signal 'ambadramexto' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(506):Instantiation ambadram_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(546):Conditional signal assignment line__546
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(191): Nonresolved signal 'ambaexto' may have multiple sources.
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(506):Instantiation ambadram_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(546):Conditional signal assignment line__546
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(191): Nonresolved signal 'ambaexto' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(539):Instantiation amba_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(547):Conditional signal assignment line__547
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(197): Nonresolved signal 'gIRQ' may have multiple sources.
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(539):Instantiation amba_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(547):Conditional signal assignment line__547
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(197): Nonresolved signal 'gIRQ' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(539):Instantiation amba_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(545):Conditional signal assignment line__545
-** Warning: [5] /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(199): Nonresolved signal 'scarts_hold' may have multiple sources.
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(539):Instantiation amba_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(545):Conditional signal assignment line__545
+** Warning: [5] /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(199): Nonresolved signal 'scarts_hold' may have multiple sources.
   Drivers:
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(539):Instantiation amba_unit
-    /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(548):Conditional signal assignment line__548
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(539):Instantiation amba_unit
+    /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts.vhd(548):Conditional signal assignment line__548
 
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf_components.vhd {0 {vcom -work altera_mf -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf_components.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf_components.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_byteram.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_byteram.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_byteram.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_byteram.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -284,8 +285,21 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/regf.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_dram.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_dram.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package top_pkg
+-- Loading package scarts_amba_pkg
+-- Loading package scarts_pkg
+-- Loading package pkg_but_sw_led
+-- Loading package pkg_timer
+-- Compiling entity top
+-- Compiling architecture behaviour of top
+
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_dram.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_dram.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -301,8 +315,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_amba_pkg.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_pkg.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_pkg.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_pkg.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -318,8 +332,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/rs232.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/rs232.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/rs232.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/rs232.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/rs232.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -342,8 +356,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity miniUART_transmitter
 -- Compiling architecture behaviour of miniUART_transmitter
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/dram.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/dram.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/dram.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/dram.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -354,8 +368,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity scarts_dram
 -- Compiling architecture behaviour of scarts_dram
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/byteram.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/byteram.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/byteram.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/byteram.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -366,8 +380,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity scarts_byteram
 -- Compiling architecture behaviour of scarts_byteram
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf.vhd {1 {vcom -work altera_mf -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf.vhd {1 {vcom -work altera_mf -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/altera_mf.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -602,8 +616,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity altsource_probe
 -- Compiling architecture sim_altsource_probe of altsource_probe
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/cycloneiii_components.vhd {1 {vcom -work altera_mf -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/cycloneiii_components.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/cycloneiii_components.vhd {1 {vcom -work altera_mf -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/cycloneiii_components.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -622,8 +636,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts_core_pkg.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/ext_AMBA.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/ext_AMBA.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/ext_AMBA.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/ext_AMBA.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -639,8 +653,16 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/sysc.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/sysc.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package scarts_amba_pkg
+-- Compiling package scarts_pkg
+
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/sysc.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/sysc.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -651,21 +673,13 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity scarts_sysc
 -- Compiling architecture behaviour of scarts_sysc
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/common/scarts_pkg.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package scarts_amba_pkg
--- Compiling package scarts_pkg
-
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/dram.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/dram.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/dram.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/regfram.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/regfram.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/regfram.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/regfram.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -676,18 +690,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity scarts_regfram
 -- Compiling architecture behaviour of scarts_regfram
 
-} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd" in read mode.
-No such file or directory. (errno = ENOENT)
-
-} {3.0 4.0} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/cycloneiii_components.vhd {0 {vcom -work altera_mf -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/cycloneiii_components.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/cycloneiii_components.vhd" in read mode.
-No such file or directory. (errno = ENOENT)
-
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_AHBMasterStatemachine.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_AHBMasterStatemachine.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_AHBMasterStatemachine.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_AHBMasterStatemachine.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -699,8 +703,18 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity AMBA_AHBMasterStatemachine
 -- Compiling architecture Behavioral of AMBA_AHBMasterStatemachine
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/bpt.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/bpt.vhd
+} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/cycloneiii_components.vhd {0 {vcom -work altera_mf -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/cycloneiii_components.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/modelsim/cycloneiii_components.vhd" in read mode.
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led_ent.vhd" in read mode.
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/bpt.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/bpt.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -711,18 +725,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity ext_breakpoint
 -- Compiling architecture behaviour of ext_breakpoint
 
-} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_dram.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_dram.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_dram.vhd" in read mode.
-No such file or directory. (errno = ENOENT)
-
-} {3.0 4.0} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd" in read mode.
-No such file or directory. (errno = ENOENT)
-
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/brom.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/brom.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/brom.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/brom.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -733,8 +737,23 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity scarts_brom
 -- Compiling architecture behaviour of scarts_brom
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd
+} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd" in read mode.
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_dram.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_dram.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/AMBA_sharedmem_dram.vhd" in read mode.
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/sysc.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/sysc.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/sysc.vhd" in read mode.
+No such file or directory. (errno = ENOENT)
+
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/pkg_but_sw_led.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -742,13 +761,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package scarts_pkg
 -- Compiling package pkg_but_sw_led
 
-} {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/sysc.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/sysc.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
-** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/sysc.vhd" in read mode.
-No such file or directory. (errno = ENOENT)
-
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/wpt.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/wpt.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/wpt.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/wpt.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -774,17 +788,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/workspace/hwsw_de2-115/VHDL/top_pkg.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts_core_pkg.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts_core_pkg.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package scarts_amba_pkg
--- Loading package scarts_pkg
--- Compiling package scarts_core_pkg
-
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/altera/boot_rom.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/altera/boot_rom.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/altera/boot_rom.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/altera/boot_rom.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -794,13 +799,22 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity altera_boot_rom
 -- Compiling architecture SYN of altera_boot_rom
 
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts_core_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/scarts_core_pkg.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package scarts_amba_pkg
+-- Loading package scarts_pkg
+-- Compiling package scarts_core_pkg
+
 } {} {}} /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/bpt.vhd {0 {vcom -work work -2002 -explicit /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/bpt.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/bpt.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/ext_AMBA_sharedmem.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/ext_AMBA_sharedmem.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/ext_AMBA_sharedmem.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/ext_AMBA_sharedmem.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -816,8 +830,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: (vcom-7) Failed to open design unit file "/homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led.vhd" in read mode.
 No such file or directory. (errno = ENOENT)
 
-} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {3.0 4.0} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/ext_modules/ext_but_sw_led/ext_but_sw_led.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -828,8 +842,8 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling architecture behaviour of ext_but_sw_led
 -- Loading entity ext_but_sw_led
 
-} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/iram.vhd {1 {vcom -work work -2002 -explicit /home/bif/Desktop/Studium/bachelorarbeit/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/iram.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ~/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/iram.vhd {1 {vcom -work work -2002 -explicit -vopt /homes/ssimhandl/SPARC-ISP1362/sparc_usb_ISP1362/VHDL/scarts_core/iram.vhd
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
